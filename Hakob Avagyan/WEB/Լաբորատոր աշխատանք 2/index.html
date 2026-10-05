@@ -399,6 +399,8 @@
             font-size: 0.82rem;
         }
     </style>
+    <!-- Արտաքին CSS — ընտրիչներ, pseudo-classes, pseudo-elements, specificity -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -493,7 +495,9 @@
         <h2>Ընթացիկ ծրագրեր եւ նախաձեռնություններ</h2>
         <div class="articles-grid">
 
-            <article class="program-card">
+            <!-- id="card-featured" — specificity demo:
+                 #card-featured h3  (1,0,1)  beats  .articles-grid .program-card h3  (0,2,1) -->
+            <article class="program-card" id="card-featured">
                 <figure>
                     <img src="eco-program.jpg"
                          alt="Կամավորներ ծառ են տնկում Երևանի հյուսիսային արվարձաններում"
