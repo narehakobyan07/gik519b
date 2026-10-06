@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Անվճար Փորձնական Դաս - EduCenter</title>
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo"><a href="index.html">
+                <img src="images/logo.svg" alt="EduCenter Logo" style="height: 60px;"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="index.html#courses">Դասընթացներ</a></li>
+                <li><a href="about.html">Մեր մասին</a></li>
+                <li><a href="contacts.html">Կապ</a></li>
+            </ul>
+        </nav>
+        <a href="free.html" class="btn btn-secondary active-btn">Փորձնական Դաս</a>
+    </header>
+
+    <section class="registration-section">
+        <div class="container">
+            <div class="form-card">
+
+                <div class="form-header">
+                    <span class="badge-free">100% ԱՆՎՃԱՐ</span>
+                    <h2>Գրանցում Փորձնական Դասին</h2>
+                    <p>Փորձեք առաջին դասն անվճար, ծանոթացեք ծրագրին և ծրագրավորող/մասնագետ դասախոսին։</p>
+                </div>
+
+                <form action="#" method="POST" class="registration-form">
+
+                    <div class="form-group">
+                        <label for="name">Անուն *</label>
+                        <input type="text" id="name" name="name" placeholder=" Աննա " required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="surname">Ազգանուն *</label>
+                        <input type="text" id="surname" name="surname" placeholder=" Գրիգորյան " required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Հեռախոսահամար *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+374 99 123456" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Ընտրեք դասընթացը և հարմար ժամը *</label>
+                        <select id="course" name="course" required>
+                            <option value="" disabled selected>-- Ընտրեք դասընթացը --</option>
+
+                            <optgroup label="Վեբ Ծրագրավորում (Frontend / Backend)">
+                                <option value="web-day">Վեբ Ծրագրավորում — ☀️ Ցերեկային (12:00 - 15:00)</option>
+                                <option value="web-eve">Վեբ Ծրագրավորում — 🌙 Երեկոյան (18:30 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="UI/UX Դիզայն">
+                                <option value="uiux-day">UI/UX Դիզայն — ☀️ Ցերեկային (10:00 - 13:00)</option>
+                                <option value="uiux-eve">UI/UX Դիզայն — 🌙 Երեկոյան (19:00 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Գրաֆիկական Դիզայն">
+                                <option value="gdesign-day">Գրաֆիկական Դիզայն — ☀️ Ցերեկային (14:00 - 17:00)</option>
+                                <option value="gdesign-eve">Գրաֆիկական Դիզայն — 🌙 Երեկոյան (18:00 - 20:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Անգլերեն Լեզու (General & Business)">
+                                <option value="eng-day">Անգլերեն Լեզու — ☀️️ Ցերեկային (11:00 - 13:00)</option>
+                                <option value="eng-eve">Անգլերեն Լեզու — 🌙 Երեկոյան (18:30 - 20:30)</option>
+                            </optgroup>
+
+                            <optgroup label="Թվային Մարկետինգ (SMM / SEO)">
+                                <option value="mkt-day">Թվային Մարկետինգ — ☀️️ Ցերեկային (15:00 - 18:00)</option>
+                                <option value="mkt-eve">Թվային Մարկետինգ — 🌙 Երեկոյան (19:00 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Python Ծրագրավորում">
+                                <option value="python-day">Python Ծրագրավորում — ☀️ Ցերեկային (13:00 - 16:00)</option>
+                                <option value="python-eve">Python Ծրագրավորում — 🌙 Երեկոյան (18:00 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Տվյալների Վերլուծություն">
+                                <option value="data-day">Տվյալների Վերլուծություն — ☀️ Ցերեկային (10:00 - 12:00)
+                                </option>
+                                <option value="data-eve">Տվյալների Վերլուծություն — 🌙 Երեկոյան (19:00 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Մոբայլ Հավելվածների Մշակում">
+                                <option value="mobile-day">Մոբայլ Հավելվածներ — ☀️ Ցերեկային (16:00 - 19:00)</option>
+                                <option value="mobile-eve">Մոբայլ Հավելվածներ — 🌙 Երեկոյան (18:30 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Հաշվապահություն և 1U Ձեռնարկություն">
+                                <option value="acc-day">Հաշվապահություն և 1Ս Ձեռնարկություն — ☀️ Ցերեկային (11:00 -
+                                    14:00)</option>
+                                <option value="acc-eve">Հաշվապահություն և 1Ս Ձեռնարկություն — 🌙 Երեկոյան (17:30 -
+                                    19:30)</option>
+                            </optgroup>
+
+                            <optgroup label="Ֆինանսական Մենեջմենթ">
+                                <option value="fin-day">Ֆինանսական Մենեջմենթ — ☀️ Ցերեկային (14:00 - 16:00)</option>
+                                <option value="fin-eve">Ֆինանսական Մենեջմենթ — 🌙 Երեկոյան (18:00 - 20:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Նախագծերի Կառավարում (Agile / Scrum)">
+                                <option value="pm-day">Նախագծերի Կառավարում — ☀️ Ցերեկային (12:00 - 14:00)</option>
+                                <option value="pm-eve">Նախագծերի Կառավարում — 🌙 Երեկոյան (19:00 - 21:00)</option>
+                            </optgroup>
+
+                            <optgroup label="Նախադպրոցական Կրթության Մեթոդիկա">
+                                <option value="edu-day">Նախադպրոցական Կրթություն — ☀️ Ցերեկային (10:00 - 13:00)</option>
+                                <option value="edu-eve">Նախադպրոցական Կրթություն — 🌙 Երեկոյան (17:00 - 19:00)</option>
+                            </optgroup>
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Մասնակցության ձևաչափը</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="format" value="presential" checked> Առկա
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="format" value="online"> Օնլայն (Zoom)
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">Ամրագրել Անվճար Տեղը</button>
+
+                    <p class="form-footer-text">🔒 Ձեր տվյալները պաշտպանված են։ Մենք կկապնվենք ձեզ հետ ժամը հստակեցնելու
+                        համար։</p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EduCenter. Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+
+</html>
