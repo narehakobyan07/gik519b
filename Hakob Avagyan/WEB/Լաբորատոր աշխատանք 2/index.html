@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Կամավորական կենտրոն ԱԿՏ — Հայաստան. ծրագրեր, նախաձեռնություններ, պատկերասրահ">
+    <meta name="keywords" content="կամավոր, կենտրոն, ծրագրեր, Հայաստան, ԱԿՏ, նախաձեռնություն">
+    <meta name="author" content="Hakob Avagyan">
+    <title>Կամավորական կենտրոն «ԱԿՏ»</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: #fff;
+            padding: 0 0 0 0;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 40px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-area p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 32px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 13px 18px;
+            color: #d6eaf8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            max-height: 420px;
+        }
+
+        .hero picture,
+        .hero picture img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(26,82,118,0.45), rgba(26,82,118,0.75));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            color: #fff;
+        }
+
+        .hero-overlay h2 {
+            font-size: 2.2rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            margin-bottom: 12px;
+        }
+
+        .hero-overlay p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 11px 28px;
+            background: #e74c3c;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover { background: #c0392b; }
+
+        /* ===== MAIN LAYOUT ===== */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 56px;
+        }
+
+        section > h2 {
+            font-size: 1.55rem;
+            color: #1a5276;
+            border-left: 5px solid #2e86c1;
+            padding-left: 14px;
+            margin-bottom: 24px;
+        }
+
+        /* ===== DIRECTIONS GRID ===== */
+        .directions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .direction-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid #2e86c1;
+        }
+
+        .direction-card .icon {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        .direction-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #1a5276;
+        }
+
+        .direction-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* ===== ARTICLES (PROGRAMS) ===== */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        article.program-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+            display: flex;
+            flex-direction: column;
+        }
+
+        article.program-card figure {
+            margin: 0;
+        }
+
+        article.program-card figure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        article.program-card figure figcaption {
+            background: #1a5276;
+            color: #d6eaf8;
+            font-size: 0.82rem;
+            padding: 6px 14px;
+            font-style: italic;
+        }
+
+        article.program-card .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        article.program-card h3 {
+            font-size: 1.1rem;
+            color: #1a5276;
+            margin-bottom: 8px;
+        }
+
+        article.program-card p {
+            font-size: 0.92rem;
+            color: #555;
+            flex: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: #d6eaf8;
+            color: #1a5276;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .card-meta {
+            margin-top: 14px;
+            font-size: 0.82rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        /* ===== ABOUT / GENERAL INFO ===== */
+        .about-flex {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .about-text { flex: 1 1 320px; }
+
+        .about-text p { margin-bottom: 14px; font-size: 0.97rem; }
+
+        .about-text blockquote {
+            border-left: 4px solid #2e86c1;
+            margin: 18px 0;
+            padding: 12px 18px;
+            background: #eaf4fd;
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+            color: #1a5276;
+        }
+
+        .stats-box {
+            flex: 0 0 220px;
+            background: #1a5276;
+            color: #fff;
+            border-radius: 8px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+
+        .stats-box h3 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            opacity: 0.85;
+            text-transform: uppercase;
+        }
+
+        .stat-item {
+            margin-bottom: 18px;
+        }
+
+        .stat-item .num {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #aed6f1;
+            display: block;
+        }
+
+        .stat-item .label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .gallery-grid figure {
+            margin: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-grid figure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid figure:hover img { transform: scale(1.04); }
+
+        .gallery-grid figure figcaption {
+            padding: 10px 14px;
+            background: #fff;
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1a2533;
+            color: #aab8c5;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #d6eaf8;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #2e86c1;
+            padding-bottom: 6px;
+        }
+
+        .footer-col p,
+        .footer-col address {
+            font-size: 0.88rem;
+            line-height: 1.8;
+            font-style: normal;
+        }
+
+        .footer-col a {
+            color: #aed6f1;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover { color: #fff; text-decoration: underline; }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 6px;
+            font-size: 0.88rem;
+        }
+
+        .footer-col ul li::before {
+            content: "→ ";
+            color: #2e86c1;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            border-top: 1px solid #2c3e50;
+            padding-top: 18px;
+            text-align: center;
+            font-size: 0.82rem;
+        }
+    </style>
+    <!-- Արտաքին CSS — ընտրիչներ, pseudo-classes, pseudo-elements, specificity -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="header-top">
+        <div class="logo-area">
+            <h1>Կամավորական կենտրոն «ԱԿՏ»</h1>
+            <p>Ակտիվ Կամավոր Տիրույթ · Հայաստան · 2015-ից</p>
+        </div>
+    </div>
+    <nav aria-label="Կայքի գլխավոր նավիգացիա">
+        <ul>
+            <li><a href="index.html">Գլխավոր</a></li>
+            <li><a href="programs.html">Ծրագրեր</a></li>
+            <li><a href="#directions">Ուղղություններ</a></li>
+            <li><a href="#initiatives">Նախաձեռնություններ</a></li>
+            <li><a href="#about">Մեր մասին</a></li>
+            <li><a href="#gallery">Պատկերասրահ</a></li>
+            <li><a href="register.html">Գրանցում</a></li>
+            <li><a href="#contact">Կոնտակտ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+    <picture>
+        <!-- Մոբայլ սարքերի համար (max-width 600px) -->
+        <source
+            srcset="hero-mobile.jpg 600w, hero-mobile@2x.jpg 1200w"
+            sizes="(max-width: 600px) 100vw"
+            media="(max-width: 600px)"
+            type="image/jpeg">
+        <!-- Պլանշետի համար (601–1024px) -->
+        <source
+            srcset="hero-tablet.jpg 1024w"
+            sizes="(max-width: 1024px) 100vw"
+            media="(max-width: 1024px)"
+            type="image/jpeg">
+        <!-- Աշխատասեղան — ստանդարտ և ретина -->
+        <img
+            src="hero.jpg"
+            srcset="hero.jpg 1200w, hero@2x.jpg 2400w"
+            sizes="100vw"
+            alt="ԱԿՏ կամավորները խմբային աշխատանքի ժամանակ՝ Երևանի Կենտրոնական այգում"
+            width="1200" height="420">
+    </picture>
+    <div class="hero-overlay">
+        <h2>Փոխե՛ք աշխարհը՝ մեկ քայլ առ մեկ</h2>
+        <p>ԱԿՏ կամավորական կենտրոնը կամավոր ծառայությամբ ուժեղացնում է հայ հասարակությունն արդեն <strong>10 տարի</strong>։</p>
+        <a href="programs.html" class="btn">Տեսնել ծրագրերը</a>
+    </div>
+</div>
+
+<main>
+
+    <!-- ===== ԿԱՄԱՎՈՐԱԿԱՆ ՈՒՂՂՈՒԹՅՈՒՆՆԵՐ ===== -->
+    <section id="directions">
+        <h2>Կամավորական գործունեության ուղղություններ</h2>
+        <div class="directions-grid">
+            <div class="direction-card">
+                <div class="icon">🌿</div>
+                <h3>Էկոլոգիա</h3>
+                <p>Բնապահպանական ծրագրեր, անտառաշինություն, կանաչ Երևան նախաձեռնություններ։</p>
+            </div>
+            <div class="direction-card">
+                <div class="icon">📚</div>
+                <h3>Կրթություն</h3>
+                <p>Դպրոցականների դաստիարակություն, դասընկերական կրթություն, STEM ծրագրեր։</p>
+            </div>
+            <div class="direction-card">
+                <div class="icon">🤝</div>
+                <h3>Սոցիալական</h3>
+                <p>Հոգատարություն ծերերի, հաշմանդամ անձանց և խոցելի խմբերի համար։</p>
+            </div>
+            <div class="direction-card">
+                <div class="icon">🏥</div>
+                <h3>Առողջություն</h3>
+                <p>Արյան դոնորություն, բժշկական ճամբարներ, հանրային առողջության իրազեկում։</p>
+            </div>
+            <div class="direction-card">
+                <div class="icon">🏛️</div>
+                <h3>Մշակույթ</h3>
+                <p>Ազգային ժառանգության պահպանում, մշակութային միջոցառումներ, թանգարաններ։</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ԸՆԹԱՑԻԿ ԾՐԱԳՐԵՐ / ՆԱԽԱՁԵՌՆՈՒԹՅՈՒՆՆԵՐ ===== -->
+    <section id="initiatives">
+        <h2>Ընթացիկ ծրագրեր եւ նախաձեռնություններ</h2>
+        <div class="articles-grid">
+
+            <!-- id="card-featured" — specificity demo:
+                 #card-featured h3  (1,0,1)  beats  .articles-grid .program-card h3  (0,2,1) -->
+            <article class="program-card" id="card-featured">
+                <figure>
+                    <img src="eco-program.jpg"
+                         alt="Կամավորներ ծառ են տնկում Երևանի հյուսիսային արվարձաններում"
+                         width="400" height="200">
+                    <figcaption>«Կանաչ Երևան» ծրագրի մասնակիցները — 2025 թ. հոկտեմբեր</figcaption>
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Էկոլոգիա</span>
+                    <h3>Կանաչ Երևան 2025</h3>
+                    <p>
+                        Ծրագիրն ուղղված է Երևանի կանաչ ծածկույթի ավելացմանը։
+                        <strong>500+</strong> ծառ կտնկվի Հրապարակի, Ավանի և Նոր Նորքի
+                        շրջաններում։ Կամավորները մասնակցում են տնկման, ոռոգման
+                        և <em>կանաչ գոտիների մաքրման</em> աշխատանքներին։
+                    </p>
+                    <div class="card-meta">
+                        📅 Հոկտեմբեր — Նոյեմբեր 2025 &nbsp;|&nbsp; 📍 Երևան
+                    </div>
+                </div>
+            </article>
+
+            <article class="program-card">
+                <figure>
+                    <img src="education-program.jpg"
+                         alt="ԱԿՏ կամավոր ուսուցիչ դասաժամ է անցկացնում գյուղական դպրոցում"
+                         width="400" height="200">
+                    <figcaption>«Կրթական կամուրջ» — կամավոր ուսուցիչ Սյունիքի մարզում</figcaption>
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Կրթություն</span>
+                    <h3>Կրթական կամուրջ</h3>
+                    <p>
+                        Կամավոր ուսուցիչներ մեկնում են Սյունիքի, Վայոց ձորի և
+                        Լոռու մարզի հեռավոր դպրոցներ՝ <em>մաթեմատիկա, ծրագրավորում
+                        և անգլերեն</em> դասավանդելու։ Ծրագիրն ընդգրկում է
+                        <strong>15 դպրոց</strong> ու <strong>600+</strong> աշակերտ։
+                    </p>
+                    <div class="card-meta">
+                        📅 Սեպտեմբեր — Դեկտեմբեր 2025 &nbsp;|&nbsp; 📍 Մարզեր
+                    </div>
+                </div>
+            </article>
+
+            <article class="program-card">
+                <figure>
+                    <img src="social-program.jpg"
+                         alt="ԱԿՏ կամավորը ուտելիք է բաժանում մեկուսացված տարեցներին"
+                         width="400" height="200">
+                    <figcaption>«Հոգատար ձեռք» — ծերերի կենտրոնի կամավոր այց</figcaption>
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Սոցիալական</span>
+                    <h3>Հոգատար ձեռք</h3>
+                    <p>
+                        Ամբողջ Հայաստանի <strong>ավագ քաղաքացիների կենտրոններ</strong>
+                        կամ առանձնահատուկ կարիք ունեցող ընտանիքների այց։
+                        Կամավորները շփվում, կարդում, օգնում ռoukine-ի
+                        հետ՝ <em>նվազեցնելու մեկուսացումն ու միայնությունը</em>։
+                    </p>
+                    <div class="card-meta">
+                        📅 Ամբողջ տարի &nbsp;|&nbsp; 📍 Ողջ ՀՀ
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ===== ԸՆԴՀԱՆՈՒՐ ՏԵՂԵԿՈՒԹՅՈՒՆ ===== -->
+    <section id="about">
+        <h2>Ընդհանուր տեղեկություն կենտրոնի մասին</h2>
+        <div class="about-flex">
+            <div class="about-text">
+                <p>
+                    <abbr title="Ակտիվ Կամավոր Տիրույթ">ԱԿՏ</abbr> կամավորական կենտրոնը
+                    հիմնադրվել է <mark>2015 թ.</mark>-ին Երևանում՝ նպատակ ունենալով
+                    <strong>կամավոր ծառայությունը</strong> դարձնել հայ հասարակության
+                    ամենօրյա կյանքի մաս։
+                </p>
+                <p>
+                    Կենտրոնն աշխատում է <em>կրթության, բնապահպանության,
+                    սոցիալական ծառայության</em> և <em>մշակութային ժառանգության</em>
+                    ոլորտներում։ Ծրագրի <u>ամսական մասնակցության</u> շեմը՝
+                    <del>20 ժամ</del> <ins>15 ժամ</ins>
+                    <small>(փոփոխվել է 2025 թ. հունվարից)</small>։
+                </p>
+                <blockquote cite="https://www.un.org/en/volunteering">
+                    <p>«Կամավորությունը ոչ թե ժամանակի կորուստ է, այլ ներդրում ապագայի մեջ»</p>
+                    <cite>— ՄԱԿ-ի Կամավորների ծրագիր (UNV)</cite>
+                </blockquote>
+                <p>
+                    Հաջողությամբ ավարտած կամավորը ստանում է
+                    <sup>®</sup>պաշտոնական հավաստագիր,
+                    ճանաչված նաև CO<sub>2</sub> նվազեցման ծրագրերում։
+                    Գրանցման վճար՝ <del>5 000 դրամ</del> <ins>անվճար</ins>
+                    <small>(2024 թ.-ից)</small>։
+                </p>
+            </div>
+            <aside class="stats-box" aria-label="Կենտրոնի վիճակագրություն">
+                <h3>Մեր թվերը</h3>
+                <div class="stat-item">
+                    <span class="num">500+</span>
+                    <span class="label">Կամավոր</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">30+</span>
+                    <span class="label">Ծրագիր</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">10</span>
+                    <span class="label">Տարի</span>
+                </div>
+                <div class="stat-item">
+                    <span class="num">15</span>
+                    <span class="label">Մարզ</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ===== ՊԱՏԿԵՐԱՍՐԱՀ ===== -->
+    <section id="gallery">
+        <h2>Պատկերասրահ</h2>
+        <div class="gallery-grid">
+
+            <figure>
+                <img src="gallery1.jpg"
+                     alt="Կամավորներ Երևանի Կենտրոնական պուրակում ջուր են ոռոգում նոր տնկված ծառերին"
+                     width="400" height="200"
+                     loading="lazy">
+                <figcaption>«Կանաչ Երևան» — ծառ տնկելու արշավ</figcaption>
+            </figure>
+
+            <figure>
+                <img src="gallery2.jpg"
+                     alt="ԱԿՏ կամավոր ուսուցիչ դասաժամ է անցկացնում Գորիսի թիվ 2 դպրոցում"
+                     width="400" height="200"
+                     loading="lazy">
+                <figcaption>«Կրթական կամուրջ» — ծրագիր Սյունիքի մարզում</figcaption>
+            </figure>
+
+            <figure>
+                <img src="gallery3.jpg"
+                     alt="Կամավորներ արյան դոնորություն են կատարում Ազգային արյան կենտրոնում"
+                     width="400" height="200"
+                     loading="lazy">
+                <figcaption>«Արյան կաթիլ» — արյան դոնորության ծրագիր</figcaption>
+            </figure>
+
+            <figure>
+                <img src="gallery4.jpg"
+                     alt="ԱԿՏ կամավորները հանդիպում են Երևանի Ազատության հրապարակում՝ ամփոփելու տարվա արդյունքները"
+                     width="400" height="200"
+                     loading="lazy">
+                <figcaption>ԱԿՏ — 2025 թ. տարեկան ամփոփ հավաք</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <!-- ===== ԿՈՆՏԱԿՏ ===== -->
+    <section id="contact">
+        <h2>Կոնտակտ</h2>
+        <address>
+            <strong>Կամավորական կենտրոն «ԱԿՏ»</strong><br>
+            Հայաստան, 0010 Երևան, Աբովյան փողոց 15, բն. 3<br>
+            Հեռ.՝ <a href="tel:+37411123456">+374 11 12-34-56</a><br>
+            Էլ. փոստ՝ <a href="mailto:info@akt-volunteer.am">info@akt-volunteer.am</a>
+        </address>
+        <br>
+        <p>
+            Ծրագրերի ամբողջական ցուցակ՝
+            <a href="programs.html">Կամավորական ծրագրեր</a> էջում։
+        </p>
+        <p>
+            Արտաքին ռեսուրս՝
+            <a href="https://www.un.org/en/volunteering" target="_blank" rel="noopener">
+                ՄԱԿ-ի Կամավորների ծրագիր (UNV)
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-inner">
+
+        <div class="footer-col">
+            <h4>ԱԿՏ կենտրոն</h4>
+            <p>
+                Ակտիվ Կամավոր Տիրույթ՝ ձեր ծառայության հարթակը
+                Հայաստանում 2015 թ.-ից։<br>
+                Միացի՛ր, փոխի՛ր, ապրի՛ր։
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Հղումներ</h4>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="programs.html">Ծրագրեր</a></li>
+                <li><a href="#directions">Ուղղություններ</a></li>
+                <li><a href="#initiatives">Նախաձեռնություններ</a></li>
+                <li><a href="#gallery">Պատկերասրահ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Կոնտակտ</h4>
+            <address>
+                Երևան, Աբովյան 15/3<br>
+                <a href="tel:+37411123456">+374 11 12-34-56</a><br>
+                <a href="mailto:info@akt-volunteer.am">info@akt-volunteer.am</a>
+            </address>
+        </div>
+
+        <div class="footer-col">
+            <h4>Ռեսուրսներ</h4>
+            <ul>
+                <li>
+                    <a href="https://www.un.org/en/volunteering"
+                       target="_blank" rel="noopener">
+                        ՄԱԿ-ի Կամավոր ծրագիր
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.icva.ngo"
+                       target="_blank" rel="noopener">
+                        ICVA Կամավոր Դաշինք
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <small>© 2025 Կամավորական կենտրոն «ԱԿՏ»։ Բոլոր իրավունքները պաշտպանված են։
+        Կայքը մշակել է <strong>Hakob Avagyan</strong> — Լաբ. աշխ. 2, WEB ծրագիր։</small>
+    </div>
+</footer>
+
+</body>
+</html>
