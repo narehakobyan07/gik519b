@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="hy">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Հայաստան Տուր զբոսաշրջային գործակալություն՝ Հայաստանի տեսարժան վայրեր, երթուղիներ և տուրիստական ծառայություններ">
     <title>Հայաստան Տուր — Գլխավոր էջ</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -16,8 +18,10 @@
         <a href="index.html">Գլխավոր</a>
         <a href="about.html">Մեր մասին</a>
         <a href="#routes">Երթուղիներ</a>
+        <a href="#booking">Ամրագրում</a>
         <a href="#contacts">Կապ</a>
     </nav>
+
 </header>
 
 <hr>
@@ -234,8 +238,7 @@
 
         <figure>
             <img src="../images/tatev.png"
-                 alt="Տաթևի վանական համալիր"
-                 >
+                 alt="Տաթևի վանական համալիր">
             <figcaption>Տաթևի վանական համալիր</figcaption>
         </figure>
     </section>
@@ -339,6 +342,181 @@
 
     <hr>
 
+
+    <section id="booking">
+        <h2>Ուղևորության ամրագրման հարցում</h2>
+
+        <p>
+            Լրացրեք ձևը՝ ձեր նախընտրած ճանապարհորդության մասին
+            ամրագրման հարցում ուղարկելու համար։
+        </p>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Անձնական տվյալներ</legend>
+
+                <p>
+                    <label for="first-name">Անուն</label><br>
+                    <input
+                            type="text"
+                            id="first-name"
+                            name="firstName"
+                            placeholder="Մուտքագրեք ձեր անունը"
+                            minlength="2"
+                            maxlength="30"
+                            required
+                    >
+                </p>
+
+                <p>
+                    <label for="last-name">Ազգանուն</label><br>
+                    <input
+                            type="text"
+                            id="last-name"
+                            name="lastName"
+                            placeholder="Մուտքագրեք ձեր ազգանունը"
+                            minlength="2"
+                            maxlength="40"
+                            required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Էլեկտրոնային հասցե</label><br>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            maxlength="100"
+                            required
+                    >
+                </p>
+
+                <p>
+                    <label for="phone">Հեռախոսահամար</label><br>
+                    <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+37499123456"
+                            pattern="\+374[0-9]{8}"
+                            title="Մուտքագրեք հեռախոսահամարը +374XXXXXXXX ձևաչափով"
+                            required
+                    >
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Ուղևորության ամրագրման հարցում</legend>
+
+                <p>
+                    <label for="route">Ընտրեք երթուղին</label><br>
+                    <select id="route" name="route" required>
+                        <option value="">Ընտրեք երթուղին</option>
+                        <option value="garni-geghard">Գառնի և Գեղարդ</option>
+                        <option value="sevan">Սևան</option>
+                        <option value="dilijan">Դիլիջան</option>
+                        <option value="tatev">Տաթև</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="passengers">Ուղևորների քանակ</label><br>
+                    <input
+                            type="number"
+                            id="passengers"
+                            name="passengers"
+                            min="1"
+                            max="20"
+                            required
+                    >
+                </p>
+
+                <p>
+                    <label for="start-date">Մեկնարկի ամսաթիվ</label><br>
+                    <input
+                            type="date"
+                            id="start-date"
+                            name="startDate"
+                            required
+                    >
+                </p>
+
+                <p>
+                    Ուղևորության տեսակը
+                </p>
+
+                <input
+                        type="radio"
+                        id="one-day"
+                        name="tripType"
+                        value="one-day"
+                        required
+                >
+                <label for="one-day">Մեկօրյա</label>
+
+                <br>
+
+                <input
+                        type="radio"
+                        id="multi-day"
+                        name="tripType"
+                        value="multi-day"
+                >
+                <label for="multi-day">Բազմօրյա</label>
+
+                <p>
+                    Լրացուցիչ ծառայություններ
+                </p>
+
+                <input
+                        type="checkbox"
+                        id="guide"
+                        name="additionalService"
+                        value="guide"
+                >
+                <label for="guide">Ցանկանում եմ ուղեկցորդ</label>
+
+                <br>
+
+                <input
+                        type="checkbox"
+                        id="transport"
+                        name="additionalService"
+                        value="transport"
+                >
+                <label for="transport">Ցանկանում եմ լրացուցիչ տրանսպորտային ծառայություն</label>
+
+                <p>
+                    <label for="message">Լրացուցիչ հաղորդագրություն կամ մեկնաբանություն</label><br>
+                    <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            cols="50"
+                            minlength="10"
+                            maxlength="500"
+                            placeholder="Գրեք ձեր ցանկությունները կամ հարցերը..."
+                    ></textarea>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Ուղարկել ամրագրման հարցումը</button>
+            <button type="reset">Մաքրել ձևը</button>
+
+        </form>
+    </section>
+
+    <hr>
+
     <section id="contacts">
         <h2>Կապ մեզ հետ</h2>
 
@@ -350,7 +528,9 @@
         </address>
 
         <p>
-            <a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.google.com/"
+               target="_blank"
+               rel="noopener noreferrer">
                 Գտնել մեզ քարտեզի վրա
             </a>
         </p>
