@@ -3,262 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Կինոակումբի գլխավոր էջ. ֆիլմերի դիտումներ, քննարկումներ և տոմսերի ամրագրում">
-    <title>Կինոակումբ - Գլխավոր (Ամբողջական)</title>
+    <meta name="description" content="Կինոակումբ՝ ֆիլմերի ցուցադրություններ և գրանցում">
+    <title>Կինոակումբ – Գրանցում</title>
+    <!-- CSS ֆայլի միացում -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header id="main-header">
-        <h1>Կինոակումբ «Սինեմա»</h1>
-        <p>Բարի գալուստ մի վայր, որտեղ կինոն դառնում է կյանքի մի մասնիկ, իսկ յուրաքանչյուր կադր՝ քննարկման թեմա:</p>
-        
-        <nav>
-            <ul>
-                <li><a href="#info-section">Ընդհանուր տեղեկություն</a></li>
-                <li><a href="#rules-section">Կանոններ և Քայլեր</a></li>
-                <li><a href="#schedule-section">Ժամանակացույց</a></li>
-                <li><a href="#media-section">Մեդիա Նյութեր</a></li>
-                <li><a href="#registration-section">Տոմսերի ամրագրում</a></li>
-                <li><a href="about.html">Ուսումնական էջ (About)</a></li>
-                <li><a href="mailto:info@cinemaclub.am">Գրել մեզ</a></li>
-            </ul>
+    <header id="top" class="site-header">
+        <h1>Կինոակումբ</h1>
+        <nav aria-label="Հիմնական նավիգացիա">
+            <a href="#movies">Ֆիլմեր</a>
+            <a href="#registration">Գրանցում</a>
         </nav>
     </header>
-
+    <hr>
+    
     <main>
-
-        <section id="info-section" data-type="info">
-            <h2>Մեր Ակումբի Մասին</h2>
-            <article>
-                <p>Մեր կինոակումբը ստեղծվել է <time datetime="2024-01-15">2024 թվականի հունվարին</time>: Սա մի վայր է, որտեղ հավաքվում են կինոսիրահարները՝ դիտելու համաշխարհային գրագետ ֆիլմեր և մասնակցելու բուռն քննարկումներին: Մենք հավատում ենք, որ յուրաքանչյուր <b>կադր</b> ունի իր գաղտնիքը:</p>
-                <p><strong>Զգուշացում.</strong> Տոմսերի հին արժեքը <del>2000 դրամ</del> էր, սակայն նոր սարքավորումների պատճառով այժմ այն դարձել է <ins>2500 դրամ</ins>: Մեր սրահի ընդհանուր մակերեսը կազմում է 150 մ<sup>2</sup>, որտեղ հյուրերին միշտ հասանելի է թարմ H<sub>2</sub>O ջուրը:</p>
-            </article>
-
-            <aside>
-                <h3>Կարևոր Նշում</h3>
-                <p><mark>Ուշացողներին</mark> չի թույլատրվում մտնել դահլիճ սեանսի սկսվելուց 10 րոպե անց: <small>Խնդրում ենք հարգել մյուս հանդիսատեսներին:</small></p>
-            </aside>
-
-            <br>
-            <picture>
-                <source media="(min-width: 800px)" srcset="images/main-large.jpg">
-                <source media="(min-width: 400px)" srcset="images/main-medium.jpg">
-                <img src="images/main-default.jpg" alt="Կինոակումբի գլխավոր սրահի տեսքը տարբեր էկրանների համար">
-            </picture>
+        <!-- Ֆիլմերի բաժին -->
+        <section id="movies">
+            <h2>Այս ամսվա ցուցադրությունները</h2>
+            <div class="movie-list">
+                <article class="movie-card">
+                    <h3>Տիեզերական Օդիսեյ</h3>
+                    <p>Գիտաֆանտաստիկա, 1968</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Կնքահայրը</h3>
+                    <p>Դրամա, 1972</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Մատրիցա</h3>
+                    <p>Մարտաֆիլմ, 1999</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Ինտերստելար</h3>
+                    <p>Գիտաֆանտաստիկա, 2014</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Փախուստ Շոուշենկից</h3>
+                    <p>Դրամա, 1994</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Քրեական ընթերցվածք</h3>
+                    <p>Քրեական, 1994</p>
+                </article>
+            </div>
         </section>
-
+        
         <hr>
-
-        <section id="rules-section">
-            <h2>Դիտման Կանոններ և Գրանցման Քայլեր</h2>
-            <p>Ակումբում հանգիստ և հաճելի մթնոլորտ ապահովելու համար խնդրում ենք հետևել այս կանոններին.</p>
-            
-            <ul>
-                <li>Անջատել բջջային հեռախոսների ձայնային ազդանշանները:</li>
-                <li>Չօգտագործել սեփական սնունդը (հատկապես բարձր ծամվող):
-                    <ul>
-                        <li>Թույլատրվում է միայն ակումբի ջուրը:</li>
-                        <li>Թույլատրվում է թեթև ադիբուդի:</li>
-                    </ul>
-                </li>
-                <li>Չխոսել ֆիլմի ընթացքում:</li>
-                <li>Մասնակցել քննարկմանը միայն ցանկության դեպքում:</li>
-            </ul>
-
-            <h3>Դիտմանը գրանցվելու քայլերը</h3>
-            <ol>
-                <li>Ընտրեք ֆիլմը ստորև ներկայացված ժամանակացույցի աղյուսակից:</li>
-                <li>Լրացրեք էջի վերջում գտնվող տոմսերի ամրագրման հայտը ձեր տվյալներով:</li>
-                <li>Ստացեք հաստատման հաղորդագրությունը ձեր էլեկտրոնային փոստին:</li>
-                <li>Մոտեցեք ակումբ սեանսի սկսվելուց 15 րոպե առաջ:</li>
-            </ol>
-        </section>
-         <hr>
-
-        <section id="schedule-section">
-            <h2>Ցուցադրման Ժամանակացույց</h2>
-            
-            <article>
-                <h3>Ֆիլմ «Ինսեպշն» (Inception)</h3>
-                <p>Ռեժիսոր Քրիստոֆեր Նոլանի հանճարեղ գործը երազների և ենթագիտակցության մանիպուլյացիայի մասին:</p>
-            </article>
-
-            <article>
-                <h3>Ֆիլմ «Կնքահայրը» (The Godfather)</h3>
-                <p>Կլասիկ քրեական դրամա մաֆիոզ ընտանիքի պատմության, հավատարմության և իշխանության մասին:</p>
-            </article>
-
-            <article>
-                <h3>Ֆիլմ «Ինտերստելար» (Interstellar)</h3>
-                <p>Գիտաֆանտաստիկ պատմություն տիեզերական ճամփորդության և մարդկային սիրո ուժի մասին:</p>
-            </article>
-
-            <br>
-            <table border="1" class="movie-table">
-                <caption>Այս շաբաթվա ֆիլմերի ցուցակը</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Ֆիլմ</th>
-                        <th scope="col">Ժանր</th>
-                        <th scope="col">Ռեժիսոր</th>
-                        <th scope="col">Տևողություն</th>
-                        <th scope="col">Ցուցադրման ժամ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ինսեպշն</td>
-                        <td rowspan="2">Ֆանտաստիկա</td>
-                        <td>Ք. Նոլան</td>
-                        <td>148 րոպե</td>
-                        <td>18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Ինտերստելար</td>
-                        <td>Ք. Նոլան</td>
-                        <td>169 րոպե</td>
-                        <td>21:00</td>
-                    </tr>
-                    <tr>
-                        <td>Կնքահայրը</td>
-                        <td>Դրամա</td>
-                        <td>Ֆ. Կոպպոլա</td>
-                        <td>175 րոպե</td>
-                        <td>19:00</td>
-                    </tr>
-                    <tr>
-                        <td>Պուլպ Ֆիքշն</td>
-                        <td>Քրեական</td>
-                        <td>Ք. Տարանտինո</td>
-                        <td>154 րոպե</td>
-                        <td>20:30</td>
-                    </tr>
-                    <tr>
-                        <td>Շերլոկ Հոլմս</td>
-                        <td>Դետեկտիվ</td>
-                        <td>Գ. Ռիչի</td>
-                        <td>128 րոպե</td>
-                        <td>17:00</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4">Ընդհանուր ցուցադրվող ֆիլմերի քանակը՝</td>
-                        <td>5 ֆիլմ</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-
-        <hr>
-
-        <section id="media-section">
-            <h2>Մեդիա Նյութեր և Պատկերասրահ</h2>
-            
-            <h3>Ակումբի Ձայնային Ուղերձ</h3>
-            <audio controls>
-                <source src="media/audio.mp3" type="audio/mpeg">
-                Ձեր բրաուզերը չի աջակցում աուդիո տարրը:
-            </audio>
-            <p><i>Ձայնագրության տեքստային վերծանում.</i> «Բարև ձեզ, հարգելի կինոսիրահարներ: Ուրախ ենք ձեզ տեսնել մեր կինոակումբում: Դիտեք լավագույն ֆիլմերը մեզ հետ»:</p>
-
-            <h3>Ֆիլմի Թրեյլեր (Ենթագրերով)</h3>
-            <video controls width="600">
-                <source src="media/video.mp4" type="video/mp4">
-                <track kind="subtitles" src="media/subtitles.vtt" srclang="hy" label="Հայերեն" default>
-                Ձեր բրաուզերը չի աջակցում վիդեո տարրը:
-            </video>
-
-            <h3>Տեսարաններ մեր ակումբից</h3>
-            <p>
-                <img src="images/poster.jpg" alt="Պոստեր" width="150">
-                <img src="images/projector.jpg" alt="Պրոյեկտոր" width="150">
-                <img src="images/seats.jpg" alt="Աթոռներ" width="150">
-                <img src="images/lobby.jpg" alt="Նախասրահ" width="150">
-            </p>
-
-            <figure>
-                <img src="images/screen.jpg" alt="Էկրան" width="400">
-                <figcaption>Պատկեր 1: Ֆիլմի ցուցադրման ընթացքը մեր հիմնական էկրանին:</figcaption>
-            </figure>
-        </section>
-
-        <hr>
-
-        <section id="registration-section">
+        
+        <!-- Գրանցման ձևի բաժին -->
+        <section id="registration">
             <h2>Ֆիլմի դիտման գրանցման ձև</h2>
-            <p>Լրացրեք հայտը՝ ձեր նախընտրած ֆիլմի դիտման տոմսերը ամրագրելու համար:</p>
-
-            <form action="https://httpbin.org" method="POST">
+            
+            <form action="#" method="POST" id="registration-form">
+                <!-- Առաջին Fieldset: Անձնական տվյալներ -->
                 <fieldset>
                     <legend>Անձնական տվյալներ</legend>
-                    <p>
-                        <label for="txt-name">Անուն (պարտադիր):</label><br>
-                        <input type="text" id="txt-name" name="customerName" required minlength="2" maxlength="30">
-                    </p>
-                    <p>
-                        <label for="txt-email">Էլեկտրոնային հասցե (պարտադիր):</label><br>
-                        <input type="email" id="txt-email" name="customerEmail" required>
-                    </p>
-                    <p>
-                        <label for="txt-phone">Հեռախոսահամար (+374XX-XX-XX-XX):</label><br>
-                        <input type="tel" id="txt-phone" name="customerPhone" pattern="^\+374[0-9]{8}$" placeholder="+37499123456">
-                    </p>
+                    
+                    <label for="fullname">Անուն Ազգանուն:</label>
+                    <input type="text" id="fullname" name="fullname" 
+                           required minlength="3" maxlength="50" 
+                           pattern="[Ա-Ֆա-ֆ\s]+" 
+                           placeholder="Օրինակ՝ Անի Հակոբյան">
+                    
+                    <label for="email">Էլ. փոստ:</label>
+                    <input type="email" id="email" name="email" 
+                           required placeholder="example@mail.com">
+                    
+                    <label for="phone">Հեռախոսահամար:</label>
+                    <input type="tel" id="phone" name="phone" 
+                           required pattern="[0-9]{9}" 
+                           placeholder="09XXXXXXXX">
                 </fieldset>
-
-                <br>
-
+                
+                <!-- Երկրորդ Fieldset: Ֆիլմի դիտման գրանցում -->
                 <fieldset>
-                    <legend>Ամրագրման մանրամասներ</legend>
-                    <p>
-                        <label for="sel-movie">Ընտրեք ֆիլմը (պարտադիր):</label><br>
-                        <select id="sel-movie" name="selectedMovie" required>
-                            <option value="">-- Ընտրել ֆիլմը --</option>
-                            <option value="inception">Ինսեպշն</option>
-                            <option value="godfather">Կնքահայրը</option>
-                            <option value="interstellar">Ինտերստելար</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="dat-show">Ցուցադրման օր/ժամ:</label><br>
-                        <input type="datetime-local" id="dat-show" name="showDateTime">
-                    </p>
-                    <p>
-                        <label for="num-tickets">Տոմսերի քանակ (1-5 տեղ):</label><br>
-                        <input type="number" id="num-tickets" name="ticketsQuantity" min="1" max="5" value="1">
-                    </p>
-                    <p>
-                        <label>Նախընտրելի ֆորմատ:</label><br>
-                        <input type="radio" id="rad-2d" name="movieFormat" value="2D" checked> <label for="rad-2d">2D</label>
-                        <input type="radio" id="rad-3d" name="movieFormat" value="3D"> <label for="rad-3d">3D</label>
-                    </p>
-                    <p>
-                        <label for="txa-message">Լրացուցիչ հաղորդագրություն:</label><br>
-                        <textarea id="txa-message" name="customerMessage" rows="3" cols="30"></textarea>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="chk-agree" name="termsAgreement" value="agreed" required>
-                        <label for="chk-agree">Համաձայն եմ ակումբի դիտման կանոններին (պարտադիր):</label>
-                    </p>
+                    <legend>Ֆիլմի դիտման գրանցման ձև</legend>
+                    
+                    <!-- Սպեցիֆիկության ցուցադրման համար ավելացված class -->
+                    <label for="movie-select" class="special-label">Ընտրեք ֆիլմը:</label>
+                    <select id="movie-select" name="movie" required>
+                        <option value="">-- Ընտրեք ֆիլմ --</option>
+                        <option value="space">Տիեզերական Օդիսեյ</option>
+                        <option value="godfather">Կնքահայրը</option>
+                        <option value="matrix">Մատրիցա</option>
+                        <option value="interstellar">Ինտերստելար</option>
+                        <option value="shawshank">Փախուստ Շոուշենկից</option>
+                        <option value="pulp">Քրեական ընթերցվածք</option>
+                    </select>
+                    
+                    <label for="screening-date">Ցուցադրության օր:</label>
+                    <input type="date" id="screening-date" name="screening-date" required>
+                    
+                    <label for="screening-time">Ցուցադրության ժամ:</label>
+                    <input type="time" id="screening-time" name="screening-time" required>
+                    
+                    <label for="tickets">Տոմսերի քանակ:</label>
+                    <input type="number" id="tickets" name="tickets" 
+                           min="1" max="10" required placeholder="1-10">
+                    
+                    <label>Ձևաչափ:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="format-2d" name="format" value="2D" required>
+                        <label for="format-2d">2D</label>
+                        
+                        <input type="radio" id="format-3d" name="format" value="3D">
+                        <label for="format-3d">3D</label>
+                    </div>
+                    
+                    <label>Լրացուցիչներ:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="popcorn" name="extras" value="popcorn">
+                        <label for="popcorn">Պոպկորն</label>
+                        
+                        <input type="checkbox" id="drink" name="extras" value="drink">
+                        <label for="drink">Ըմպելիք</label>
+                    </div>
+                    
+                    <label for="message">Հաղորդագրություն:</label>
+                    <textarea id="message" name="message" rows="4" maxlength="200" 
+                              placeholder="Ձեր ցանկությունները..."></textarea>
                 </fieldset>
-
-                <br>
-                <p>
-                    <button type="submit">Հաստատել ամրագրումը</button>
-                    <button type="reset">Մաքրել ձևը</button>
-                </p>
+                
+                <div class="form-buttons">
+                    <button type="submit">Գրանցվել</button>
+                    <button type="reset">Մաքրել</button>
+                </div>
             </form>
         </section>
-
     </main>
-
-    <footer id="main-footer">
-        <address>
-            Գտնվելու վայրը՝ Ալեք Մանուկյան 1, Գյումրի, Հայաստան<br>
-            Հեռախոս՝ +374 99 00-00-00
-        </address>
-        <p><small>&copy; 2026 Կինոակումբ «Սինեմա». Բոլոր իրավունքները պաշտպանված են:</small></p>
+    
+    <hr>
+    <footer>
+        <p>&copy; 2026 Կինոակումբ</p>
+        <a href="#top">Վերադառնալ վերև</a>
     </footer>
-
 </body>
 </html>
