@@ -3,254 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="«Հարմոնիա» երաժշտական դպրոց. ներկայացում, երաժշտական դասեր, ընդունվելու քայլեր, դասացուցակ, լուսանկարներ, ձայնային ներկայացում և տեսանյութ։">
-  <title>«Հարմոնիա» երաժշտական դպրոց</title>
+  <title>Երաժշտական դպրոց — Գլխավոր</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="page-home" data-page="home">
-
-  <header id="site-header" class="site-header">
-    <h1>«Հարմոնիա» երաժշտական դպրոց</h1>
-    <p>Դաշնամուր, ջութակ, կիթառ և վոկալ՝ երեխաների ու մեծահասակների համար։</p>
-    <nav id="main-nav" aria-label="Կայքի հիմնական մենյու">
-      <ul>
-        <li><a href="#intro">Ներածություն</a></li>
-        <li><a href="#description">Դպրոցի մասին</a></li>
-        <li><a href="#opportunities">Հնարավորություններ</a></li>
-        <li><a href="#timetable">Դասացուցակ</a></li>
-        <li><a href="#media">Մեդիա</a></li>
-        <li><a href="about.html">Կանոններ և կոնտակտներ</a></li>
+<body>
+  <header class="site-header">
+    <h1> Երաժշտական դպրոց</h1>
+    <nav aria-label="Հիմնական մենյու">
+      <ul class="nav-list">
+        <li><a href="index.html">Գլխավոր</a></li>
+        <li><a href="#sections">Բաժիններ</a></li>
+        <li><a href="#info">Տեղեկություն</a></li>
+        <li><a href="#gallery">Պատկերասրահ</a></li>
+        <li><a href="school.html">Դպրոցի մասին</a></li>
+        <li><a href="register.html">Գրանցում</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content">
-
-    <section id="intro" class="content-section" aria-labelledby="intro-title">
-      <h2 id="intro-title">Ներածություն</h2>
-      <p>
-        «Հարմոնիա» երաժշտական դպրոցը ստեղծվել է նրանց համար, ովքեր ուզում են սովորել նվագել՝ անկախ տարիքից և
-        նախնական պատրաստվածությունից։ Դպրոցում գործում են չորս բաժին, իսկ ուսումնական տարին սկսվում է
-        <time datetime="2026-10-05">2026 թ. հոկտեմբերի 5-ին</time>։
-      </p>
-      <p>
-        <mark>Գրանցումը բաց է մինչև սեպտեմբերի 30-ը։</mark>
-        Առաջին դասը կարող եք փորձել առանց պարտավորության․
-        <s>փորձնական դասը վճարովի էր</s>, իսկ այժմ <ins datetime="2026-09-01">առաջին փորձնական դասն անվճար է</ins>։
-      </p>
-      <p>
-        <a href="#timetable"><img
-          src="images/piano-keys.jpg"
-          alt="Դաշնամուրի ստեղները և նոտաներ. սեղմեք՝ դասացուցակին անցնելու համար"
-          width="600" height="400"></a>
-      </p>
+  <main>
+    <section class="hero" id="hero">
+      <picture>
+        <source media="(min-width: 900px)" srcset="images/hero-large.jpg">
+        <source media="(min-width: 500px)" srcset="images/hero-medium.jpg">
+        <img src="C:\Users\User\gik519b\Vrezh Karapetyan\WEB\Լաբորատոր աշխատանք 2\images\hero-small.jpeg"
+             srcset="images/hero-small.jpeg 480w, images/hero-medium.jpeg 800w, images/hero-large.jpeg 1400w"
+             sizes="(min-width: 900px) 1200px, 100vw"
+             alt="Երաժշտական դպրոցի դահլիճ՝ դաշնամուրով և աշակերտներով">
+      </picture>
+      <h2>Երաժշտությունը սկսվում է այստեղ</h2>
+      <p>Դասեր երեխաների և մեծահասակների համար՝ փորձառու դասավանդողների հետ:</p>
+      <a class="btn" href="register.html">Գրանցվել դասի</a>
     </section>
 
-    <hr>
-
-    <section id="description" class="content-section" aria-labelledby="description-title">
-      <h2 id="description-title">Դպրոցի նկարագրությունը</h2>
-      <p>
-        Դասերը անցկացվում են փոքր խմբերով և անհատապես։ Դասասենյակները հագեցած են պրոֆեսիոնալ գործիքներով,
-        իսկ համերգային դահլիճի մակերեսը <span class="hall-area" data-unit="m2">60 մ<sup>2</sup></span> է․
-        այնտեղ ամեն եռամսյակ անցկացվում են աշակերտների ելույթները։
-        Դաշնամուրի կարգավորման համար հիմք է ընդունվում A<sub>4</sub> = 440 Հց հաճախականությունը։
-      </p>
-
-      <article id="teaching-method" class="method-card" data-topic="method" aria-labelledby="method-title">
-        <h3 id="method-title">Դասավանդման մեթոդը</h3>
-        <p>
-          Յուրաքանչյուր դաս սկսվում է տաքացումից, ապա անցնում են նոր նյութին։
-          <dfn>Սոլֆեջիոն</dfn>՝ ձայնաստիճանները երգելով և լսողությամբ սովորելու առարկան, անցնում է բոլոր բաժինների
-          հիմքով։ Պարբերաբար նվագում ենք նաև դանդաղ և արագ մեղեդիներ, օրինակ՝
-          <i lang="it">adagio</i> և <i lang="it">allegro</i> տեմպերով։
-        </p>
-        <p>
-          Ուսուցիչներից մեկն ասում է․
-          <q>Ամեն օր 15 րոպե՝ ավելի արդյունավետ է, քան շաբաթը մեկ՝ երկու ժամ։</q>
-          Ուստի տանը պարապելը <em>պարտադիր</em> է, իսկ <b>ամենօրյա պարապմունքը</b> ավելի կարևոր է, քան երկար
-          պարապմունքները։
-        </p>
-      </article>
-
-      <blockquote cite="https://example.com/student-review">
-        <p>Առաջին ամսվա վերջում ես արդեն կարողանում էի նվագել պարզ մեղեդի՝ առանց նոտաների։</p>
-        <footer>— «Աշակերտի կարծիք» (հորինված մեջբերում)</footer>
-      </blockquote>
-
-      <p>
-        <strong>Կարևոր զգուշացում.</strong> դասերին հեռախոսը պետք է անջատված լինի, որպեսզի չխանգարի նվագելուն։
-        Ուշադրություն ուղղագրությանը՝ ճիշտ է «դաշնամուր», այլ ոչ թե սխալ գրված <u>դաշնամուռ</u>։
-      </p>
-      <p>
-        Մեր պրակտիկան համընկնում է երաժշտական կրթության ընդհանուր սկզբունքների հետ․ մանրամասները
-        <a href="https://en.wikipedia.org/wiki/Music_education" target="_blank" rel="noopener noreferrer">Վիքիպեդիայի անգլերեն էջում</a>
-        են։ Դասերը գնահատելու համար դպրոցը չի օգտագործում գնահատականներ. ավելի կարևոր է առաջընթացը, ոչ թե ցուցանիշը։
-        <small>Այս կայքի տվյալները ուսումնական են և հորինված։</small>
-      </p>
+    <section id="sections">
+      <h2>Երաժշտական բաժիններ</h2>
+      <div class="card-grid">
+        <article class="card" id="piano">
+          <h3>Դաշնամուր</h3>
+          <p>Դասեր սկսնակների և առաջադեմների համար՝ դասական ու ժամանակակից երաժշտություն:</p>
+        </article>
+        <article class="card" id="violin">
+          <h3>Ջութակ</h3>
+          <p>Ձայնի դրվածք, աղեղի տեխնիկա և անսամբլային նվագ:</p>
+        </article>
+        <article class="card" id="vocal">
+          <h3>Վոկալ</h3>
+          <p class="note" id="special-note">Շնչառություն, ինտոնացիա և բեմական վարպետություն:</p>
+          <div class="long-text">
+            <p>Վոկալի դասընթացը ներառում է շնչառական վարժություններ, ձայնի տաքացում, ինտոնացիայի զարգացում,
+            երգացանկի ընտրություն, միկրոֆոնի հետ աշխատանք և բեմական ելույթների պատրաստում: Սովորողները
+            մասնակցում են տարեվերջյան համերգին և քաղաքային մրցույթներին: Դասերը անցկացվում են անհատական
+            և խմբային ձևաչափով՝ հաշվի առնելով սովորողի տարիքն ու մակարդակը:</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <hr>
-
-    <section id="opportunities" class="content-section" aria-labelledby="opportunities-title">
-      <h2 id="opportunities-title">Ուսումնական հնարավորություններ և ընդունելություն</h2>
-
-      <p>Դպրոցում կարող եք․</p>
-      <ul id="opportunities-list">
-        <li>Սովորել անհատական դասերով
-          <ul>
-            <li>դաշնամուր և սինթեզատոր</li>
-            <li>ջութակ և կիթառ</li>
-          </ul>
-        </li>
-        <li>Երգել երգչախմբում և վոկալ խմբում</li>
-        <li>Հաճախել սոլֆեջիոյի և երաժշտական տեսության դասերի</li>
-        <li>Մասնակցել եռամսյակային համերգներին</li>
+    <section id="info">
+      <h2>Ընդհանուր տեղեկություն</h2>
+      <p>Դպրոցը գործում է երկուշաբթիից շաբաթ՝ <time datetime="09:00">9:00</time>-ից <time datetime="20:00">20:00</time>:
+         Խմբերը փոքր են՝ առավելագույնը 8 սովորող:</p>
+      <h3>Գործիքների ցանկ</h3>
+      <ul class="instruments">
+        <li>Դաշնամուր</li>
+        <li>Ջութակ</li>
+        <li>Կիթառ</li>
+        <li>Ֆլեյտա</li>
+        <li>Թմբուկ</li>
       </ul>
-
-      <p>Ընդունվելու համար կատարեք հետևյալ քայլերը․</p>
-      <ol id="admission-steps">
-        <li>Լրացրեք գրանցման հայտը դպրոցի էլ. փոստով։</li>
-        <li>Մասնակցեք անվճար փորձնական դասին։</li>
-        <li>Ընտրեք բաժինը, դասավանդողին և դասի ժամը։</li>
-        <li>Վճարեք առաջին ամսվա վարձը և ստացեք դասացուցակը։</li>
-      </ol>
-    </section>
-
-    <hr>
-
-    <section id="timetable" class="content-section" aria-labelledby="timetable-title">
-      <h2 id="timetable-title">Դասացուցակ և վճարներ</h2>
-      <p>
-        Դաշնամուրի ամսավճարը՝
-        <del datetime="2026-08-15">18000 դրամ</del> <ins datetime="2026-09-01">20000 դրամ</ins>։
-        Ջութակի դասը տեղափոխվել է՝ <s>17:00</s>-ից <ins datetime="2026-09-01">18:00</ins>։
-      </p>
-      <table id="lessons-table" class="data-table" data-rows="5">
-        <caption>Երաժշտական դասերի ժամանակացույցը և ամսավճարները (տվյալները հորինված են)</caption>
+      <h3>Դասերի ժամանակացույց</h3>
+      <table class="schedule">
+        <caption>Շաբաթական ժամանակացույց</caption>
         <thead>
-          <tr>
-            <th scope="col">Դաս</th>
-            <th scope="col">Բաժին</th>
-            <th scope="col">Դասավանդող</th>
-            <th scope="col">Ժամ</th>
-            <th scope="col">Ամսավճար (դրամ)</th>
-          </tr>
+          <tr><th scope="col">Դաս</th><th scope="col">Օր</th><th scope="col">Ժամ</th><th scope="col">Ամսավճար</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Դաշնամուր</th>
-            <td rowspan="2">Ստեղնավոր գործիքներ</td>
-            <td>Անի Գրիգորյան</td>
-            <td>16:00</td>
-            <td>20000</td>
-          </tr>
-          <tr>
-            <th scope="row">Սինթեզատոր</th>
-            <td>Արամ Հակոբյան</td>
-            <td>17:00</td>
-            <td>18000</td>
-          </tr>
-          <tr>
-            <th scope="row">Ջութակ</th>
-            <td>Աղեղնավոր գործիքներ</td>
-            <td>Նարինե Սարգսյան</td>
-            <td>18:00</td>
-            <td>19000</td>
-          </tr>
-          <tr>
-            <th scope="row">Վոկալ</th>
-            <td>Երգեցողություն</td>
-            <td>Լուսինե Ավետիսյան</td>
-            <td>17:30</td>
-            <td>17000</td>
-          </tr>
-          <tr>
-            <th scope="row">Կիթառ</th>
-            <td>Կիթառային գործիքներ</td>
-            <td>Դավիթ Մկրտչյան</td>
-            <td>19:00</td>
-            <td>16000</td>
-          </tr>
+          <tr><td>Դաշնամուր</td><td>Երկուշաբթի</td><td>16:00</td><td>18 000 ֏</td></tr>
+          <tr><td>Ջութակ</td><td>Երեքշաբթի</td><td>17:00</td><td>20 000 ֏</td></tr>
+          <tr><td>Վոկալ</td><td>Չորեքշաբթի</td><td>18:00</td><td>15 000 ֏</td></tr>
+          <tr><td>Կիթառ</td><td>Հինգշաբթի</td><td>16:30</td><td>16 000 ֏</td></tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="4">Գրառումների քանակը</td>
-            <td>5</td>
-          </tr>
-        </tfoot>
       </table>
     </section>
 
-    <hr>
-
-    <section id="media" class="content-section" aria-labelledby="media-title">
-      <h2 id="media-title">Լուսանկար, ձայնային ներկայացում և տեսանյութ</h2>
-
-      <figure id="violin-figure">
-        <img
-          src="images/violin-notes.jpg"
-          alt="Ջութակ և աղեղ՝ ձայնանիշերով նոտագրության վրա"
-          width="600" height="400">
-        <figcaption>Ջութակի բաժնի խորհրդանշական պատկերը (ուսումնական նկար)։</figcaption>
-      </figure>
-
-      <p>Լսեք դպրոցի կարճ ձայնային ներկայացումը՝</p>
-      <audio id="school-audio" controls preload="none">
-        <source src="media/school-intro.mp3" type="audio/mpeg">
-        <source src="media/school-intro.ogg" type="audio/ogg">
-        Ձեր զննիչը չի աջակցում ձայնային նվագարկիչը։
-      </audio>
-      <p id="audio-transcript">
-        <b>Ձայնի վերծանում.</b> [Դաշնամուրային կարճ մեղեդի՝ մոտ 11 վայրկյան։ Խոսք չկա. մեղեդին դպրոցի
-        «հնչյունային այցեքարտն» է։]
-      </p>
-
-      <p>Դիտեք տեսանյութը՝ հայերեն ենթագրերով․</p>
-      <video id="school-video" controls preload="metadata" width="640" height="360" poster="images/piano-keys.jpg">
-        <source src="media/school-video.mp4" type="video/mp4">
-        <source src="media/school-video.webm" type="video/webm">
-        <track kind="subtitles" src="media/school-subtitles.vtt" srclang="hy" label="Հայերեն" default>
-        Ձեր զննիչը չի աջակցում տեսանյութի նվագարկիչը։
-      </video>
+    <section id="gallery">
+      <h2>Պատկերասրահ</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/piano.jpg" alt="Դաշնամուրի ստեղներ մոտ պլանով">
+          <figcaption>Դաշնամուրի դասարան</figcaption>
+        </figure>
+        <figure>
+          <img src="images/violin.jpg" alt="Ջութակ և աղեղ նոտաների վրա">
+          <figcaption>Ջութակի դաս</figcaption>
+        </figure>
+        <figure>
+          <img src="images/guitar.jpg" alt="Աշակերտը նվագում է ակուստիկ կիթառ">
+          <figcaption>Կիթառի խումբ</figcaption>
+        </figure>
+        <figure>
+          <img src="images/concert.jpg" alt="Աշակերտների համերգը դպրոցի դահլիճում">
+          <figcaption>Տարեվերջյան համերգ</figcaption>
+        </figure>
+      </div>
     </section>
-
-    <hr>
-
-    <section id="glossary" class="content-section" aria-labelledby="glossary-title">
-      <h2 id="glossary-title">Երաժշտական հիմնական հասկացություններ</h2>
-      <dl id="music-terms">
-        <dt>Ռիթմ</dt>
-        <dd>Ձայների տևողությունների և շեշտերի հերթափոխումը ժամանակի մեջ։</dd>
-        <dt>Մեղեդի</dt>
-        <dd>Տարբեր բարձրության ձայների հաջորդականություն, որն ընկալվում է որպես մեկ մտահղացում։</dd>
-        <dt>Տեմպ</dt>
-        <dd>Երաժշտության կատարման արագությունը, որը հաճախ չափվում է
-          <abbr title="Beats per minute՝ զարկ րոպեում">BPM</abbr>-ով։</dd>
-      </dl>
-    </section>
-
-    <aside id="more-info" class="side-note" aria-labelledby="more-info-title">
-      <h2 id="more-info-title">Օգտակար է իմանալ</h2>
-      <p>
-        Դպրոցի կանոնները, կոնտակտները և կայքի ուսումնական օրինակները ամփոփված են
-        <a href="about.html">երկրորդ էջում</a>։
-      </p>
-    </aside>
-
   </main>
 
-  <footer id="site-footer" class="site-footer">
+  <footer class="site-footer">
+    <p>&copy; 2025  Երաժշտական դպրոց</p>
     <address>
-      «Հարմոնիա» երաժշտական դպրոց<br>
-      Երևան, Աբովյան փողոց 12 (հորինված հասցե)<br>
-      Էլ. փոստ՝ <a href="mailto:info@example.com">info@example.com</a>
+      Երևան, Մուզեյի փ. 9 ·
+      <a href="tel:+37410123456">+374 10 123 456</a> ·
+      <a href="mailto:info@music9.am">info@music9.am</a>
     </address>
-    <p>
-      Վերջին թարմացումը՝ <time datetime="2026-09-28">2026 թ. սեպտեմբերի 28</time>։
-      <a href="#site-header">Վերադառնալ վերև</a>
-    </p>
-    <p><small>© 2026 «Հարմոնիա» երաժշտական դպրոց. ուսումնական կայք։</small></p>
   </footer>
-
 </body>
 </html>
