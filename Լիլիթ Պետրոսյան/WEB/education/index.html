@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ուսումնական Կենտրոն - Բոլոր Դասընթացները</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo"><a href="index.html">
+                <img src="images/logo.svg" alt="EduCenter Logo" style="height: 60px;"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="#courses">Դասընթացներ</a></li>
+                <li><a href="about.html">Մեր մասին</a></li>
+                <li><a href="contacts.html">Կապ</a></li>
+            </ul>
+        </nav>
+        <a href="login.html" class="secondary">Մուտք</a>
+    </header>
+
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Սովորիր լավագույն մասնագետներից</h1>
+                <p>Զարգացրու հմտություններդ, ստացիր որակյալ կրթություն և կառուցիր քո հաջողակ կարիերան մեզ հետ։</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Դիտել Դասընթացները</a>
+                    <a href="free.html" class="btn btn-outline">Անվճար փորձնական դաս</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-section">
+        <h2>Նկարներ մեր կենտրոնից</h2>
+
+        <div class="slider-container">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <div class="slides-window">
+                <div class="slides-track">
+                    <div class="slide-item">
+                        <picture class="slide-picture">
+                            <source media="(max-width: 768px)" srcset="images/info-mobile.jpg">
+                            <img src="images/info.jpg" alt="Կենտրոնի տեղեկատվական ստենդ և ընդունարան">
+                        </picture>
+                        <p class="slide-caption">Կենտրոնի տեղեկատվական ստենդը և ընդունարանը</p>
+                    </div>
+                    <div class="slide-item">
+                        <picture class="slide-picture">
+                            <source media="(max-width: 768px)" srcset="images/english-mobile.jpg">
+                            <img src="images/english.jpg" alt="Անգլերեն լեզվի ժամանակակից լսարան">
+                        </picture>
+                        <p class="slide-caption">Օտար լեզվի ժամանակակից լսարաններից մեկը</p>
+                    </div>
+                    <div class="slide-item">
+                        <picture class="slide-picture">
+                            <source media="(max-width: 768px)" srcset="images/hall-mobile.jpg">
+                            <img src="images/hall.jpg" alt="Մեր կենտրոնի ընդարձակ դահլիճը">
+                        </picture>
+                        <p class="slide-caption">Մեր կենտրոնի ընդարձակ սենյակներից</p>
+                    </div>
+                    <div class="slide-item">
+                        <picture class="slide-picture">
+                            <source media="(max-width: 768px)" srcset="images/library-mobile.jpg">
+                            <img src="images/library.jpg" alt="Մասնագիտական գրադարան և ընթերցասրահ">
+                        </picture>
+                        <p class="slide-caption">Մասնագիտական գրադարանը և ընթերցասրահը</p>
+                    </div>
+                    <div class="slide-item">
+                        <picture class="slide-picture">
+                            <source media="(max-width: 768px)" srcset="images/theatre-mobile.jpg">
+                            <img src="images/theatre.jpg" alt="Դահլիճը">
+                        </picture>
+                        <p class="slide-caption">Դահլիճը</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2>Մեր Բոլոր Դասընթացները</h2>
+            <p class="section-desc">Ընտրեք ձեզ հարմար ուղղությունը և սովորեք ճկուն ժամանակացույցով՝ ցերեկային կամ
+                երեկոյան խմբերում։</p>
+
+            <div class="courses-grid">
+
+                <div class="course-card">
+                    <h3>Վեբ Ծրագրավորում (Frontend / Backend)</h3>
+                    <p>Սովորեք HTML, CSS, JavaScript, React և Node.js զրոյից մինչև պրոֆեսիոնալ մակարդակ:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 12:00 - 15:00</span>
+                        <span>🌙 Երեկոյան: 18:30 - 21:00</span>
+                    </div>
+                    <a href="web-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>UI/UX Դիզայն</h3>
+                    <p>Ստեղծեք ժամանակակից և հարմարավետ ինտերֆեյսներ Figma-ի և գրաֆիկական այլ գործիքների միջոցով:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 10:00 - 13:00</span>
+                        <span>🌙 Երեկոյան: 19:00 - 21:00</span>
+                    </div>
+                    <a href="uiux-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Գրաֆիկական Դիզայն</h3>
+                    <p>Photoshop, Illustrator, InDesign և այլ ծրագրեր՝ պրոֆեսիոնալ գրաֆիկա ստեղծելու համար:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 14:00 - 17:00</span>
+                        <span>🌙 Երեկոյան: 18:00 - 20:00</span>
+                    </div>
+                    <a href="graphic-design-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Անգլերեն Լեզու (General & Business)</h3>
+                    <p>Խոսակցական անգլերենի զարգացում, քերականություն և բիզնես անգլերեն տարբեր մակարդակների համար:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 11:00 - 13:00</span>
+                        <span>🌙 Երեկոյան: 18:30 - 20:30</span>
+                    </div>
+                    <a href="english-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Թվային Մարկետինգ (SMM / SEO)</h3>
+                    <p>Սոցիալական մեդիայի կառավարում, գովազդների կարգավորում (Facebook, Instagram, Google Ads) և SEO:
+                    </p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 15:00 - 18:00</span>
+                        <span>🌙 Երեկոյան: 19:00 - 21:00</span>
+                    </div>
+                    <a href="digital-marketing-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Python Ծրագրավորում</h3>
+                    <p>Ծրագրավորման հիմունքներ, ավտոմատացում, վերլուծություն և Python-ի կիրառությունը տարբեր
+                        ոլորտներում:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 13:00 - 16:00</span>
+                        <span>🌙 Երեկոյան: 18:00 - 21:00</span>
+                    </div>
+                    <a href="python-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Տվյալների Վերլուծություն (Data Analytics)</h3>
+                    <p>Excel, SQL, Power BI և տվյալների վերլուծության հիմնական գործիքներն ու մեթոդաբանությունը:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 10:00 - 12:00</span>
+                        <span>🌙 Երեկոյան: 19:00 - 21:00</span>
+                    </div>
+                    <a href="data-analytics-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Մոբայլ Հավելվածների Մշակում</h3>
+                    <p>Սովորեք ստեղծել բջջային հավելվածներ iOS և Android օպերացիոն համակարգերի համար (Flutter / React
+                        Native):</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 16:00 - 19:00</span>
+                        <span>🌙 Երեկոյան: 18:30 - 21:00</span>
+                    </div>
+                    <a href="mobile-development-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Հաշվապահություն և 1Ս Ձեռնարկություն</h3>
+                    <p>ՀՀ հարկային օրենսդրություն, հաշվապահական հաշվառում և 1C ծրագրի գործնական կիրառություն:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 11:00 - 14:00</span>
+                        <span>🌙 Երեկոյան: 17:30 - 19:30</span>
+                    </div>
+                    <a href="accounting-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Ֆինանսական Մենեջմենթ</h3>
+                    <p>Բյուջետավորում, ֆինանսական հաշվետվությունների վերլուծություն և բիզնեսի պլանավորում:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 14:00 - 16:00</span>
+                        <span>🌙 Երեկոյան: 18:00 - 20:00</span>
+                    </div>
+                    <a href="financial-management-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Նախագծերի Կառավարում (Agile / Scrum)</h3>
+                    <p>Առաջնորդեք թիմեր և կառավարեք նախագծեր ժամանակակից մեթոդոլոգիաներով (Agile, Scrum, Jira):</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 12:00 - 14:00</span>
+                        <span>🌙 Երեկոյան: 19:00 - 21:00</span>
+                    </div>
+                    <a href="project-management-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Նախադպրոցական Կրթության Մեթոդիկա</h3>
+                    <p>Ժամանակակից մանկավարժություն, երեխաների խոսքի զարգացման և վաղ տարիքի կրթության մեթոդներ:</p>
+                    <div class="course-schedule">
+                        <span>☀️ Ցերեկային: 10:00 - 13:00</span>
+                        <span>🌙 Երեկոյան: 17:00 - 19:00</span>
+                    </div>
+                    <a href="preschool-education-details.html" class="btn btn-primary">Իմանալ Ավելին</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EduCenter. Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+
+</html>
