@@ -1,0 +1,118 @@
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Տեղեկատվություն HTML, XML, XHTML տարբերությունների և օգտագործման ուղեցույցի մասին">
+  <title>Ակումբի Մասին - HTML / XHTML Ուղեցույց</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Ուսումնական Էջ և HTML/XHTML Համեմատություն</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">← Վերադարձ Գլխավոր Էջ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section 1: Headings Hierarchy Example -->
+    <section>
+      <h2>Վերնագրերի Հաջորդական Մակարդակներ (h1 - h6)</h2>
+      <h1>Վերնագիր Մակարդակ 1 (h1)</h1>
+      <h2>Վերնագիր Մակարդակ 2 (h2)</h2>
+      <h3>Վերնագիր Մակարդակ 3 (h3)</h3>
+      <h4>Վերնագիր Մակարդակ 4 (h4)</h4>
+      <h5>Վերնագիր Մակարդակ 5 (h5)</h5>
+      <h6>Վերնագիր Մակարդակ 6 (h6)</h6>
+    </section>
+
+    <hr>
+
+    <!-- Section 2: Technical Guide & Code Elements -->
+    <section>
+      <h2>Օգտագործման Ուղեցույց (Տեխնիկական Տեքստ)</h2>
+      <p>Ակումբի կայքում խաղ ամրագրելու համար կարող եք օգտագործել հետևյալ հրամանը terminal-ում կամ ստեղնաշարային հապավումը.</p>
+      
+      <p>Սեղմեք <kbd>Ctrl</kbd> + <kbd>F</kbd>՝ էջում որոնում կատարելու համար։</p>
+
+      <p>Կոդի օրինակ HTML-ում. <code>&lt;div class="game"&gt;Catan&lt;/div&gt;</code></p>
+
+      <pre>
+function calculatePrice(hours, rate) {
+    <var>let total</var> = hours * rate;
+    return total;
+}
+      </pre>
+
+      <p>Ծրագրի ելքի օրինակ (<samp>Output</samp>). <samp>Ամրագրումը հաջողությամբ հաստատված է:</samp></p>
+      
+      <p>Հապավման օրինակ. <abbr title="HyperText Markup Language">HTML</abbr>-ը վեբ էջերի նշագրման լեզու է։</p>
+    </section>
+
+    <hr>
+
+    <!-- Section 3: HTML, XML, and XHTML Comparison -->
+    <section>
+      <h2>HTML, XML և XHTML Տարբերությունները</h2>
+      <p>HTML-ը նախատեսված է վեբ էջերի բովանդակությունը նշագրելու և ցուցադրելու համար։ XML-ը տվյալների պահպանման և փոխանցման ձևաչափ է, որտեղ թեգերը սահմանում է օգտագործողը։ XHTML-ը HTML-ն է՝ ձևակերպված XML-ի խիստ շարահյուսական կանոններով։</p>
+      
+      <p>HTML տարրը բաղկացած է բացվող թեգից, ատրիբուտից և փակվող թեգից: Օրինակ՝ <code>&lt;a href="index.html"&gt;Գլխավոր&lt;/a&gt;</code>, որտեղ <code>&lt;a&gt;</code>-ն թեգն է, իսկ <code>href=""</code>-ը՝ հատկանիշը (ատրիբուտը)։</p>
+
+      <h3>Պատկերի գրառումը HTML-ում և XHTML-ում.</h3>
+      <ul>
+        <li><b>HTML (ինքնափակվող թեգ առանց ֆլեշի):</b> <code>&lt;img src="images/club-small.jpg" alt="Ակումբ"&gt;</code></li>
+        <li><b>XHTML (պարտադիր փակվող թեգ ֆլեշով):</b> <code>&lt;img src="images/club-small.jpg" alt="Ակումբ" /&gt;</code></li>
+      </ul>
+      <p>XHTML-ում բոլոր թեգերը պետք է խիստ փակվեն, իսկ ատրիբուտների արժեքները պարտադիր լինեն չակերտների մեջ։</p>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p><a href="index.html">← Վերադարձ Գլխավոր Էջ</a></p>
+  </footer>
+  <section id="about" class="about-section">
+      <div class="about-header">
+        <span class="badge">Բարի Գալուստ</span>
+        <h2>Dice &amp; Dragons Ակումբ</h2>
+        <p class="about-lead">
+          Վայր, որտեղ հավաքվում են սեղանի խաղերի սիրահարները՝ ստեղծելու անմոռանալի պահեր և նոր ընկերություններ։
+        </p>
+      </div>
+
+      <div class="about-hero-wrapper">
+        <picture>
+          <source media="(min-width: 800px)" srcset="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?q=80&w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?q=80&w=600&auto=format&fit=crop" alt="Dice & Dragons ակումբի սրահը" class="hero-img">
+        </picture>
+        <div class="hero-overlay-card">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Տարբեր Խաղեր</span>
+        </div>
+      </div>
+
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-icon">🎲</div>
+          <h3>Հսկայական Հավաքածու</h3>
+          <p>Դասական <i>Catan</i>-ից ու <i>Carcassonne</i>-ից մինչև ամենանոր ու բարդ ռազմավարական խաղերը։</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Փորձառու Խաղավարներ</h3>
+          <p>Կանոնները չգիտե՞ք, հոգ չէ։ Մեր խաղավարները սիրով կսովորեցնեն ցանկացած խաղի նրբությունները։</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">☕</div>
+          <h3>Հարմարավետ Մթնոլորտ</h3>
+          <p>Անվճար թեյ, սուրճ, քաղցրավենիք և ընկերական ջերմ միջավայր՝ երեկոն վայելելու համար։</p>
+        </div>
+      </div>
+    </section>
+
+</body>
+</html>

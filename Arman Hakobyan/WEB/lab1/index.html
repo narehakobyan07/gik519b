@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Կինոակումբ՝ ֆիլմերի ցուցադրություններ և գրանցում">
+    <title>Կինոակումբ – Գրանցում</title>
+    <!-- CSS ֆայլի միացում -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="top" class="site-header">
+        <h1>Կինոակումբ</h1>
+        <nav aria-label="Հիմնական նավիգացիա">
+            <a href="#movies">Ֆիլմեր</a>
+            <a href="#registration">Գրանցում</a>
+        </nav>
+    </header>
+    <hr>
+    
+    <main>
+        <!-- Ֆիլմերի բաժին -->
+        <section id="movies">
+            <h2>Այս ամսվա ցուցադրությունները</h2>
+            <div class="movie-list">
+                <article class="movie-card">
+                    <h3>Տիեզերական Օդիսեյ</h3>
+                    <p>Գիտաֆանտաստիկա, 1968</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Կնքահայրը</h3>
+                    <p>Դրամա, 1972</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Մատրիցա</h3>
+                    <p>Մարտաֆիլմ, 1999</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Ինտերստելար</h3>
+                    <p>Գիտաֆանտաստիկա, 2014</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Փախուստ Շոուշենկից</h3>
+                    <p>Դրամա, 1994</p>
+                </article>
+                <article class="movie-card">
+                    <h3>Քրեական ընթերցվածք</h3>
+                    <p>Քրեական, 1994</p>
+                </article>
+            </div>
+        </section>
+        
+        <hr>
+        
+        <!-- Գրանցման ձևի բաժին -->
+        <section id="registration">
+            <h2>Ֆիլմի դիտման գրանցման ձև</h2>
+            
+            <form action="#" method="POST" id="registration-form">
+                <!-- Առաջին Fieldset: Անձնական տվյալներ -->
+                <fieldset>
+                    <legend>Անձնական տվյալներ</legend>
+                    
+                    <label for="fullname">Անուն Ազգանուն:</label>
+                    <input type="text" id="fullname" name="fullname" 
+                           required minlength="3" maxlength="50" 
+                           pattern="[Ա-Ֆա-ֆ\s]+" 
+                           placeholder="Օրինակ՝ Անի Հակոբյան">
+                    
+                    <label for="email">Էլ. փոստ:</label>
+                    <input type="email" id="email" name="email" 
+                           required placeholder="example@mail.com">
+                    
+                    <label for="phone">Հեռախոսահամար:</label>
+                    <input type="tel" id="phone" name="phone" 
+                           required pattern="[0-9]{9}" 
+                           placeholder="09XXXXXXXX">
+                </fieldset>
+                
+                <!-- Երկրորդ Fieldset: Ֆիլմի դիտման գրանցում -->
+                <fieldset>
+                    <legend>Ֆիլմի դիտման գրանցման ձև</legend>
+                    
+                    <!-- Սպեցիֆիկության ցուցադրման համար ավելացված class -->
+                    <label for="movie-select" class="special-label">Ընտրեք ֆիլմը:</label>
+                    <select id="movie-select" name="movie" required>
+                        <option value="">-- Ընտրեք ֆիլմ --</option>
+                        <option value="space">Տիեզերական Օդիսեյ</option>
+                        <option value="godfather">Կնքահայրը</option>
+                        <option value="matrix">Մատրիցա</option>
+                        <option value="interstellar">Ինտերստելար</option>
+                        <option value="shawshank">Փախուստ Շոուշենկից</option>
+                        <option value="pulp">Քրեական ընթերցվածք</option>
+                    </select>
+                    
+                    <label for="screening-date">Ցուցադրության օր:</label>
+                    <input type="date" id="screening-date" name="screening-date" required>
+                    
+                    <label for="screening-time">Ցուցադրության ժամ:</label>
+                    <input type="time" id="screening-time" name="screening-time" required>
+                    
+                    <label for="tickets">Տոմսերի քանակ:</label>
+                    <input type="number" id="tickets" name="tickets" 
+                           min="1" max="10" required placeholder="1-10">
+                    
+                    <label>Ձևաչափ:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="format-2d" name="format" value="2D" required>
+                        <label for="format-2d">2D</label>
+                        
+                        <input type="radio" id="format-3d" name="format" value="3D">
+                        <label for="format-3d">3D</label>
+                    </div>
+                    
+                    <label>Լրացուցիչներ:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="popcorn" name="extras" value="popcorn">
+                        <label for="popcorn">Պոպկորն</label>
+                        
+                        <input type="checkbox" id="drink" name="extras" value="drink">
+                        <label for="drink">Ըմպելիք</label>
+                    </div>
+                    
+                    <label for="message">Հաղորդագրություն:</label>
+                    <textarea id="message" name="message" rows="4" maxlength="200" 
+                              placeholder="Ձեր ցանկությունները..."></textarea>
+                </fieldset>
+                
+                <div class="form-buttons">
+                    <button type="submit">Գրանցվել</button>
+                    <button type="reset">Մաքրել</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <hr>
+    <footer>
+        <p>&copy; 2026 Կինոակումբ</p>
+        <a href="#top">Վերադառնալ վերև</a>
+    </footer>
+</body>
+</html>
