@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մուտք - EduCenter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="contacts.css">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 60px auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-header h2 {
+            color: #0284c7;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .auth-header p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .form-footer a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">
+                    <img src="images/logo.svg" alt="EduCenter Logo" style="height: 60px;"></a></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Գլխավոր</a></li>
+                    <li><a href="index.html#courses">Դասընթացներ</a></li>
+                    <li><a href="about.html">Մեր մասին</a></li>
+                    <li><a href="contacts.html">Կապ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Մուտք անձնական Էջ</h2>
+                <p>Մուտքագրեք Ձեր էլ․ հասցեն և գաղտնաբառը</p>
+            </div>
+
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="login-email">Էլ․ հասցե *</label>
+                    <input type="email" id="login-email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Գաղտնաբառ *</label>
+                    <input type="password" id="login-password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Մուտք Գործել</button>
+            </form>
+
+            <div class="form-footer">
+                <p>Չունե՞ք հաշիվ: <a href="register.html">Գրանցվել այստեղ</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 EduCenter. Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+
+</html>
