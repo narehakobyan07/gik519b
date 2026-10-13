@@ -1,0 +1,174 @@
+/* =========================================
+   Ընդհանուր ոճեր և Ժառանգականություն
+   ========================================= */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Խմբային ընտրիչ */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+#movies, #registration {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   Ֆիլմերի քարտերի ձևավորում
+   ========================================= */
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(33.333% - 40px);
+    background-color: #fafafa;
+    border-radius: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* :nth-child(even) - յուրաքանչյուր երկրորդ (զույգ) քարտի ֆոնի և եզրագծի փոփոխություն */
+.movie-card:nth-child(even) {
+    background-color: #e8f4f8;
+    border-color: #3498db;
+}
+
+/* :hover - քարտերի արձագանք */
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* ::before և ::after - վերնագրերի ձևավորում */
+.movie-card h3::before {
+    content: "🎬 ";
+    margin-right: 5px;
+}
+
+.movie-card h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+    margin-top: 8px;
+}
+
+/* =========================================
+   Ձևի ձևավորում և Ժառանգականության ցուցադրում
+   ========================================= */
+#registration-form {
+    font-family: 'Georgia', serif; /* Ժառանգվող տառատեսակ */
+    color: #444; /* Ժառանգվող գույն */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Հակասող class և id կանոններ */
+/* ID-ն ավելի բարձր առաջնահերթություն ունի (100), քան class-ը (10) */
+#registration-form label {
+    color: #2980b9; /* Այս կանոնը կգերազանցի .special-label-ին, եթե գույնը հակասի */
+}
+
+/* Class-ը փոխում է ժառանգված տառատեսակը (հակասում է #registration-form-ի 'Georgia'-ին) */
+#registration-form .special-label {
+    font-family: 'Courier New', monospace; 
+    color: #e74c3c; /* Այս գույնը կկիրառվի, քանի որ սելեկտորը ավելի սպեցիֆիկ է */
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], 
+input[type="date"], input[type="time"], input[type="number"], 
+select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* :focus - դաշտերի ընդգծում ստեղնաշարով անցնելիս */
+input:focus, select:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    background-color: #f0f8ff;
+}
+
+.radio-group, .checkbox-group {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-group label, .checkbox-group label {
+    display: inline;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.form-buttons {
+    margin-top: 15px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* :hover - կոճակի արձագանք */
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+button[type="reset"] {
+    background-color: #e74c3c;
+    margin-left: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+}
