@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ուսումնական տեղեկատվություն HTML, XML և XHTML տարբերությունների մասին">
+    <title>Կինոակումբ - Ուսումնական Էջ</title>
+</head>
+<body>
+
+    <header>
+        <h1>Ուսումնական Տեղեկատվական Էջ</h1>
+        <nav>
+            <a href="index.html">Վերադառնալ Գլխավոր Էջ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="theology-section">
+            <h2>10. HTML, XML և XHTML Տարբերությունները</h2>
+            <p>HTML-ը նախատեսված է վեբ էջերի կառուցվածքը ստեղծելու և տվյալները ցուցադրելու համար: XML-ը կենտրոնանում է տվյալները պահպանելու և փոխանցելու վրա, որտեղ թեգերը սահմանվում են օգտագործողի կողմից: XHTML-ը հանդիսանում է HTML-ի ավելի խիստ տարբերակը, որը բազավորված է XML-ի կանոնների վրա և պահանջում է անպայման փակել բոլոր թեգերը:</p>
+            
+            <p>Օրինակ՝ սովորական պատկերի տեղադրման տարբերությունը HTML-ում և XHTML-ում ունի հետևյալ տեսքը.</p>
+            <ul>
+                <li>HTML գրառում (չփակվող)՝ <code>&lt;img src="image.jpg" alt="Նկար"&gt;</code></li>
+                <li>XHTML գրառում (ինքնափակվող)՝ <code>&lt;img src="image.jpg" alt="Նկար" /&gt;</code></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="guide-section">
+            <h2>Օգտագործման Ուղեցույց և Տերմիններ</h2>
+            
+            <dl>
+                <dt><dfn>Ժանր</dfn></dt>
+                <dd>Ֆիլմերի տեսակավորման ձևն է ըստ բովանդակության (օրինակ՝ դրամա, կոմեդիա):</dd>
+                <dt><dfn>Սցենար</dfn></dt>
+                <dd>Գրավոր տեքստ, որի հիման վրա նկարահանվում է ֆիլմը:</dd>
+                <dt><dfn>Ենթագիր</dfn></dt>
+                <dd>Ֆիլմի տակից երևացող տեքստային թարգմանությունը (սուբտիտր):</dd>
+            </dl>
+
+            <blockquote>
+                <q>Կինոն արվեստ է, որը թույլ է տալիս տեսնել անտեսանելին:</q> - <cite>Հայտնի Կինոքննադատ</cite>
+            </blockquote>
+
+            <p>Ծրագրում <abbr title="HyperText Markup Language">HTML</abbr> տարր սահմանելիս թեգը և հատկանիշը առանձնանում են հետևյալ կերպ. <code>&lt;tag attribute="value"&gt;</code>, որտեղ <var>tag</var>-ը թեգի անունն է, իսկ <var>attribute</var>-ը՝ հատկանիշը:</p>
+
+            <h3>Ծրագրային Կոդի Օրինակ (Guide)</h3>
+            <pre>
+    // Կոդի պարզ ցուցադրում
+    #include &lt;iostream&gt;
+    int main() {
+        std::cout &lt;&lt; "Hello Cinema!";
+        return 0;
+    }
+            </pre>
+            <p>Խմբագրիչում կոդը պահպանելու համար սեղմեք <kbd>Ctrl</kbd> + <kbd>S</kbd> ստեղները, որից հետո էկրանին կհայտնվի <samp>File saved successfully</samp> հաղորդագրությունը:</p>
+        </section>
+
+        <hr>
+
+        <section id="headers-hierarchy">
+            <h2>Վերնագրերի Մակարդակների Ցուցադրում</h2>
+            <h1>Մակարդակ 1 (h1)</h1>
+            <h2>Մակարդակ 2 (h2)</h2>
+            <h3>Մակարդակ 3 (h3)</h3>
+            <h4>Մակարդակ 4 (h4)</h4>
+            <h5>Մակարդակ 5 (h5)</h5>
+            <h6>Մակարդակ 6 (h6)</h6>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2026 Ուսումնական բաժին:</small></p>
+    </footer>
+
+</body>
+</html>
