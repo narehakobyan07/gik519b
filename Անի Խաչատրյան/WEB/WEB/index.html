@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA STUDIO | Պրոֆեսիոնալ Լուսանկարչական Ստուդիա</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --bg-card: #141418;
+            --bg-card-hover: #1c1c22;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --accent-gold-glow: rgba(212, 175, 55, 0.25);
+            --text-light: #f5f5f7;
+            --text-muted: #a1a1aa;
+            --text-dim: #71717a;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --glass-bg: rgba(10, 10, 12, 0.85);
+            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --font-heading: 'Cinzel', 'Noto Sans Armenian', serif;
+            --font-body: 'Noto Sans Armenian', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: var(--font-heading);
+            letter-spacing: 0.5px;
+        }
+
+        .section-subtitle {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.05rem;
+        }
+
+        .text-center { text-align: center; }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            padding: 1rem 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--accent-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .logo:hover svg {
+            transform: rotate(45deg);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-gold);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .page-view {
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            padding-top: 80px;
+            min-height: calc(100vh - 80px);
+            flex: 1;
+        }
+
+        .page-view.active-page {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-header {
+            background: linear-gradient(180deg, rgba(10, 10, 12, 0.8) 0%, var(--bg-dark) 100%),
+                        url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb span {
+            color: var(--accent-gold);
+        }
+
+        .hero {
+            position: relative;
+            height: calc(100vh - 80px);
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.4), var(--bg-dark)),
+                        url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(10,10,12,0.2) 0%, var(--bg-dark) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            border-radius: 50px;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #d1d1d6;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-gold), #b38f2a);
+            color: #000;
+            font-weight: 600;
+            box-shadow: 0 4px 20px var(--accent-gold-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #e5be3f, var(--accent-gold));
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .section-padding { padding: 5rem 0; }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-img-main {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-img-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .about-img-badge .years {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+            font-family: var(--font-heading);
+        }
+
+        .about-img-badge .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat-card h4 {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .stat-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-gold);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Equipment / Tech Spec Grid */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .eq-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .eq-icon {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+        }
+
+        .services-bg { background-color: #0e0e12; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-gold);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--accent-gold);
+            color: #000;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-gold);
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, var(--bg-card) 100%);
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .badge-popular {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 4px 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+
+        .price-title { font-size: 1.4rem; margin-bottom: 1rem; }
+        .price-val {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-family: var(--font-heading);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-features li i { color: var(--accent-gold); font-size: 0.85rem; }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: #000;
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 380px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 12, 0.9) 0%, rgba(10, 10, 12, 0.2) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-item:hover img { transform: scale(1.08); }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+        .portfolio-cat {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .portfolio-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+            padding: 2rem;
+        }
+
+        .lightbox-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            max-width: 900px;
+            max-height: 85vh;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            z-index: 2001;
+        }
+
+        .lightbox-close:hover { color: var(--accent-gold); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .contact-details p, .contact-details a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .contact-details a:hover { color: var(--accent-gold); }
+
+        .contact-form-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background: #0a0a0c;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-light);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+        }
+
+        textarea.form-control { resize: vertical; min-height: 120px; }
+
+        footer {
+            background: #050507;
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo-desc p {
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+        .footer-links a:hover { color: var(--accent-gold); padding-left: 5px; }
+
+        .social-icons { display: flex; gap: 12px; margin-top: 1rem; }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+        .social-btn:hover {
+            background: var(--accent-gold);
+            color: #000;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        /* Toast Feedback */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: 3000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--bg-card);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem 2rem;
+                gap: 1.5rem;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.8);
+                transition: var(--transition-smooth);
+            }
+            .nav-links.active { right: 0; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 2.2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a onclick="navigateTo('home')" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                </svg>
+                LUMINA<span>STUDIO</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="navigateTo('home')" class="nav-link active" id="nav-home">Գլխավոր</a></li>
+                <li><a onclick="navigateTo('about')" class="nav-link" id="nav-about">Մեր մասին</a></li>
+                <li><a onclick="navigateTo('services')" class="nav-link" id="nav-services">Ծառայություններ</a></li>
+                <li><a onclick="navigateTo('portfolio')" class="nav-link" id="nav-portfolio">Պորտֆոլիո</a></li>
+                <li><a onclick="navigateTo('contact')" class="nav-link" id="nav-contact">Կապ</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Մենյու">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="mainContainer">
+        <section id="page-home" class="page-view active-page" style="padding-top: 0;">
+            <div class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-star"></i> Պրեմիում Լուսանկարչություն
+                    </div>
+                    <h1 class="hero-title">Պահպանեք Ձեր Լավագույն Պահերը</h1>
+                    <p class="hero-subtitle">Մենք ստեղծում ենք բարձրորակ, գեղարվեստական և էմոցիոնալ լուսանկարներ, որոնք կպահպանեն Ձեր հիշողությունները հավերժ։</p>
+                    <div class="hero-cta">
+                        <button onclick="navigateTo('contact')" class="btn btn-primary">
+                            <i class="fa-regular fa-calendar-check"></i> Ամրագրել Նկարահանում
+                        </button>
+                        <button onclick="navigateTo('portfolio')" class="btn btn-outline">
+                            <i class="fa-regular fa-images"></i> Դիտել Աշխատանքները
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-padding">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" alt="Lumina Studio Interior" class="about-img-main">
+                            <div class="about-img-badge">
+                                <div class="years">10+</div>
+                                <div class="label">Տարվա Փորձ</div>
+                            </div>
+                        </div>
+                        <div class="about-content">
+                            <span class="section-subtitle">Բարի Գալուստ</span>
+                            <h2 class="section-title">Լուսանկարչություն Որպես Արվեստ</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 1.2rem;">LUMINA STUDIO-ն ժամանակակից լուսանկարչական ստուդիա է Երևանում, որտեղ յուրաքանչյուր կադր ստեղծվում է հատուկ ուշադրությամբ և գեղարվեստական ճաշակով։</p>
+                            <p style="color: var(--text-muted); margin-bottom: 2rem;">Մենք առաջարկում ենք անհատական մոտեցում յուրաքանչյուր հաճախորդին՝ ապահովելով հարմարավետ մթնոլորտ և պրոֆեսիոնալ արդյունք։</p>
+                            <button onclick="navigateTo('about')" class="btn btn-outline">
+                                Կարդալ Ավելին <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-about" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Մեր Մասին</h1>
+                    <div class="breadcrumb">Գլխավոր / <span>Մեր Մասին</span></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-subtitle">Պատմություն և Տեսլական</span>
+                        <h2 class="section-title">10 Տարվա Պրոֆեսիոնալ Ստեղծագործական Ուղի</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 1.2rem;">LUMINA STUDIO-ն հիմնադրվել է 2016 թվականին Երևանում՝ նպատակ ունենալով փոխել լուսանկարչության նկատմամբ մոտեցումը Հայաստանում։ Մեր ստուդիան հագեցած է եվրոպական արտադրության պրոֆեսիոնալ լուսային տեխնիկայով, որը թույլ է տալիս ստանալ կատարյալ կադրեր ցանկացած բարդության նախագծերում։</p>
+                        <p style="color: var(--text-muted);">Մենք հավատում ենք, որ լավ լուսանկարը ոչ միայն պատկեր է, այլ պատմություն, էմոցիա և հիշողություն, որը մնում է սերունդներին։</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h4>500+</h4>
+                                <p>Ավարտված Պրոյեկտ</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>100%</h4>
+                                <p>Գոհ Հաճախորդներ</p>
+                            </div>
+                            <div class="stat-card">
+                                <h4>15+</h4>
+                                <p>Մրցանակներ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80" alt="Studio Equipment" class="about-img-main">
+                    </div>
+                </div>
+
+                <!-- Team Section -->
+                <div class="section-padding">
+                    <div class="text-center">
+                        <span class="section-subtitle">Մեր Թիմը</span>
+                        <h2 class="section-title">Պրոֆեսիոնալ Մասնագետներ</h2>
+                        <p class="section-desc">Ծանոթացեք մեր թիմի հետ, ովքեր կյանքի են կոչում Ձեր ամենաստեղծագործ գաղափարները։</p>
+                    </div>
+
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Team Member" class="team-img">
+                            <div class="team-info">
+                                <h3 class="team-name">Անի Գրիգորյան</h3>
+                                <p class="team-role">Գլխավոր Լուսանկարիչ</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Team Member" class="team-img">
+                            <div class="team-info">
+                                <h3 class="team-name">Արմեն Սարգսյան</h3>
+                                <p class="team-role">Fashion & Portrait Specialist</p>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Team Member" class="team-img">
+                            <div class="team-info">
+                                <h3 class="team-name">Ելենա Հովհաննիսյան</h3>
+                                <p class="team-role">Գլխավոր Ռետուշոր / Stylist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment Specifications -->
+                <div style="padding-bottom: 5rem;">
+                    <div class="text-center">
+                        <span class="section-subtitle">Տեխնիկական Հագեցվածություն</span>
+                        <h2 class="section-title">Սարքավորումներ</h2>
+                    </div>
+                    <div class="equipment-grid">
+                        <div class="eq-item">
+                            <i class="fa-solid fa-camera eq-icon"></i>
+                            <div>
+                                <h4>Canon R5 & Sony A7IV</h4>
+                                <p style="color: var(--text-muted); font-size: 0.85rem;">Full-Frame Բարձր կետայնությամբ խցիկներ</p>
+                            </div>
+                        </div>
+                        <div class="eq-item">
+                            <i class="fa-solid fa-lightbulb eq-icon"></i>
+                            <div>
+                                <h4>Profoto B10 & D2</h4>
+                                <p style="color: var(--text-muted); font-size: 0.85rem;">Շվեդական պրոֆեսիոնալ ստուդիային լույսեր</p>
+                            </div>
+                        </div>
+                        <div class="eq-item">
+                            <i class="fa-solid fa-circle-nodes eq-icon"></i>
+                            <div>
+                                <h4>Sigma Art & Prime Օբյեկտիվներ</h4>
+                                <p style="color: var(--text-muted); font-size: 0.85rem;">Կատարյալ հստակություն և բոքե</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-services" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Ծառայություններ և Գնացուցակ</h1>
+                    <div class="breadcrumb">Գլխավոր / <span>Ծառայություններ</span></div>
+                </div>
+            </div>
+
+            <div class="container section-padding" style="padding-top: 0;">
+                <div class="text-center">
+                    <span class="section-subtitle">Ինչ ենք առաջարկում</span>
+                    <h2 class="section-title">Մեր Ծառայությունները</h2>
+                    <p class="section-desc">Ապահովում ենք ֆոտոնկարահանման ամբողջական ցիկլ՝ գաղափարից մինչև վերջնական մշակում։</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-user"></i></div>
+                        <h3>Դիմանկարային Նկարահանում</h3>
+                        <p>Անհատական, գեղարվեստական և բիզնես պորտրետներ՝ Ձեր լավագույն կողմերը ընդգծելու համար։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-shirt"></i></div>
+                        <h3>Fashion & Lookbook</h3>
+                        <p>Լուքբուքեր, կատալոգներ և իմիջային նկարահանումներ հագուստի բրենդերի և դիզայներների համար։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Միջոցառումներ և Հարսանիքներ</h3>
+                        <p>Ձեր կյանքի կարևորագույն իրադարձությունների անմոռանալի և հուզիչ լուսաբանում։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3>Ապրանքային / Կոմերցիոն</h3>
+                        <p>Բարձրորակ ֆոտոներ օնլայն խանութների, SMM առաջխաղացման և գովազդների համար։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3>Ստուդիայի Վարձակալություն</h3>
+                        <p>Լուսավոր և ընդարձակ տարածք՝ պրոֆեսիոնալ լույսերով այլ լուսանկարիչների համար։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Ռետուշ և Մշակում</h3>
+                        <p>Մասնագիտական գունային ուղղում, մաշկի ռետուշ և բարձրորակ հետմշակում։</p>
+                        <button onclick="navigateTo('contact')" class="btn btn-outline" style="width:100%;">Ամրագրել</button>
+                    </div>
+                </div>
+
+                <!-- Pricing Section inside Services page -->
+                <div class="section-padding">
+                    <div class="text-center">
+                        <span class="section-subtitle">Մատչելի փաթեթներ</span>
+                        <h2 class="section-title">Գնացուցակ</h2>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3 class="price-title">Ստանդարտ</h3>
+                            <div class="price-val">35,000 ֏</div>
+                            <ul class="price-features">
+                                <li><i class="fa-solid fa-check"></i> 1 ժամ նկարահանում</li>
+                                <li><i class="fa-solid fa-check"></i> 10 մշակված լուսանկար</li>
+                                <li><i class="fa-solid fa-check"></i> Բոլոր օրիգինալ կադրերը</li>
+                                <li><i class="fa-solid fa-check"></i> 1 Լուք / Զգեստ</li>
+                            </ul>
+                            <button onclick="navigateTo('contact')" class="btn btn-outline" style="width: 100%;">Ընտրել</button>
+                        </div>
+
+                        <div class="pricing-card featured">
+                            <div class="badge-popular">Ամենապահանջված</div>
+                            <h3 class="price-title">Պրեմիում</h3>
+                            <div class="price-val">65,000 ֏</div>
+                            <ul class="price-features">
+                                <li><i class="fa-solid fa-check"></i> 2 ժամ նկարահանում</li>
+                                <li><i class="fa-solid fa-check"></i> 25 մշակված լուսանկար</li>
+                                <li><i class="fa-solid fa-check"></i> Բոլոր օրիգինալ կադրերը</li>
+                                <li><i class="fa-solid fa-check"></i> Մինչև 3 Լուք / Զգեստ</li>
+                                <li><i class="fa-solid fa-check"></i> Դիմահարդարում ներառված է</li>
+                            </ul>
+                            <button onclick="navigateTo('contact')" class="btn btn-primary" style="width: 100%;">Ընտրել</button>
+                        </div>
+
+                        <div class="pricing-card">
+                            <h3 class="price-title">Էքսկլյուզիվ</h3>
+                            <div class="price-val">120,000 ֏</div>
+                            <ul class="price-features">
+                                <li><i class="fa-solid fa-check"></i> Անսահմանափակ ժամանակ</li>
+                                <li><i class="fa-solid fa-check"></i> 50+ մշակված լուսանկար</li>
+                                <li><i class="fa-solid fa-check"></i> Դիմահարդարում & Վարսահարդարում</li>
+                                <li><i class="fa-solid fa-check"></i> Ֆոտոալբոմ (PhotoBook)</li>
+                            </ul>
+                            <button onclick="navigateTo('contact')" class="btn btn-outline" style="width: 100%;">Ընտրել</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-portfolio" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Պորտֆոլիո</h1>
+                    <div class="breadcrumb">Գլխավոր / <span>Պորտֆոլիո</span></div>
+                </div>
+            </div>
+
+            <div class="container section-padding" style="padding-top: 0;">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Բոլորը</button>
+                    <button class="filter-btn" data-filter="portrait">Դիմանկար</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="events">Հարսանիք</button>
+                    <button class="filter-btn" data-filter="product">Ապրանքային</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Portrait Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Դիմանկար</span>
+                            <h3 class="portfolio-title">Էլեգանտ Դիմանկար</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="fashion" onclick="openLightbox('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Fashion Shooting">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Աշնանային Հավաքածու</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="events" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Հարսանիք</span>
+                            <h3 class="portfolio-title">Ռոմանտիկ Պահեր</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="product" onclick="openLightbox('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Product Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Ապրանքային</span>
+                            <h3 class="portfolio-title">Պրեմիում Ժամացույցներ</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Male Portrait">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Դիմանկար</span>
+                            <h3 class="portfolio-title">Բիզնես Պորտրետ</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="fashion" onclick="openLightbox('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80" alt="Editorial Fashion">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Editorial Look</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-contact" class="page-view">
+            <div class="page-header">
+                <div class="container">
+                    <h1>Կապ Մեզ Հետ</h1>
+                    <div class="breadcrumb">Գլխավոր / <span>Կապ</span></div>
+                </div>
+            </div>
+
+            <div class="container section-padding" style="padding-top: 0;">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div>
+                            <span class="section-subtitle">Ամրագրում</span>
+                            <h2 class="section-title">Կապվեք Մեզ Հետ</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 2rem;">Ունե՞ք հարցեր կամ ցանկանում եք պատվիրել նկարահանում։ Լրացրեք ձևանմուշը կամ զանգահարեք մեզ։</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h4>Հասցե</h4>
+                                <p>ՀՀ, ք. Երևան, Սայաթ-Նովա պողոտա 15</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-details">
+                                <h4>Հեռախոս</h4>
+                                <a href="tel:+37499123456">+374 (99) 12-34-56</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h4>Էլ․ հասցե</h4>
+                                <a href="mailto:info@luminastudio.am">info@luminastudio.am</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="contact-details">
+                                <h4>Աշխատանքային ժամեր</h4>
+                                <p>Երկ - Կիր: 10:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <form onsubmit="handleBooking(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Անուն Ազգանուն *" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Հեռախոսահամար *" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <select class="form-control" required style="color: #a1a1aa;">
+                                        <option value="" disabled selected>Ընտրեք Ծառայությունը</option>
+                                        <option value="portrait">Դիմանկարային</option>
+                                        <option value="fashion">Fashion & Brand</option>
+                                        <option value="events">Միջոցառումներ</option>
+                                        <option value="product">Ապրանքային</option>
+                                        <option value="rental">Ստուդիայի վարձակալություն</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control" required style="color-scheme: dark;">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Հավելյալ նշումներ կամ գաղափարներ..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fa-regular fa-paper-plane"></i> Ուղարկել Հայտը
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox-modal" id="lightboxModal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImg" alt="Preview Image">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-desc">
+                    <a onclick="navigateTo('home')" class="logo">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                        </svg>
+                        LUMINA<span>STUDIO</span>
+                    </a>
+                    <p>Պրոֆեսիոնալ լուսանկարչական ստուդիա Երևանում։ Գեղարվեստական որակ և անհատական մոտեցում։</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_annllll__/" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ani.khachatryan.423052?locale=ru_RU" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.pinterest.com/annllll__/" class="social-btn"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Էջեր</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="navigateTo('home')">Գլխավոր</a></li>
+                        <li><a onclick="navigateTo('about')">Մեր մասին</a></li>
+                        <li><a onclick="navigateTo('services')">Ծառայություններ</a></li>
+                        <li><a onclick="navigateTo('portfolio')">Պորտֆոլիո</a></li>
+                        <li><a onclick="navigateTo('contact')">Կապ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Ծառայություններ</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="navigateTo('services')">Դիմանկար</a></li>
+                        <li><a onclick="navigateTo('services')">Fashion Ֆոտո</a></li>
+                        <li><a onclick="navigateTo('services')">Հարսանեկան</a></li>
+                        <li><a onclick="navigateTo('services')">Կոմերցիոն</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Կապ</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">ք․ Երևան, Սայաթ-Նովա 15</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">+374 (99) 12-34-56</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">info@luminastudio.am</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUMINA STUDIO. Բոլոր իրավունքները պաշտպանված են։</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i> Ձեր հայտը հաջողությամբ ուղարկվեց։ Մենք շուտով կկապվենք Ձեզ հետ։
+    </div>
+
+    <script>
+
+        function navigateTo(pageId) {
+
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active-page');
+            }
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+
+            const navContainer = document.getElementById('navLinks');
+            navContainer.classList.remove('active');
+            document.getElementById('mobileToggle').querySelector('i').className = 'fa-solid fa-bars';
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+        function handleBooking(event) {
+            event.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            event.target.reset();
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
