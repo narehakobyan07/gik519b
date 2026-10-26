@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Անդամակցություն - Tech Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Tech<span>Club</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Գլխավոր</a></li>
+                    <li><a href="about.html">Մեր մասին</a></li>
+                    <li><a href="projects.html">Նախագծեր</a></li>
+                    <li><a href="events.html">Միջոցառումներ</a></li>
+                    <li><a href="resources.html">Ռեսուրսներ & Բլոգ</a></li>
+                    <li><a href="membership.html" class="active">Անդամակցություն</a></li>
+                    <li><a href="contact.html">Կապ</a></li>
+                </ul>
+            </nav>
+            <a href="membership.html#join-form" class="btn btn-primary nav-btn">Միացի՛ր մեզ</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Դարձի՛ր մեր <span>Թիմի մասը</span></h1>
+            <p>Բացահայտիր նոր հնարավորություններ, սովորիր փորձառու մտերմիկ համայնքից և զարգացրո՛ւ քո տեխնիկական հմտությունները։</p>
+        </div>
+    </section>
+
+    <section class="membership-steps">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ինչպե՞ս Միանալ Ակումբին</h2>
+                <p>Անդամագրման գործընթացը շատ պարզ է և բաղկացած է ընդամենը 3 քայլից</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Լրացրո՛ւ հայտը</h3>
+                    <p>Ստորև բերված առցանց հարցաշարում նշիր քո անձնական տվյալներն ու նախընտրելի ուղղությունը։</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Անցի՛ր զրույց</h3>
+                    <p>Մեր թիմը կկապվի քեզ հետ կարճատև ծանոթացնող հանդիպման կամ զրույցի համար։</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Միացի՛ր միջոցառումներին</h3>
+                    <p>Ստացիր մուտք դեպի մեր ներքին չաթեր, վորքշոփեր և համատեղ նախագծեր։</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-section" id="join-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="section-title">
+                    <h2>Անդամագրման Հայտադիմում</h2>
+                    <p>Լրացրո՛ւ դիմումը և մենք շատ արագ կկապվենք քեզ հետ</p>
+                </div>
+
+                <form id="membershipForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="memberName">Անուն Ազգանուն *</label>
+                            <input type="text" id="memberName" required placeholder="Օր.՝ Աննա Մկրտչյան">
+                        </div>
+                        <div class="form-group">
+                            <label for="memberEmail">Էլ. հասցե (Email) *</label>
+                            <input type="email" id="memberEmail" required placeholder="name@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="memberPhone">Հեռախոսահամար *</label>
+                            <input type="tel" id="memberPhone" required placeholder="+374 XX XXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="memberDirection">Նախընտրելի Ուղղություն *</label>
+                            <select id="memberDirection" required class="form-control-select">
+                                <option value="" disabled selected>Ընտրեք ուղղությունը</option>
+                                <option value="web">Վեբ Ծրագրավորում (Web Dev)</option>
+                                <option value="robotics">Ռոբոտաշինություն (Robotics & IoT)</option>
+                                <option value="ai">Արհեստական Բանականություն (AI / ML)</option>
+                                <option value="cyber">Կիբեռանվտանգություն (Cybersecurity)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberSkills">Ձեր գիտելիքները կամ հմտությունները (կամավոր)</label>
+                        <input type="text" id="memberSkills" placeholder="Օր.՝ HTML/CSS-ի հիմունքներ, Python, Arduino...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberReason">Ինչո՞ւ եք ցանկանում միանալ մեր ակումբին *</label>
+                        <textarea id="memberReason" rows="4" required placeholder="Գրեք ձեր նպատակների կամ ակնկալիքների մասին..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">Ուղարկել հայտը</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Tech Club: Բոլոր իրավունքները պաշտպանված են:</p>
+        </div>
+    </footer>
+
+</body>
+</html>
