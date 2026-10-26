@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Երաժշտական դպրոց — Գլխավոր</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1> Երաժշտական դպրոց</h1>
+    <nav aria-label="Հիմնական մենյու">
+      <ul class="nav-list">
+        <li><a href="index.html">Գլխավոր</a></li>
+        <li><a href="#sections">Բաժիններ</a></li>
+        <li><a href="#info">Տեղեկություն</a></li>
+        <li><a href="#gallery">Պատկերասրահ</a></li>
+        <li><a href="school.html">Դպրոցի մասին</a></li>
+        <li><a href="register.html">Գրանցում</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <picture>
+        <source media="(min-width: 900px)" srcset="images/hero-large.jpg">
+        <source media="(min-width: 500px)" srcset="images/hero-medium.jpg">
+        <img src="C:\Users\User\gik519b\Vrezh Karapetyan\WEB\Լաբորատոր աշխատանք 2\images\hero-small.jpeg"
+             srcset="images/hero-small.jpeg 480w, images/hero-medium.jpeg 800w, images/hero-large.jpeg 1400w"
+             sizes="(min-width: 900px) 1200px, 100vw"
+             alt="Երաժշտական դպրոցի դահլիճ՝ դաշնամուրով և աշակերտներով">
+      </picture>
+      <h2>Երաժշտությունը սկսվում է այստեղ</h2>
+      <p>Դասեր երեխաների և մեծահասակների համար՝ փորձառու դասավանդողների հետ:</p>
+      <a class="btn" href="register.html">Գրանցվել դասի</a>
+    </section>
+
+    <section id="sections">
+      <h2>Երաժշտական բաժիններ</h2>
+      <div class="card-grid">
+        <article class="card" id="piano">
+          <h3>Դաշնամուր</h3>
+          <p>Դասեր սկսնակների և առաջադեմների համար՝ դասական ու ժամանակակից երաժշտություն:</p>
+        </article>
+        <article class="card" id="violin">
+          <h3>Ջութակ</h3>
+          <p>Ձայնի դրվածք, աղեղի տեխնիկա և անսամբլային նվագ:</p>
+        </article>
+        <article class="card" id="vocal">
+          <h3>Վոկալ</h3>
+          <p class="note" id="special-note">Շնչառություն, ինտոնացիա և բեմական վարպետություն:</p>
+          <div class="long-text">
+            <p>Վոկալի դասընթացը ներառում է շնչառական վարժություններ, ձայնի տաքացում, ինտոնացիայի զարգացում,
+            երգացանկի ընտրություն, միկրոֆոնի հետ աշխատանք և բեմական ելույթների պատրաստում: Սովորողները
+            մասնակցում են տարեվերջյան համերգին և քաղաքային մրցույթներին: Դասերը անցկացվում են անհատական
+            և խմբային ձևաչափով՝ հաշվի առնելով սովորողի տարիքն ու մակարդակը:</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="info">
+      <h2>Ընդհանուր տեղեկություն</h2>
+      <p>Դպրոցը գործում է երկուշաբթիից շաբաթ՝ <time datetime="09:00">9:00</time>-ից <time datetime="20:00">20:00</time>:
+         Խմբերը փոքր են՝ առավելագույնը 8 սովորող:</p>
+      <h3>Գործիքների ցանկ</h3>
+      <ul class="instruments">
+        <li>Դաշնամուր</li>
+        <li>Ջութակ</li>
+        <li>Կիթառ</li>
+        <li>Ֆլեյտա</li>
+        <li>Թմբուկ</li>
+      </ul>
+      <h3>Դասերի ժամանակացույց</h3>
+      <table class="schedule">
+        <caption>Շաբաթական ժամանակացույց</caption>
+        <thead>
+          <tr><th scope="col">Դաս</th><th scope="col">Օր</th><th scope="col">Ժամ</th><th scope="col">Ամսավճար</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Դաշնամուր</td><td>Երկուշաբթի</td><td>16:00</td><td>18 000 ֏</td></tr>
+          <tr><td>Ջութակ</td><td>Երեքշաբթի</td><td>17:00</td><td>20 000 ֏</td></tr>
+          <tr><td>Վոկալ</td><td>Չորեքշաբթի</td><td>18:00</td><td>15 000 ֏</td></tr>
+          <tr><td>Կիթառ</td><td>Հինգշաբթի</td><td>16:30</td><td>16 000 ֏</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="gallery">
+      <h2>Պատկերասրահ</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/piano.jpg" alt="Դաշնամուրի ստեղներ մոտ պլանով">
+          <figcaption>Դաշնամուրի դասարան</figcaption>
+        </figure>
+        <figure>
+          <img src="images/violin.jpg" alt="Ջութակ և աղեղ նոտաների վրա">
+          <figcaption>Ջութակի դաս</figcaption>
+        </figure>
+        <figure>
+          <img src="images/guitar.jpg" alt="Աշակերտը նվագում է ակուստիկ կիթառ">
+          <figcaption>Կիթառի խումբ</figcaption>
+        </figure>
+        <figure>
+          <img src="images/concert.jpg" alt="Աշակերտների համերգը դպրոցի դահլիճում">
+          <figcaption>Տարեվերջյան համերգ</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025  Երաժշտական դպրոց</p>
+    <address>
+      Երևան, Մուզեյի փ. 9 ·
+      <a href="tel:+37410123456">+374 10 123 456</a> ·
+      <a href="mailto:info@music9.am">info@music9.am</a>
+    </address>
+  </footer>
+</body>
+</html>
