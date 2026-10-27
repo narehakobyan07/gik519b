@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Սեղանի խաղերի ակումբի պաշտոնական էջ. խաղերի հավաքածու, կանոններ և միջոցառումներ:">
+    <title>Սեղանի Խաղերի Ակումբ | Գլխավոր</title>
+</head>
+<body id="top-page" class="main-layout" data-club-id="bgc-2026">
+
+    <header>
+        <h1>Բարի գալուստ «Սեղանի Խաղերի Ակումբ»</h1>
+        <p>Լավագույն վայրը ռազմավարության, ժամանցի և նոր ընկերների համար։</p>
+        <nav>
+            <ul>
+                <li><a href="#rules">Ակումբի Կանոններ</a></li>
+                <li><a href="#games-list">Խաղերի Հավաքածու</a></li>
+                <li><a href="#media-section">Մեդիա</a></li>
+                <li><a href="about.html">Մեր Մասին (about.html)</a></li>
+                <li><a href="https://hy.wikipedia.org/wiki/Սեղանի_խաղ" target="_blank">Վիքիպեդիա (Արտաքին)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Ներածություն և Կանոններ -->
+        <section id="rules">
+            <h2>Ակումբի Նկարագրությունը և Կանոնները</h2>
+            <article>
+                <h3>Մեր Ակումբի Մասին</h3>
+                <p>
+                    Մեր ակումբը հիմնադրվել է <b>2024</b> թվականին։ Մենք առաջարկում ենք ավելի քան <strong>100 տարբեր խաղեր</strong>։ 
+                    Խաղասենյակի մակերեսը կազմում է 150 m<sup>2</sup>, որտեղ միշտ առկա է զովացուցիչ H<sub>2</sub>O ջուր բոլոր մասնակիցների համար։
+                </p>
+                <p>
+                    <i>Ուշադրություն․</i> Մուտքի վճարը նախկինում <del>2000 Դրամ</del> էր, իսկ հիմա ընդամենը <ins>1500 Դրամ</ins> է ամբողջ օրվա համար։ 
+                    <mark>Կարևոր զգուշացում․</mark> խաղաքարերը կորցնելու դեպքում գործում է տուգանք։ 
+                    <s>Հին կանոնակարգը այլևս չի գործում։</s>
+                </p>
+            </article>
+
+            <article>
+                <h3>Ակումբի Հիմնական Կանոնները (Unordered List)</h3>
+                <ul>
+                    <li>Հարգել մյուս խաղացողներին և ակումբի գույքը։</li>
+                    <li>Խաղերն օգտագործելուց հետո վերադարձնել նույն տեղում։
+                        <ul>
+                            <li>Խաղաքարերը դասավորել տուփի մեջ։</li>
+                            <li>Մաքրել խաղասեղանը խաղից հետո։</li>
+                        </ul>
+                    </li>
+                    <li>Սնունդն ու խմիչքը պահել խաղասեղաններից հեռու։</li>
+                    <li>Խաղի ընթացքում հետևել <em>ազնիվ խաղի (Fair Play)</em> սկզբունքներին։</li>
+                </ul>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Section 2: Խաղին միանալը և Տերմինները -->
+        <section id="how-to-join">
+            <h2>Ինչպես Միանալ Խաղին և Տերմինաբանություն</h2>
+            
+            <article>
+                <h3>Խաղին Միանալու 4 Քայլերը (Ordered List)</h3>
+                <ol>
+                    <li>Գրանցվել ակումբի ընդունարանում կամ կայքում։</li>
+                    <li>Ընտրել խաղը մեր հարուստ հավաքածուից։</li>
+                    <li>Ծանոթանալ խաղի կանոններին կամ դիմել խաղավարին։</li>
+                    <li>Սկսել խաղը և վայելել ժամանակը։</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Հիմնական Տերմիններ (Definition List)</h3>
+                <dl>
+                    <dt><dfn>Ռազմավարություն</dfn></dt>
+                    <dd>Երկարաժամկետ պլանավորման մեթոդ, որն օգտագործվում է խաղում հաղթանակի հասնելու համար։</dd>
+                    
+                    <dt><dfn>Հերթ</dfn></dt>
+                    <dd>Ժամանակահատված, որի ընթացքում մեկ խաղացողը կատարում է իր քայլը։</dd>
+                    
+                    <dt><dfn>Միավոր</dfn></dt>
+                    <dd>Չափման միավոր, որը հաշվարկվում է խաղացողի հաջողությունները գնահատելու համար։</dd>
+                </dl>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Section 3: Աղյուսակ -->
+        <section id="games-list">
+            <h2>Մեր Խաղերի Հավաքածուն</h2>
+            <table border="1">
+                <caption>Ակումբում առկա սեղանի խաղերի ցանկը</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Խաղի Անվանումը</th>
+                        <th scope="col">Ժանր</th>
+                        <th scope="col">Խաղացողներ</th>
+                        <th scope="col">Տևողություն</th>
+                        <th scope="col">Տարիքային շեմ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Կաթան (Catan)</td>
+                        <td rowspan="2">Ռազմավարական</td>
+                        <td>3-4 անձ</td>
+                        <td>60-90 րոպե</td>
+                        <td>10+</td>
+                    </tr>
+                    <tr>
+                        <td>Կարկասոն (Carcassonne)</td>
+                        <td>2-5 անձ</td>
+                        <td>35-45 րոպե</td>
+                        <td>7+</td>
+                    </tr>
+                    <tr>
+                        <td>Մոնոպոլիա</td>
+                        <td>Տնտեսական</td>
+                        <td>2-6 անձ</td>
+                        <td>60-180 րոպե</td>
+                        <td>8+</td>
+                    </tr>
+                    <tr>
+                        <td>Դիքսիթ (Dixit)</td>
+                        <td>Ասոցիատիվ</td>
+                        <td>3-6 անձ</td>
+                        <td>30 րոպե</td>
+                        <td>8+</td>
+                    </tr>
+                    <tr>
+                        <td>Կոդնեյմս (Codenames)</td>
+                        <td>Թիմային / Բառային</td>
+                        <td>2-8 անձ</td>
+                        <td>15-30 րոպե</td>
+                        <td>10+</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Ընդհանուր ցուցադրված ռեկորդներ / ցանկեր․</td>
+                        <td>5 խաղ</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Section 4: Պատկերներ -->
+        <section id="gallery">
+            <h2>Լուսանկարներ</h2>
+            
+            <p>Սեղմեք ստորև ներկայացված նկարին՝ խաղերի մասին ավելին իմանալու համար․</p>
+            <a href="https://hy.wikipedia.org/wiki/Սեղանի_խաղ" target="_blank">
+                <img src="images/game-board.jpg" alt="Սեղանի խաղի տախտակ և քարեր" width="300">
+            </a>
+
+            <figure>
+                <img src="images/club-room.jpg" alt="Ակումբի սրահի ընդհանուր տեսքը" width="300">
+                <figcaption>Նկար 1․ Մեր ակումբի հարմարավետ խաղասրահը։</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!-- Section 5: Մեդիա (Ձայն և Տեսանյութ) -->
+        <section id="media-section">
+            <h2>Մեդիա Նյութեր</h2>
+            
+            <article>
+                <h3>Աուդիո Ներկայացում</h3>
+                <audio controls>
+                    <source src="media/audio-intro.mp3" type="audio/mpeg">
+                    Ձեր բրաուզերը չի աջակցում աուդիո տարրը։
+                </audio>
+                <p><small><b>Տեքստային վերծանում․</b> «Բարի գալուստ մեր սեղանի խաղերի ակումբ։ Այստեղ դուք կարող եք գտնել ավելի քան 100 խաղեր և անցկացնել հիանալի ժամանակ։»</small></p>
+            </article>
+
+            <article>
+                <h3>Վիդեո Ակնարկ</h3>
+                <video controls width="400">
+                    <source src="media/video-promo.mp4" type="audio/mp4">
+                    <track kind="subtitles" src="media/subtitles-hy.vtt" srclang="hy" label="Հայերեն" default>
+                    Ձեր բրաուզերը չի աջակցում վիդեո տարրը։
+                </video>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Հետաքրքիր փաստ</h3>
+        <p>Ըստ <cite>BoardGameGeek</cite> կայքի՝ աշխարհում ամենահին հայտնի սեղանի խաղը <abbr title="Ancient Egyptian Game">Սենետն</abbr> է։</p>
+        <p>Ինչպես ասել է հայտնի մտածողը․ <q>Խաղը մարդու ինքնաարտահայտման լավագույն ձևն է։</q></p>
+    </aside>
+
+    <footer>
+        <p>&copy; <time datetime="2026">2026</time> «Սեղանի Խաղերի Ակումբ»։ Բոլոր իրավունքները պաշտպանված են։</p>
+        <address>
+            Գտնվելու վայրը․ ՀՀ, ք․ Երևան, Աբովյան փող․ 10<br>
+            Էլ․ հասցե․ <a href="mailto:info@boardgames.am">info@boardgames.am</a><br>
+            Հեռախոս․ +374 10 000000
+        </address>
+        <p><a href="#top-page">Վերադառնալ էջի սկիզբ</a></p>
+    </footer>
+
+</body>
+</html>
