@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="hy">
 <head>
+  <!-- Nshum enq ej-i lezun, kodavorumy ev ekranayin chapsery -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Արդի Գրադարան | Կապ</title>
+
+  <!-- HTML ejy kapum enq arandzin CSS fayli het -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
+  <!-- Stexcum enq navigaciayi panel, vori mijocov ogtaticy karox e ancnel kayqi ayl ejery -->
+  <nav class="navbar">
         <a href="index.html" class="logo"> 📖 VELL<span>.LIB</span></a>
+
+        <!-- Kayqi ejery kapox navigaciayi hghumner -->
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Գլխավոր</a></li>
+            <li><a href="index.html">Գլխավոր</a></li>
             <li><a href="catalog.html">Կատալոգ</a></li>
             <li><a href="resources.html">Թվային Ռեսուրսներ</a></li>
             <li><a href="about.html">Մեր մասին</a></li>
-            <li><a href="contact.html">Կապ</a></li>
+            <li><a href="contact.html" class="active">Կապ</a></li>
         </ul>
+
+        <!-- Mutqi ej ancnelu hamar arandzin blok -->
         <div class="nav-actions">
             <a href="login.html" class="btn-outline">Մուտք</a>
         </div>
-    </nav>
+  </nav>
 
+  <!-- Ej-i himnakan masy parunakum e hetadardz kapi bajiny -->
   <main class="container">
+
+    <!-- Ej-i vernagir ev ogtaticyin uxxvac karch nerkayacum -->
     <div class="page-header">
       <h1>Կապ Մեզ Հետ</h1>
       <p>Ունե՞ք հարցեր կամ առաջարկներ: Գրեք մեզ:</p>
     </div>
 
+    <!-- Glass-card-y sahmanapակում e dimumi formi chapsery ev dasavorumy -->
     <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
+
+      <!-- Form-i mijocov havakvum en ogtaticyi mutqagrac tvyalnery -->
       <form>
+
+        <!-- Anun azganuni mutqagrman dasht -->
         <div class="form-group">
           <label>Անուն Ազգանուն</label>
           <input type="text" placeholder="Ձեր անունը">
         </div>
+
+        <!-- Email hascei mutqagrman dasht, vori hamar ogtagorcvel e email tipy -->
         <div class="form-group">
           <label>Էլ․ փոստ</label>
           <input type="email" placeholder="example@mail.com">
         </div>
+
+        <!-- Haxordagrutyan mutqagrman hamar ogtagorcvel e textarea elementy -->
         <div class="form-group">
           <label>Հաղորդագրություն</label>
           <textarea rows="5" placeholder="Ձեր հաղորդագրությունը..."></textarea>
         </div>
+
+        <!-- Submit knopkan naxatesvac e form-y uxarkelu hamar -->
         <button type="submit" class="btn-primary" style="width: 100%;">Ուղարկել</button>
       </form>
     </div>
   </main>
 
+  <!-- Footer-y kayqi nerqevum gtnvox hakirjayin masn e -->
   <footer>
     <p>&copy; 2026 Արդի Գրադարան. Բոլոր իրավունքները պաշտպանված են:</p>
   </footer>

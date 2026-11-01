@@ -1,0 +1,907 @@
+/* Google Fonts-ic miacnum enq Noto Sans Armenian shrifty */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   1. ROOT VARIABLES
+========================= */
+
+/* Root-um sahmanum enq global popoxakanner, voronq ogtagorcum enq kayqi tarber maserum */
+:root {
+    --bg-main: #0b0f19;
+    --bg-navbar: #182036;
+    --bg-card: rgba(22, 31, 48, 0.75);
+
+    --primary-accent: #6366f1;
+    --primary-hover: #4f46e5;
+
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --glow-color: rgba(99, 102, 241, 0.25);
+
+    --radius: 16px;
+    --transition: 0.3s ease;
+}
+
+/* =========================
+   2. RESET
+========================= */
+
+/* Reset-y veracnum e brauzeri default margin ev padding tarberutyunnery */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Eji mijocov ancnelu jamanak miacnum enq smooth scroll-i effecty */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body-y sahmanum e kayqi yndhanur shrifty, fonayin guyny ev himnakan dasavorumy */
+body {
+    font-family: 'Noto Sans Armenian', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+
+    /* Flexbox-i mijocov ej-i himnakan masy dasavorvum e footer-i mijin masum */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hghumneric heracnum enq underline-y ev pahpanum jarrangvac guyny */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Input-ayin elementnerin talis enq kayqi yndhanur shrifty */
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+/* =========================
+   3. NAVIGATION
+========================= */
+
+/* Navigaciayi panely pahpanum enq ej-i verevum scroll-i jamanak */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    padding: 15px 40px;
+
+    /* Flexbox-y dasavorum e navigaciayi elementnery mek toxi mej */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    background-color: var(--bg-navbar);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+/* Logo-i chapn u shrifti hastutyuny */
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--primary-accent);
+}
+
+/* Navigaciayi hghumneri dasavorum ev mijakayqner */
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    list-style: none;
+}
+
+/* Hghumneri tesqy ev guyni poxum hover-i jamanak */
+.nav-links a {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover-y ashxatum e mouse-i hghman jamanak, active-y nshanakum e bacvac ejy */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-accent);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================
+   4. BUTTONS
+========================= */
+
+/* Himnakan knopkaneri yndhanur dasavorum ev gradient fon */
+.btn-primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 22px;
+
+    /* Linear-gradient-y stexcum e erku guynic kazmvac ancnox gradient */
+    background: linear-gradient(
+        135deg,
+        var(--primary-accent),
+        var(--primary-hover)
+    );
+
+    color: white;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 30px;
+
+    box-shadow: 0 4px 15px var(--glow-color);
+
+    /* Transition-y apahovum e poxoxutyunneri suav ancyum */
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/* Knopkan mouse-i vra pahov mecacnum e stverayin effecty ev bardzr anum */
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--glow-color);
+}
+
+/* Outline knopkaneri tesqayin dzevavorum */
+.btn-outline {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background: transparent;
+    color: var(--text-main);
+
+    border: 1px solid var(--border-glass);
+    border-radius: 30px;
+
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Hover-i jamanak knopkan poxum e fonayin guyny ev texasharjvum verev */
+.btn-outline:hover {
+    background: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: white;
+
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--glow-color);
+}
+
+/* =========================
+   5. HERO SECTION
+========================= */
+
+/* Hero-y glxavor ej-i nerkayacman arajin blokn e */
+.hero {
+    padding: 5rem 1.5rem;
+    margin-bottom: 2rem;
+
+    /* Flexbox-y nergyum e vernagirn u nerkayacman teksty */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /* Radial-gradient-y stexcum e kentronic depi durs taracvox fonayin ancyum */
+    background: radial-gradient(
+        circle at top,
+        rgba(99, 102, 241, 0.18),
+        transparent 70%
+    );
+}
+
+/* Hero-i vernagri chapy sahmanapակում enq, vor teksty chdarna shat layn */
+.hero h1 {
+    max-width: 800px;
+
+    margin-bottom: 16px;
+
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Hero-i nerkayacman teksty sahmanvac chapov kentronacnum enq */
+.hero p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* =========================
+   6. CONTAINER
+========================= */
+
+/* Container-y sahmanum e ej-i parunakutyan maksimal laynuty ev kentronacnum ayn */
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 3rem;
+    padding: 0 20px;
+
+    flex: 1;
+}
+
+/* Ej-i vernagirayin blokneri dasavorum */
+.page-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    color: var(--text-muted);
+}
+
+/* =========================
+   7. BOOK GRID
+========================= */
+
+/* CSS Grid-y grqeri kartnery dasavorum e avtomat poxvox syunaknerov */
+.grid-3 {
+    display: grid;
+
+    /* Auto-fit-y stacum e aynqan syunak, vorqan texavorvum e konteynerum */
+    /* Minmax-y sahmanum e syunaki minimal ev maksimal chapsery */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+/* =========================
+   8. GLASS CARDS
+========================= */
+
+/* Glass-card-y yndhanur kartayin dizayn e, vor ogtagorcum enq kayqi tarber bajinnerum */
+.glass-card {
+    position: relative;
+
+    min-width: 0;
+    max-width: none;
+    height: 100%;
+
+    padding: 15px;
+
+    /* Kartayi nersum elementnery dasavorvum en vertikal */
+    display: flex;
+    flex-direction: column;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+
+    /* Blur-y kartayi fonin talis e apakii nman tesq */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: var(--transition);
+}
+
+/* Grqeri kartan mouse-i vra texasharjvum e u stanum stverayin effect */
+.grid-3 .glass-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(99, 102, 241, 0.5);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Grqeri nkarnery stacnum en nuyn chapn u nman dasavorumy */
+.grid-3 .glass-card img {
+    display: block;
+
+    width: 100%;
+    height: 240px;
+
+    margin: 0 0 12px;
+
+    /* Contain-y pahpanum e nkari amboxjakan tesanyutyuny aranc kտրելու */
+    object-fit: contain;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover-i jamanak nkary poqr-ինch mecacnum e */
+.grid-3 .glass-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Kartayi vernagreri tesqayin dzevavorum */
+.glass-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.glass-card p {
+    margin-bottom: 12px;
+
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Flexbox-i margin-top: auto-y knopkan texադրում e karti nerqevum */
+.glass-card .btn-primary {
+    margin-top: auto;
+
+    padding: 8px 12px;
+
+    font-size: 0.8rem;
+    border-radius: 20px;
+}
+
+/* Miayn knopkan e stanum hover-i sharjman effect */
+.grid-3 .glass-card .btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.7);
+}
+
+/* =========================
+   9. BOOK COVERS
+========================= */
+
+/* Book-cover-y nkari hamar sahmanum e arandzin chapov konteyner */
+.book-cover {
+    position: relative;
+
+    width: 100%;
+    height: 240px;
+
+    /* Overflow hidden-y nkari durs ekac masery chi tuyl talis cuyc tal */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.book-cover img {
+    display: block;
+
+    width: 100%;
+    height: 240px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+/* Cover-i vra mouse-i jamanak nkary mecacnum e */
+.book-cover:hover img {
+    transform: scale(1.05);
+}
+
+/* New badge-y texadrvum e cover-i verevi aj koxmum */
+.book-cover .new-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+
+    padding: 6px 10px;
+
+    background: #8b5cf6;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+/* Cover-i hover-i jamanak badge-y poxum e guyny ev stanum glow effect */
+.book-cover:hover .new-badge {
+    background: #c4b5fd;
+
+    box-shadow:
+        0 0 10px #a78bfa,
+        0 0 20px #8b5cf6;
+
+    transform: scale(1.05);
+}
+
+/* Grqi metatvyalneri dasavorum */
+.book-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.book-meta span:last-child {
+    white-space: nowrap;
+}
+
+/* Grqi nkaragrutyan tesqayin dzevavorum */
+.book-description {
+    margin-bottom: 16px;
+
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Card-action knopkan texadրվում e karti amboghj laynutyamb */
+.card-action {
+    width: 100%;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================
+   10. FEATURES
+========================= */
+
+/* Glxavor ej-i aravelutyunneri bajni dursayin taracutyuny */
+.features-section {
+    margin: 50px auto;
+}
+
+/* Aravelutyunneri kartnery dasavorvum en grid-i mijocov */
+.features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: var(--transition);
+}
+
+/* Hover-i jamanak aravelutyan karty bardzranum e u stver e stacnum */
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(99, 102, 241, 0.4);
+
+    box-shadow: 0 12px 30px var(--glow-color);
+}
+
+.feature-icon {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 2.2rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* =========================
+   11. DIGITAL RESOURCES
+========================= */
+
+/* Tvayin resursneri kartnery dasavorvum en avtomat poxvox syunaknerov */
+.resources-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Resursi karti mej elementnery dasavorvum en vertikal, isk footer-y mnum e nerqevum */
+.resource-card {
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: var(--transition);
+}
+
+/* Resursi karti hover effect */
+.resource-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--primary-accent);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Resursi verin masi elementnery texadրվում en erku koxm */
+.resource-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+.resource-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(79, 70, 229, 0.15);
+    color: var(--primary-accent);
+
+    border-radius: 12px;
+    font-size: 1.5rem;
+}
+
+.resource-badge {
+    padding: 4px 10px;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.resource-title {
+    margin-bottom: 8px;
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.resource-desc {
+    margin-bottom: 20px;
+
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Resursi karti nerqevum fayleri qanakn u hghumy dasavorvum en irar dimac */
+.resource-footer {
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid var(--border-glass);
+}
+
+.resource-meta {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* =========================
+   12. FORMS
+========================= */
+
+/* Forma-i yuraqanchyur mutqagrman dashti mijyev tex e bacvum */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Forma-i input, textarea ev select elementneri yndhanur dzevavorum */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 18px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+
+    color: white;
+
+    outline: none;
+    font-family: inherit;
+
+    transition: var(--transition);
+}
+
+/* Focus-i jamanak mutqagrman dashty arandznacnum enq guynov ev glow effect-ov */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-accent);
+
+    box-shadow: 0 0 0 3px var(--glow-color);
+}
+
+/* Textarea-n tuyl e talis poxel mutqagrman dashti bardzrutyuny miayn vertikal */
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Mutqi blokin talis enq maksimal laynutyun ev kentronacnum ejum */
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 4rem auto;
+}
+
+/* =========================
+   13. BADGE
+========================= */
+
+/* Badge-y poqr nshanak e, vor ogtagorcum enq nerkayacman bajinnerum */
+.badge {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 4px 12px;
+
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary-accent);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+
+    border-radius: 20px;
+}
+
+/* =========================
+   14. TABLES
+========================= */
+
+/* Aghyusaki bջիջների border-ery miavorvum en mekakan border-i tesqov */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Aghyusaki toxeri vra mouse-i jamanak fonayin guyny poqr չափով poxvum e */
+table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+
+    transition: background 0.2s ease;
+}
+
+/* =========================
+   15. FOOTER
+========================= */
+
+/* Footer-y texadրվում e ej-i nerqevum ev stacnum e arandzin fonayin mas */
+footer {
+    width: 100%;
+
+    margin-top: auto;
+    padding: 20px;
+
+    background: rgba(11, 15, 25, 0.9);
+
+    border-top: 1px solid var(--border-glass);
+
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* =========================
+   16. BOOK DETAIL PAGES
+========================= */
+
+/* Grqi arandzin ejերում anջatum enq kartերի sharjman ev stveri hover effectnery */
+.book-detail-page .glass-card:hover,
+.book-detail-page .resource-card:hover,
+.book-detail-page .feature-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Grqi arandzin ejերում mouse-i vra nkarnery chen mecacnum */
+.book-detail-page .glass-card:hover img,
+.book-detail-page .book-cover:hover img {
+    transform: none !important;
+}
+
+/* =========================
+   17. RESPONSIVE DESIGN
+========================= */
+
+/* 900px-ic poqr ekranների hamar poxum enq navigaciayi ev vernagri dasavorumy */
+@media (max-width: 900px) {
+
+    .navbar {
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* 600px-ic poqr ekranների hamar ogtagorcum enq mobayl dasavorum */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+
+        gap: 12px;
+    }
+
+    .glass-card {
+        padding: 10px;
+    }
+
+    .grid-3 .glass-card img {
+        height: 240px;
+    }
+
+    /* Poqr ekranin resursneri ev aravelutyunneri kartnery texadրվում en meky myusi tak */
+    .resources-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-container {
+        margin: 2rem auto;
+    }
+
+    .page-header h1 {
+        font-size: 1.7rem;
+    }
+}
