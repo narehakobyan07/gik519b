@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Տեխնոլոգիական Ակումբ - Tech Club</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Tech<span>Club</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Գլխավոր</a></li>
+                    <li><a href="about.html">Մեր մասին</a></li>
+                    <li><a href="projects.html">Նախագծեր</a></li>
+                    <li><a href="events.html">Միջոցառումներ</a></li>
+                    <li><a href="resources.html">Ռեսուրսներ & Բլոգ</a></li>
+                    <li><a href="membership.html">Անդամակցություն</a></li>
+                    <li><a href="contact.html">Կապ</a></li>
+                </ul>
+            </nav>
+            <a href="membership.html#join-form" class="btn btn-primary nav-btn">Միացի՛ր մեզ</a>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Ապագայի Տեխնոլոգիաները Այստեղ Են</span>
+                <h1>Կերտենք թվային ապագան միասին</h1>
+                <p>Մեր տեխնոլոգիական ակումբը համախմբում է ծրագրավորմամբ, ռոբոտաշինությամբ և արհեստական բանականությամբ հետաքրքրված ուսանողներին ու մասնագետներին։ Միացի՛ր մեզ՝ զարգացնելու քո հմտությունները և իրականացնելու նորարարական նախագծեր։</p>
+
+                <div class="cta-buttons">
+                    <a href="membership.html#join-form" class="btn btn-primary">Դարձի՛ր անդամ</a>
+                    <a href="events.html" class="btn btn-secondary">Տեսնել միջոցառումները</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-card">
+                    <div class="card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code><span class="kwd">struct</span> <span class="var">TechClub</span> {
+    <span class="kwd">string</span> <span class="prop">mission</span>;
+    <span class="kwd">string</span> <span class="prop">community</span>;
+    <span class="kwd">string</span> <span class="prop">status</span>;
+
+    <span class="kwd">void</span> <span class="func">join</span>() {
+        cout &lt;&lt; <span class="str">"Joined!"</span> &lt;&lt; endl;
+    }
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events preview -->
+    <section class="events" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Վերջին Նորություններ և Իրադարձություններ</h2>
+                <p>Բաց չթողնես մեր առաջիկա վորքշոփերն ու հեքաթոնները</p>
+            </div>
+
+            <div class="events-grid">
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Նոյ</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="category">Վորքշոփ</span>
+                        <h3>Web Development Starter Kit</h3>
+                        <p>Իմացիր, թե ինչպես ստեղծել առաջին վեբ կայքը HTML, CSS և JavaScript տեխնոլոգիաներով։</p>
+                        <a href="events.html" class="read-more">Մանրամասն &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="day">28</span>
+                        <span class="month">Նոյ</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="category">Հեքաթոն</span>
+                        <h3>AI & Robotics Hackathon 2026</h3>
+                        <p>24-ժամյա մրցույթ, որտեղ թիմերը կստեղծեն նորարարական լուծումներ ԱԲ-ի միջոցով։</p>
+                        <a href="events.html" class="read-more">Մանրամասն &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <span class="month">Դեկ</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="category">Միթափ</span>
+                        <h3>Cybersecurity Essentials</h3>
+                        <p>Քննարկում կիբեռանվտանգության արդի խնդիրների և տվյալների պաշտպանության մասին։</p>
+                        <a href="events.html" class="read-more">Մանրամասն &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Tech Club: Բոլոր իրավունքները պաշտպանված են:</p>
+        </div>
+    </footer>
+
+</body>
+</html>
