@@ -1,3 +1,19 @@
+/* ---------- 1. CSS Variables ---------- */
+
+:root {
+    --main-color: #173f5f;
+    --accent-color: #1d7874;
+    --highlight-color: #e7b34b;
+    --page-background: #f4f7f6;
+    --text-color: #24323d;
+    --card-background: #ffffff;
+    --border-color: #d9e5e3;
+    --main-space: 1rem;
+    --shadow-color: rgba(25, 60, 70, 0.10);
+}
+
+/* ---------- 2. General Styles and Box Model ---------- */
+
 * {
     box-sizing: border-box;
 }
@@ -8,11 +24,32 @@ html {
 
 body {
     margin: 0;
-    background: #f4f7f6;
-    color: #24323d;
+    background: var(--page-background);
+    color: var(--text-color);
     font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
     line-height: 1.7;
 }
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+audio {
+    max-width: 100%;
+}
+
+hr {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* ---------- 3. Typography ---------- */
 
 h1,
 h2,
@@ -24,51 +61,91 @@ h6 {
     margin-top: 0;
 }
 
+h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
 h2 {
     margin-bottom: 18px;
-    color: #173f5f;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 h3 {
-    color: #2f6f6d;
+    color: var(--accent-color);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+    color: var(--main-color);
 }
 
 p {
     margin: 0 0 14px;
 }
 
+strong,
+b {
+    font-weight: 700;
+}
+
+small {
+    font-size: 0.875rem;
+}
+
+mark {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #fff0bd;
+    color: #654c16;
+}
+
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+address {
+    line-height: 1.9;
+}
+
+
+/* ---------- 4. Links and Focus ---------- */
+
 a {
-    color: #176b87;
+    color: var(--accent-color);
     text-decoration: none;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 a:hover {
-    color: #0b4353;
+    color: var(--main-color);
     text-decoration: underline;
 }
 
-img,
-video {
-    max-width: 100%;
-    height: auto;
+a:focus-visible {
+    outline: 3px solid var(--highlight-color);
+    outline-offset: 4px;
 }
 
-/* ---------- Header ---------- */
+
+/* ---------- 5. Header and Navigation ---------- */
 
 .site-header {
-    color: #ffffff;
-    background: linear-gradient(135deg, #123c69, #1d7874);
     padding: 34px 20px 24px;
+    color: #ffffff;
+    background: linear-gradient(
+            135deg,
+            var(--main-color),
+            var(--accent-color),
+            #2d9690
+    );
     text-align: center;
     box-shadow: 0 8px 25px rgba(20, 55, 75, 0.18);
-}
-.site-header {
-    color: #ffffff;
-}
-
-#top {
-    color: #f4fbff;
 }
 
 .site-header h1 {
@@ -97,19 +174,13 @@ video {
 
 .site-header > nav > a:hover {
     background: #ffffff;
-    color: #123c69;
+    color: var(--main-color);
     text-decoration: none;
     transform: translateY(-2px);
 }
 
-hr {
-    width: min(1100px, 90%);
-    margin: 0 auto;
-    border: 0;
-    border-top: 1px solid #d7e2e1;
-}
 
-/* ---------- Main layout ---------- */
+/* ---------- 6. Main Layout ---------- */
 
 main {
     width: min(1100px, calc(100% - 32px));
@@ -119,10 +190,10 @@ main {
 main > section {
     margin: 0 0 30px;
     padding: 30px;
-    background: #ffffff;
-    border: 1px solid #e1ebe9;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    box-shadow: 0 8px 28px rgba(25, 60, 70, 0.07);
+    box-shadow: 0 8px 28px var(--shadow-color);
 }
 
 section > h2::after {
@@ -132,18 +203,26 @@ section > h2::after {
     height: 4px;
     margin-top: 10px;
     border-radius: 5px;
-    background: #e7b34b;
+    background: var(--highlight-color);
 }
 
-/* Element selector */
+
+/* ---------- 7. Tourism Cards ---------- */
+
+/* Garni and Geghard route card */
+
 article {
     margin-top: 22px;
 }
 
-/* Class-like card behavior through the existing route data attribute */
 article[data-route] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 720px;
+    margin: 22px auto;
     padding: 24px;
-    border-left: 5px solid #1d7874;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--accent-color);
     border-radius: 15px;
     background: linear-gradient(135deg, #f4fbfa, #ffffff);
     box-shadow: 0 7px 20px rgba(29, 120, 116, 0.10);
@@ -157,15 +236,30 @@ article[data-route]:hover {
 
 #garni-route h3 {
     margin-bottom: 10px;
-    color: #173f5f;
+    color: var(--main-color);
 }
 
+/* Travel tip card */
+
 #travel-tip {
-    margin-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 15px;
-    background: #fff8e8;
     border: 1px solid #f0d58a;
+    border-radius: 15px;
+    background-color: #fff8e8;
+    background-image:
+            linear-gradient(
+                    rgba(255, 248, 232, 0.94),
+                    rgba(255, 248, 232, 0.94)
+            ),
+            url("../images/garni.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 7px 20px rgba(29, 120, 116, 0.10);
 }
 
 #travel-tip::before {
@@ -176,10 +270,15 @@ article[data-route]:hover {
     display: inline;
 }
 
-/* ---------- Formatting section ---------- */
+
+/* ---------- 8. Introduction and Formatting ---------- */
+
+#intro > p {
+    font-size: 1.05rem;
+}
 
 #formatting strong {
-    color: #173f5f;
+    color: var(--main-color);
 }
 
 #formatting [data-info="important"] {
@@ -191,7 +290,8 @@ article[data-route]:hover {
     font-weight: 600;
 }
 
-/* ---------- Routes list ---------- */
+
+/* ---------- 9. Tourism Routes and Lists ---------- */
 
 #routes > ul {
     display: grid;
@@ -202,33 +302,41 @@ article[data-route]:hover {
     list-style: none;
 }
 
-/* Nested/descendant selector */
 #routes ul li {
     position: relative;
 }
 
-/* Each route item becomes a card */
+/* Route cards */
+
 #routes > ul > li {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 360px;
     min-height: 90px;
+    margin-bottom: 0;
     padding: 22px 20px;
-    border: 1px solid #dbe8e5;
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     background: #f8fbfa;
-    color: #173f5f;
+    color: var(--main-color);
     font-weight: 700;
     box-shadow: 0 5px 16px rgba(30, 70, 75, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease,
-                background-color 0.25s ease;
+    transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            background-color 0.25s ease;
 }
 
-/* Required :nth-child() */
+/* Required nth-child selector */
+
 #routes > ul > li:nth-child(3) {
     background: linear-gradient(135deg, #fff4d6, #fffaf0);
-    border: 2px solid #e7b34b;
+    border: 2px solid var(--highlight-color);
     transform: scale(1.02);
 }
 
-/* Hover on route cards */
+/* Hover effect */
+
 #routes > ul > li:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(30, 70, 75, 0.13);
@@ -239,19 +347,29 @@ article[data-route]:hover {
     transform: translateY(-5px) scale(1.02);
 }
 
+/* Nested list */
+
 #routes > ul > li > ul {
     margin-top: 10px;
     padding-left: 20px;
     color: #4d6870;
     font-weight: 500;
+    list-style-type: circle;
 }
 
 #routes ol {
     padding-left: 25px;
+    list-style-type: decimal;
 }
 
 #routes ol li {
     margin-bottom: 7px;
+    padding-left: 3px;
+}
+
+#routes ol li::marker {
+    color: var(--accent-color);
+    font-weight: 800;
 }
 
 #routes dl {
@@ -261,7 +379,7 @@ article[data-route]:hover {
 }
 
 #routes dt {
-    color: #1d7874;
+    color: var(--accent-color);
     font-weight: 800;
 }
 
@@ -269,7 +387,8 @@ article[data-route]:hover {
     margin: 0;
 }
 
-/* ---------- Route table ---------- */
+
+/* ---------- 10. Route Table and Prices ---------- */
 
 #route-table {
     overflow-x: auto;
@@ -279,13 +398,11 @@ article[data-route]:hover {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    overflow: hidden;
-    border-radius: 14px;
 }
 
 #route-table caption {
     padding: 12px;
-    color: #173f5f;
+    color: var(--main-color);
     font-size: 1.1rem;
     font-weight: 800;
 }
@@ -293,37 +410,47 @@ article[data-route]:hover {
 #route-table th,
 #route-table td {
     padding: 14px 12px;
-    border: 1px solid #d9e5e3;
+    border: 1px solid var(--border-color);
     text-align: left;
 }
 
 #route-table th {
-    background: #173f5f;
+    background: var(--main-color);
     color: #ffffff;
+    font-weight: 700;
 }
+
+/* Alternating rows */
 
 #route-table tbody tr:nth-child(even) {
-    background: #f5f9f8;
-}
-
-#route-table tbody tr:hover {
     background: #eaf5f3;
 }
 
-/* Price decoration with ::before */
+#route-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* Table hover */
+
+#route-table tbody tr:hover {
+    background: #d9eeea;
+}
+
+/* Decorative price symbol */
+
 #route-table tbody td:nth-child(4)::before {
     content: "֏ ";
     font-weight: 700;
 }
 
-/* Footer row */
 #route-table tfoot td {
     background: #fff4d6;
     color: #654c16;
     font-weight: 700;
 }
 
-/* ---------- Gallery ---------- */
+
+/* ---------- 11. Image Gallery ---------- */
 
 #gallery {
     text-align: center;
@@ -340,8 +467,10 @@ article[data-route]:hover {
 #gallery img {
     display: block;
     width: 100%;
-    border-radius: 18px;
+    max-width: 100%;
+    height: auto;
     border: 4px solid #ffffff;
+    border-radius: 18px;
     box-shadow: 0 10px 25px rgba(20, 50, 60, 0.14);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -351,27 +480,45 @@ article[data-route]:hover {
     box-shadow: 0 15px 32px rgba(20, 50, 60, 0.20);
 }
 
+/* First image: preserve natural proportions */
+
+#gallery > a img {
+    object-fit: contain;
+}
+
+/* Second image: fixed height and cropped display */
+
+#gallery figure img {
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
 #gallery figcaption {
     margin-top: 10px;
     color: #587078;
     font-weight: 600;
 }
 
-/* ---------- Media ---------- */
+
+/* ---------- 12. Audio and Video ---------- */
 
 #media audio,
 #media video {
+    display: block;
     width: 100%;
+    max-width: 100%;
     margin: 8px 0 18px;
     border-radius: 12px;
 }
 
-/* ---------- Quotes / code ---------- */
+
+/* ---------- 13. Quotes and Code ---------- */
 
 blockquote {
     margin: 22px 0;
     padding: 18px 22px;
-    border-left: 5px solid #e7b34b;
+    border-left: 5px solid var(--highlight-color);
     border-radius: 0 12px 12px 0;
     background: #fffaf0;
     color: #5a4a25;
@@ -387,12 +534,37 @@ pre {
 
 code {
     font-family: "SFMono-Regular", Consolas, monospace;
+    overflow-wrap: anywhere;
 }
 
-/* ---------- Booking form ---------- */
+kbd {
+    padding: 3px 7px;
+    border: 1px solid #cbd5d9;
+    border-radius: 5px;
+    background: #f4f7f8;
+    color: var(--main-color);
+    font-family: monospace;
+    box-shadow: 0 2px 0 #cbd5d9;
+}
+
+samp {
+    color: var(--accent-color);
+}
+
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* ---------- 14. Booking Form ---------- */
 
 #booking {
-    background: linear-gradient(145deg, #ffffff, #f4fbfa);
+    background: linear-gradient(
+            145deg,
+            var(--card-background),
+            #f4fbfa
+    );
 }
 
 #booking form {
@@ -400,17 +572,18 @@ code {
 }
 
 #booking fieldset {
+    min-width: 0;
     margin: 0 0 22px;
     padding: 24px;
     border: 1px solid #cfe0dd;
     border-radius: 17px;
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(255, 255, 255, 0.88);
 }
 
 #booking legend {
     padding: 7px 13px;
     border-radius: 9px;
-    background: #173f5f;
+    background: var(--main-color);
     color: #ffffff;
     font-weight: 800;
 }
@@ -430,20 +603,16 @@ code {
 #booking select,
 #booking textarea {
     width: 100%;
+    max-width: 100%;
     padding: 12px 14px;
     border: 1px solid #bfd2cf;
     border-radius: 10px;
     background: #ffffff;
-    color: #24323d;
+    color: var(--text-color);
     font: inherit;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease,
-                transform 0.2s ease;
-}
-
-#booking textarea {
-    min-height: 130px;
-    resize: vertical;
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
 }
 
 #booking input::placeholder,
@@ -451,27 +620,29 @@ code {
     color: #8a9a9f;
 }
 
-/* Required :focus — visible focus indicator must remain */
-#booking #route:focus,
-#booking #start-date:focus {
-    border-color: #1d7874;
-    box-shadow: 0 0 0 4px rgba(29, 120, 116, 0.18);
+#booking textarea {
+    min-height: 130px;
+    resize: vertical;
 }
 
-/* Focus for all other form fields */
-#booking input:focus,
-#booking select:focus,
-#booking textarea:focus {
-    border-color: #176b87;
-    box-shadow: 0 0 0 3px rgba(23, 107, 135, 0.14);
+/* Required visible focus indicators */
+
+#booking input:focus-visible,
+#booking select:focus-visible,
+#booking textarea:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(29, 120, 116, 0.15);
 }
 
-/* Radio / checkbox */
+/* Keep radio buttons and checkboxes naturally visible */
+
 #booking input[type="radio"],
 #booking input[type="checkbox"] {
     width: auto;
     margin-right: 7px;
-    accent-color: #1d7874;
+    accent-color: var(--accent-color);
 }
 
 #booking input[type="radio"] + label,
@@ -481,6 +652,8 @@ code {
     cursor: pointer;
 }
 
+/* Booking buttons */
+
 #booking button {
     padding: 13px 21px;
     margin: 4px 8px 4px 0;
@@ -489,13 +662,14 @@ code {
     font: inherit;
     font-weight: 800;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease,
-                background-color 0.2s ease;
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background-color 0.2s ease;
 }
 
-/* Hover on booking button */
 #booking button[type="submit"] {
-    background: #1d7874;
+    background: var(--accent-color);
     color: #ffffff;
 }
 
@@ -516,11 +690,12 @@ code {
 }
 
 #booking button:focus-visible {
-    outline: 3px solid #e7b34b;
+    outline: 3px solid var(--highlight-color);
     outline-offset: 3px;
 }
 
-/* ---------- About page ---------- */
+
+/* ---------- 15. About Page ---------- */
 
 #company,
 #guide,
@@ -542,30 +717,56 @@ code {
     padding-left: 25px;
 }
 
+#services ul {
+    list-style-type: square;
+}
+
+#services ol {
+    list-style-type: decimal;
+}
+
 #services li {
     margin-bottom: 7px;
+    padding-left: 3px;
 }
 
 #services li::marker {
-    color: #1d7874;
+    color: var(--accent-color);
     font-weight: 800;
 }
 
 #contact-about address {
     padding: 20px;
+    border: 1px solid var(--border-color);
     border-radius: 14px;
     background: #f4fbfa;
-    border: 1px solid #d5e6e2;
     font-style: normal;
 }
 
-/* ---------- Footer ---------- */
+
+/* ---------- 16. Contact Section ---------- */
+
+#contacts address {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: #f4fbfa;
+    font-style: normal;
+}
+
+#contacts a,
+#contact-about a {
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- 17. Footer ---------- */
 
 footer {
     padding: 32px 20px;
-    text-align: center;
-    background: #173f5f;
+    background: var(--main-color);
     color: #eaf3f5;
+    text-align: center;
 }
 
 footer p {
@@ -581,11 +782,70 @@ footer a:hover {
     color: #ffffff;
 }
 
-/* ---------- Responsive design ---------- */
+footer a:focus-visible {
+    outline-color: var(--highlight-color);
+}
+
+
+/* ---------- 18. Laboratory 6: Box Model ---------- */
+
+/* Temporary demonstration blocks */
+
+#css-lab-experiments .box-model-demo {
+    width: 200px;
+    padding: 20px;
+    margin: 15px 0;
+    border: 2px solid var(--accent-color);
+    background: #eaf5f3;
+}
+
+#css-lab-experiments .content-box-demo {
+    box-sizing: content-box;
+}
+
+#css-lab-experiments .border-box-demo {
+    box-sizing: border-box;
+}
+
+/* Display and visibility experiments */
+
+#css-lab-experiments .visibility-demo {
+    width: 200px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    background: #fff4d6;
+}
+
+#css-lab-experiments .hidden-display-demo {
+    display: none;
+}
+
+/*
+   To test visibility:
+   Replace display: none with visibility: hidden.
+   The element's layout space will remain.
+*/
+
+/* Long description with scrolling */
+
+#css-lab-experiments .overflow-demo {
+    max-height: 120px;
+    overflow: auto;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: #f4fbfa;
+    line-height: 1.7;
+}
+
+
+/* ---------- 19. Responsive Design ---------- */
 
 @media (max-width: 700px) {
+
     main {
-        width: min(100% - 20px, 1100px);
+        width: calc(100% - 20px);
         margin-top: 20px;
     }
 
@@ -607,6 +867,10 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    #routes > ul > li {
+        max-width: 100%;
+    }
+
     #routes > ul > li:nth-child(3) {
         transform: none;
     }
@@ -624,5 +888,25 @@ footer a:hover {
 
     #booking fieldset {
         padding: 18px;
+    }
+
+    #booking button {
+        max-width: 100%;
+    }
+
+    #gallery > a,
+    #gallery figure {
+        width: 100%;
+        max-width: 400px;
+        margin: 14px 0;
+    }
+
+    #gallery figure img {
+        height: 220px;
+    }
+
+    #css-lab-experiments .content-box-demo,
+    #css-lab-experiments .border-box-demo {
+        max-width: 100%;
     }
 }

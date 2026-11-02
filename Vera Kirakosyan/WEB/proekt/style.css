@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #2e7d32;
+    --accent-color: #ff8f00;
+    --bg-light: #f4f6f8;
+    --text-color: #333;
+    --border-color: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 300px;
+    flex: 1 1 250px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card:nth-child(even) {
+    background-color: #f9f9f9;
+    border-color: var(--primary-color);
+}
+
+.paw-title::before {
+    content: "🐾 ";
+}
+
+.paw-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-color);
+    margin-top: 5px;
+}
+
+.scrollable-description {
+    height: 80px;
+    overflow: auto;
+    border: 1px dashed var(--border-color);
+    padding: 5px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+fieldset {
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 143, 0, 0.5);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-color);
+}
+
+#contacts {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-links {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links li {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.items-list, .steps-list, dl {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+dt {
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+#media-section {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #2e7d32;
+    background-color: #000;
+}
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}

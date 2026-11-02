@@ -1,0 +1,147 @@
+/* 1. Ժառանգվող հատկություններ ծնող տարրի (body) վրա */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Անմիջական ժառանգի (>) ընտրիչ */
+.nav-list > li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.main-nav {
+    background-color: #34495e;
+    padding: 10px 20px;
+}
+
+.nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 3. Ձևի (Form) ընդհանուր ոճեր */
+.form-section {
+    max-width: 650px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2980b9;
+    padding: 0 8px;
+}
+
+.field-wrapper {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ::after կեղծ տարր՝ պարտադիր դաշտերի աստղանիշի (*) համար */
+.req-label::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* 4. Input-ների, Select-ի և Textarea-ի ոճեր */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* :focus կեղծ դաս (outline-ը պահպանված է տեսանելիության համար) */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: 2px solid #3498db;
+    background-color: #f0f8ff;
+}
+
+/* 5. :nth-child() կեղծ դասի կիրառություն դաշտերի զույգ/կենտ գույների համար */
+.field-wrapper:nth-child(even) {
+    background-color: #fafafa;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* 6. Կոճակներ և :hover / ::before */
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* ::before կեղծ տարր՝ submit կոճակի վրա սիմվոլ ավելացնելու համար */
+.btn-submit::before {
+    content: "✓ ";
+}
+
+.btn-submit {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+.btn-reset {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #c0392b;
+}
+
+/* 7. ՀԱԿԱՍՈՂ ԿԱՆՈՆՆԵՐ (Specificity/Order դեմոնստրացիայի համար) */
+
+/* Rule A: Element + Class (Specificity: 0,0,1,1) */
+section.form-section h2 {
+    color: #2c3e50;
+}
+
+/* Rule B: Class Selector (Specificity: 0,0,1,0) - թեև ներքևում է, բայց չի աշխատի, քանի որ Rule A-ն ավելի բարձր Specificity ունի */
+.form-section h2 {
+    color: #e67e22;
+}

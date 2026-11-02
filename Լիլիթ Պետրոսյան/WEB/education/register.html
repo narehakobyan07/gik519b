@@ -38,12 +38,12 @@
                 <form action="#" method="POST" class="registration-form">
 
                     <div class="form-group">
-                        <label for="fullname">Անուն Ազգանուն *</label>
+                        <label for="fullname">Անուն Ազգանուն <i style="color: #ef4444;">*</i></label>
                         <input type="text" id="fullname" name="fullname" placeholder="Օրինակ՝ Արմեն Գրիգորյան" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Հեռախոսահամար *</label>
+                        <label for="phone">Հեռախոսահամար <i style="color: #ef4444;">*</i></label>
                         <input type="tel" id="phone" name="phone" placeholder="+374 99 123456" required>
                     </div>
 
@@ -51,18 +51,21 @@
                         <label for="course">Ընտրեք դասընթացը *</label>
                         <select id="course" name="course" required>
                             <option value="" disabled selected>-- Ընտրեք դասընթացը --</option>
+                            <option value="chinese">Չինարեն Լեզու</option>
+                            <option value="ai">Արհեստական Բանականություն</option>
+                            <option value="cybersecurity">Կիբեռանվտանգություն</option>
                             <option value="web">Web Ծրագրավորում (HTML/CSS)</option>
-                            <option value="js">JavaScript & React</option>
-                            <option value="python">Python & AI Base</option>
-                            <option value="design">Graphic Design (Photoshop, Illustrator, Canva)</option>
                             <option value="uiux">UI/UX Design (Figma)</option>
-                            <option value="smm">SMM & Content Creation</option>
-                            <option value="marketing">Digital Marketing (SEO/PPC/SMM)</option>
-                            <option value="english">General English (Անգլերեն)</option>
-                            <option value="it-english">IT English (Մասնագիտական)</option>
-                            <option value="german">Գերմաներեն (A1-B2)</option>
-                            <option value="accounting">Ժամանակակից Հաշվապահություն + 1C</option>
-                            <option value="pedagogy">Նախադպրոցական Մանկավարժություն</option>
+                            <option value="design">Graphic Design </option>
+                            <option value="english">General English</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="python">Python & AI Base</option>
+                            <option value="data">Data Analysis</option>
+                            <option value="mobile">Մոբայլ հավելվածների մշակում</option>
+                            <option value="1u">Հաշվապահություն</option>
+                            <option value="finance">Ֆինանսական մենեջմենթ</option>
+                            <option value="project">Նախագծերի կառավարում</option>
+                            <option value="nax">Նախադպրոցական կրթության մեթոդիկա</option>
                         </select>
                     </div>
 

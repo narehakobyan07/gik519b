@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Գրանցում Այցելության - Rose Museum</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <!-- Նավիգացիա -->
+  <header class="navbar">
+    <div class="logo">ROSE MUSEUM</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Գլխավոր</a></li>
+        <li><a href="about.html">Մեր Մասին</a></li>
+        <li><a href="index.html#exhibits">Ցուցանմուշներ</a></li>
+        <li><a href="index.html#visit">Այցելություն</a></li>
+        <li><a href="register.html" class="active">Գրանցվել</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Գրանցման Բաժին -->
+  <section class="section form-section">
+    <div class="form-container">
+      <h2>Ամրագրել Այցելություն կամ Տոմս</h2>
+      <p>Լրացրեք տվյալները թանգարան մուտք գործելու կամ էքսկուրսիային մասնակցելու համար:</p>
+      
+      <form class="museum-form">
+        <div class="form-group">
+          <label for="fullname">Անուն Ազգանուն</label>
+          <input type="text" id="fullname" placeholder="Մուտքագրեք ձեր անունը" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Էլեկտրոնային Հասցե</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Հեռախոսահամար</label>
+          <input type="tel" id="phone" placeholder="+374 XX XXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Այցելության Ամսաթիվ</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ticket-type">Տոմսի Տեսակը</label>
+          <select id="ticket-type">
+            <option value="adult">Մեծահասակ (1500 ֏)</option>
+            <option value="student">Ուսանող / Դպրոցական (500 ֏)</option>
+            <option value="group">Խմբային էքսկուրսիա (1000 ֏ անձը)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Լրացուցիչ նշումներ (ըստ ցանկության)</label>
+          <textarea id="notes" rows="4" placeholder="Ձեր հարցերը կամ մեկնաբանությունները..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Հաստատել Գրանցումը</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Ֆուտեր -->
+  <footer class="footer">
+    <p>&copy; 2026 Rose Museum. Բոլոր իրավունքները պաշտպանված են:</p>
+  </footer>
+
+</body>
+</html>

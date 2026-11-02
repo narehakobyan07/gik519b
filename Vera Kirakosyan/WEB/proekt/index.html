@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Կենդանիների խնամքի կենտրոն - Գլխավոր</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Կենդանիների խնամքի կենտրոն</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="about.html">Մեր մասին</a></li>
+                <li><a href="#services">Ծառայություններ</a></li>
+                <li><a href="#prices">Գներ</a></li>
+                <li><a href="#booking">Ամրագրում</a></li>
+                <li><a href="#media">Մեդիա</a></li>
+                <li><a href="#contacts">Կոնտակտներ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Խնամքի ծառայություններ</h2>
+            <div class="cards-container">
+                <article class="service-card">
+                    <h3 class="paw-title">Խնամք և սպասարկում</h3>
+                    <p>Լոգանք, սանրվածք և եղունգների կտրում փորձառու մասնագետների կողմից:</p>
+                </article>
+
+                <article class="service-card">
+                    <h3 class="paw-title">Զբոսանք և խաղեր</h3>
+                    <p>Ակտիվ զբոսանքներ հատուկ առանձնացված տարածքներում:</p>
+                </article>
+
+                <article class="service-card">
+                    <h3 class="paw-title">Երկարատև կացություն</h3>
+                    <div class="scrollable-description">
+                        <p>Հատուկ կացարաններ ձեր կենդանիների համար, երբ դուք քաղաքում չեք: Մենք տրամադրում ենք 24/7
+                            հսկողություն, անհատականացված սննդակարգ, ամենօրյա զբոսանքներ, տեսահսկում և բժշկական առաջին
+                            օգնության պատրաստվածություն:</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="prices">
+            <h2>Ծառայությունների գնացուցակ</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ծառայություն</th>
+                        <th>Բաժին</th>
+                        <th>Տևողություն</th>
+                        <th>Ժամ</th>
+                        <th>Արժեք (AMD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Լոգանք</td>
+                        <td rowspan="2">Խնամք</td>
+                        <td>1 ժամ</td>
+                        <td>10:00 - 11:00</td>
+                        <td>5,000</td>
+                    </tr>
+                    <tr>
+                        <td>Սանրվածք</td>
+                        <td>1.5 ժամ</td>
+                        <td>11:30 - 13:00</td>
+                        <td>8,000</td>
+                    </tr>
+                    <tr>
+                        <td>Զբոսանք</td>
+                        <td>Զբոսանք</td>
+                        <td>45 րոպե</td>
+                        <td>14:00 - 14:45</td>
+                        <td>3,000</td>
+                    </tr>
+                    <tr>
+                        <td>Ճաշ</td>
+                        <td>Կերաբաժին</td>
+                        <td>30 րոպե</td>
+                        <td>15:00 - 15:30</td>
+                        <td>2,000</td>
+                    </tr>
+                    <tr>
+                        <td>Գիշերակաց</td>
+                        <td>Կացություն</td>
+                        <td>24 ժամ</td>
+                        <td>18:00 - 18:00</td>
+                        <td>12,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Ընդհանուր գրանցումների քանակը՝ 5 ծառայություն</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="booking">
+            <h2>Ծառայության ամրագրման ձև</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Անձնական տվյալներ</legend>
+                    <label for="fullname">Անուն Ազգանուն:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Արմեն Արմենյան">
+
+                    <label for="phone">Հեռախոսահամար:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+374 99 123456">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ծառայության ամրագրման ձև</legend>
+                    <label for="pet-type">Կենդանու տեսակ:</label>
+                    <input type="text" id="pet-type" name="pet-type" required placeholder="Շուն, Կատու...">
+
+                    <label for="service-select">Ծառայություն:</label>
+                    <select id="service-select" name="service">
+                        <option value="grooming">Խնամք</option>
+                        <option value="walking">Զբոսանք</option>
+                        <option value="boarding">Կացություն</option>
+                    </select>
+
+                    <label for="visit-date">Այցի ամսաթիվ:</label>
+                    <input type="date" id="visit-date" name="visit-date" required>
+
+                    <label for="notes">Լրացուցիչ նշում:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Ամրագրել</button>
+            </form>
+        </section>
+
+        <section id="media">
+            <h2>Մեդիա</h2>
+            <h3>Ձայնային ներկայացում</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section id="media-section">
+
+            <div class="video-container">
+                <video id="pet-video" controls width="100%"
+                    poster="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                        type="video/mp4">
+
+                    <!-- Ենթագրեր (Subtitles / Captions) -->
+                    <track kind="subtitles" src="subtitles.vtt" srclang="hy" label="Հայերեն" default>
+
+                    Ձեր բրաուզերը չի աջակցում տեսանյութի նվագարկումը։
+                </video>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Կոնտակտներ</h2>
+            <p><strong>Հասցե՝</strong> ք. Երևան, Աբովյան 10</p>
+            <p><strong>Հեռախոս՝</strong> +374 10 123456, +374 99 123456</p>
+            <p><strong>Էլ. հասցե՝</strong> info@petcare.am</p>
+            <p><strong>Աշխատանքային ժամեր՝</strong> Երկ-Ուրբ 09:00 - 19:00</p>
+
+            <h3>Մեր հղումները</h3>
+            <ul class="contact-links">
+                <li><a href="https://example.com" target="_blank">Պաշտոնական կայք (Արտաքին հղում)</a></li>
+                <li><a href="#booking">Ամրագրել ծառայություն (Ներքին հղում)</a></li>
+                <li><a href="mailto:info@petcare.am">Ուղարկել էլ․
