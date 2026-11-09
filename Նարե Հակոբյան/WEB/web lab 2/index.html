@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Սպորտային Ակումբ - Գլխավոր</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Glxavor hatvac gradientov -->
+    <header class="hero-section">
+        <h1>Սպորտային ակումբ ՏԻՏԱՆ</h1>
+        <p>Ձեր կատարյալ մարմինը մեզ հետ</p>
+    </header>
+
+
+
+    <!-- Andamakcutyan Dzev (Form) -->
+
+
+    <!-- Скрытый переключатель для показа/скрытия формы входа -->
+    <input type="checkbox" id="login-toggle" class="login-toggle-checkbox">
+
+    <!-- Մուտքի Բաժին (Login Section) -->
+    <section id="login" class="form-section">
+        <h2 class="section-title">Մուտք Անձնական Էջ</h2>
+
+        <form action="#" method="post" class="login-form">
+            <fieldset>
+                <legend>Մուտքագրեք տվյալները</legend>
+
+                <!-- 1. Email / Մուտքանուն -->
+                <div class="form-group">
+                    <label for="login-email">Էլ. հասցե *</label>
+                    <input type="email" id="login-email" name="login_email" required placeholder="example@mail.am">
+                </div>
+
+                <!-- 2. Գաղտնաբառ -->
+                <div class="form-group">
+                    <label for="login-password">Գաղտնաբառ *</label>
+                    <input type="password" id="login-password" name="login_password" required minlength="6"
+                        maxlength="20" placeholder="••••••••">
+                </div>
+
+                <!-- 3. Հիշել ինձ (Checkbox) -->
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="remember_me" value="yes"> Հիշել տվյալները
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Կոճակներ -->
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-submit">Մուտք</button>
+                <button type="reset" class="btn btn-reset">Մաքրել</button>
+                <!-- Добавлена кнопка закрытия -->
+                <label for="login-toggle" class="btn btn-close">Փակել</label>
+            </div>
+        </form>
+    </section>
+
+    <!-- Նավիգացիա և Լոգո -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <!-- Если логотип лежит в той же папке, что и index.html: -->
+                <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo">
+
+                <!-- Если логотип лежит в папке images: -->
+                <!-- <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo"> -->
+            </a>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="about.html">Մեր մասին</a></li>
+                <li><a href="service.html">Ծառայություններ</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+                <!-- Ссылка на открытие входа через label -->
+                <li><label for="login-toggle" class="nav-login-btn">Մուտք</label></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <!-- 1. Hero Section (Գլխավոր բաններ) -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Կերտիր քո կատարյալ մարմինը մեզ հետ</h1>
+                <p>Ուժ, դիմացկունություն և առողջություն՝ մեկ վայրում:</p>
+                <a href="#register" class="cta-button">Գրանցվել անվճար փորձնական մարզման</a>
+            </div>
+        </section>
+        
+
+        
+        <!-- 2. Առավելությունները (Features / Advantages) -->
+        <section class="features">
+            <h2>Ինչու՞ ընտրել հենց մեր ակումբը</h2>
+            <ul>
+                <li>
+                    <h3>Ժամանակակից սարքավորումներ</h3>
+                    <img src="images/9.jpg" alt="Ժամանակակից սարքավորումներ">
+                    <p>Վերջին սերնդի մարզասարքեր՝ նախատեսված բոլոր մակարդակի մարզիկների համար:</p>
+                </li>
+                <li>
+                    <h3>Փորձառու մարզիչներ</h3>
+                    <img src="images/10.jpg" alt="Փորձառու մարզիչներ">
+                    <p>Sertified և պրոֆեսիոնալ մարզիչների թիմ, որոնք կօգնեն հասնել ձեր նպատակներին:</p>
+                </li>
+                <li>
+                    <h3>Հարմար տեղադրություն</h3>
+                    <img src="images/11.jpg" alt="Հարմար տեղադրություն">
+                    <p>Գտնվում ենք քաղաքի կենտրոնում՝ ապահովված հարմար ավտոկայանատեղիով:</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Секция карточек тренировок (для CSS заданий) -->
+        <section id="services-cards" class="services-parent">
+            <h2 class="section-title">Մարզումների Ծրագրեր</h2>
+            <!-- Marzumneri qarter (3 hat) -->
+        <section class="cards-container">
+    <!-- 1. Ֆիտնես -->
+    <div class="card">
+        <img src="images/3.jpg" alt="Ֆիտնես և Մարզական Ուսուցում">
+        <div class="card-content">
+            <h3>Ֆիտնես և Մարզական Ուսուցում</h3>
+            <p>Պրոֆեսիոնալ մարզումներ որակյալ մարզիչների հսկողության տակ:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 2. Լողավազան -->
+    <div class="card">
+        <img src="images/2.jpg" alt="Լողավազան">
+        <div class="card-content">
+            <h3>Լողավազան</h3>
+            <p>Մաքուր և ընդարձակ լողավազան առողջության բարելավման համար:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 3. Ըմբշամարտ և Բոքս -->
+    <div class="card">
+        <img src="images/1.jpg" alt="Բոքս և Ըմբշամարտ">
+        <div class="card-content">
+            <h3>Ըմբշամարտ և Բոքս</h3>
+            <p>Ուժային և պրոֆեսիոնալ մարզումներ փորձառու մարզիչների հետ:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 4. Յոգա -->
+    <div class="card">
+        <img src="images/7.jpg" alt="Յոգա">
+        <div class="card-content">
+            <h3>Յոգա</h3>
+            <p>Ռելաքսացիա, հոգեբանական հանգստություն և մարմնի ձգում:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 5. Կրոսֆիթ -->
+    <div class="card">
+        <img src="images/8.jpg" alt="Կրոսֆիթ">
+        <div class="card-content">
+            <h3>Կրոսֆիթ</h3>
+            <p>Բարձր ինտենսիվության մարզումներ բոլոր մկանային խմբերի համար:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 6. Աերոբիկա -->
+    <div class="card">
+        <img src="images/6.jpg" alt="Աերոբիկա">
+        <div class="card-content">
+            <h3>Աերոբիկա</h3>
+            <p>Ակտիվ կարդիո պարապմունքներ ռիթմիկ երաժշտության ներքո:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 7. Հանդերձարան (Новая карточка: Раздевалка) -->
+    <div class="card">
+        <img src="images/4.jpg" alt="Հանդերձարան">
+        <div class="card-content">
+            <h3>Հանդերձարան</h3>
+            <p>Հարմարավետ, անհատական պահարաններով և ցնցուղարաններով հանդերձարաններ:</p>
+            <a href="#membership" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+
+    <!-- 8. Ընդունարան (Новая карточка: Рецепция) -->
+    <div class="card">
+        <img src="images/5.jpg" alt="Ընդունարան">
+        <div class="card-content">
+            <h3>Ընդունարան</h3>
+            <p>Ջերմ ընդունելություն, խորհրդատվություն և աջակցություն մեր աշխատակիցների կողմից:</p>
+            <a href="#contact" class="card-action">Գրանցվել</a>
+        </div>
+    </div>
+</section>
+      
+    </main>
+
+    <!-- Ֆուտեր -->
+    <footer>
+        <p>&copy; 2026 Սպորտային Ակումբ: Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+
+</html>

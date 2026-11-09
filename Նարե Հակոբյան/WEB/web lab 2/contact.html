@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Սպորտային Ակումբ - Գլխավոր</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="contact" class="contact-section">
+    <header>
+    <nav>
+        <a href="index.html">
+            <!-- Если логотип лежит в той же папке, что и index.html: -->
+            <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo">
+            
+            <!-- Если логотип лежит в папке images: -->
+            <!-- <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo"> -->
+        </a>
+        <ul>
+            <li><a href="index.html">Գլխավոր</a></li>
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="service.html">Ծառայություններ</a></li>
+            <li><a href="contact.html">Կապ</a></li>
+            <!-- Ссылка на открытие входа через label -->
+            <li><label for="login-toggle" class="nav-login-btn">Մուտք</label></li>
+        </ul>
+    </nav>
+    
+</header>
+    <div class="contact-container">
+        <div class="section-header">
+            <span class="sub-title">Կապ Մեզ Հետ</span>
+            <h2>Այցելեք Կամ Գրեք Մեզ</h2>
+            <p>Ունե՞ք հարցեր: Լրացրեք ձևաչափը կամ կապ հաստատեք մեզ հետ նշված եղանակներով:</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Ձախ կողմը՝ Կոնտակտային տվյալներ -->
+            <div class="contact-info">
+                <h3>Կոնտակտներ</h3>
+                <p class="info-text">Մենք պատրաստ ենք պատասխանել ձեր բոլոր հարցերին և օգնել ընտրել լավագույն մարզումային ծրագիրը:</p>
+
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h4>Հասցե</h4>
+                        <p>ք. Երևան, Աբովյան փող. 12</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <h4>Հեռախոս</h4>
+                        <p>+374 (10) 12-34-56</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div>
+                        <h4>Էլ. Հասցե</h4>
+                        <p>info@sportclub.am</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div>
+                        <h4>Աշխատանքային ժամեր</h4>
+                        <p>Երկ - Ուրբ: 07:00 - 23:00<br>Շաբ - Կիր: 09:00 - 21:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Աջ կողմը՝ Հետադարձ կապի Form -->
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <h3>Գրեք Մեզ</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Անուն</label>
+                        <input type="text" id="name" placeholder="Ձեր անունը" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Էլ. հասցե</label>
+                        <input type="email" id="email" placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Թեմա</label>
+                        <input type="text" id="subject" placeholder="Ինչ հարցով եք դիմում">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Հաղորդագրություն</label>
+                        <textarea id="message" rows="5" placeholder="Գրեք ձեր հաղորդագրությունը..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Ուղարկել</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Boksi Bazhin -->
+<section id="boxing" class="boxing-section">
+    <div class="boxing-container">
+        <div class="boxing-image">
+            <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" alt="Boksi marzumner">
+        </div>
+        <div class="boxing-content">
+            <span class="sub-title">Martarvest</span>
+            <h2>Բոքսի և կիկբոքսի Մարզումներ</h2>
+            <p class="description">
+                Բոքսը  իդեալական տարբերակ է ինչպես ֆիզիկական ուժի ու դիմացկունությունը զարգացնելու համար, այպես էլ ստրեսը տոտապելու և ինքնապատրաստության հմտությունների տիրապետելու համար:
+            </p>
+            
+            <ul class="boxing-features">
+                <li>🥊 Ինդիվիդուալ և խումբային մարզումներ</li>
+                <li>🥊 Պրոֆեսիոնալ ռինգ և մոդերն սարքավորումներ</li>
+                <li>🥊 Կվարվեն ինչպես սկսնակների, այնպես էլ տարածաշրջակայքի մարզումներ</li>
+            </ul>
+
+            <a href="#contact" class="cta-button">Գրանցվել մարզումների</a>
+        </div>
+    </div>
+</section>
+
+        <!-- Google Maps Քարտեզի Հատված -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.243542289139!2d44.5126!3d40.1811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEwJzUyLjAiTiA0NMKwMzAnNDUuNCJF!5e0!3m2!1shy!2sam!4v1600000000000!5m2!1shy!2sam" 
+                width="100%" 
+                height="350" 
+                style="border:0; border-radius: 12px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+</body>
+</html>
