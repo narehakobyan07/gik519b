@@ -221,3 +221,88 @@ figcaption { font-size: .9rem; color: #555; text-align: center; }
 @media (max-width: 600px) {
   .nav-list { flex-direction: column; gap: .25rem; }
 }
+/* =====================================================================
+   Լաբ 9. Արձագանքող դիզայն (Mobile First) և CSS անիմացիաներ
+   ===================================================================== */
+
+/* 9.1 Հիմք՝ հեռախոս (Media Queries չկան) */
+html { scroll-padding-top: 230px; }
+
+img, video { max-width: 100%; height: auto; }
+
+form input:not([type="checkbox"]):not([type="radio"]),
+form select,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card h3,
+.card p { overflow-wrap: anywhere; }
+
+/* 9.2 Վերնագիր և նավիգացիա՝ ուղղահայաց (sticky և z-index՝ առանց փոփոխության) */
+.site-header {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 4px;
+  padding: .75rem 1rem;
+}
+.site-header h1 { font-size: 1.35rem; line-height: 1.2; }
+.nav-list { flex-direction: column; gap: 0; }
+.nav-list a { display: block; padding: 6px 4px; line-height: 1.3; }
+
+/* 9.3 Քարտեր՝ մեկ սյունակ (վերագրում է Լաբ 8-ի auto-fit կանոնը) */
+.cards {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+/* 9.4 Transition և transform՝ կոնկրետ հատկություններով */
+.card { transition: box-shadow .25s ease, transform .25s ease; }
+.card:hover { transform: translateY(-4px); }
+
+.card-link { transition: background-color .2s ease, transform .2s ease; }
+.card-link:hover,
+.card-link:focus-visible,
+.btn:focus-visible { transform: translateY(-2px); }
+
+/* 9.5 @keyframes՝ «Նոր դաս» նշանի զարկ */
+@keyframes badge-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+.badge { animation: badge-pulse 1.6s ease-in-out 3; }
+
+/* 9.6 Պլանշետ՝ 768px և ավելի */
+@media (min-width: 768px) {
+  html { scroll-padding-top: 110px; }
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .site-header h1 { font-size: 2em; line-height: 1.25; }
+  .nav-list { flex-direction: row; gap: 1rem; }
+  .nav-list a { display: inline; padding: .25rem .5rem; line-height: inherit; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* 9.7 Համակարգիչ՝ 1024px և ավելի */
+@media (min-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* 9.8 Շարժման նվազեցում */
+@media (prefers-reduced-motion: reduce) {
+  .badge { animation: none; }
+  .card, .card-link, .btn { transition: none; }
+  .card:hover,
+  .card-link:hover,
+  .card-link:focus-visible,
+  .btn:hover,
+  .btn:focus-visible { transform: none; }
+}
