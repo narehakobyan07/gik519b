@@ -7,185 +7,34 @@
     <meta name="keywords" content="կամավոր, կենտրոն, ծրագրեր, Հայաստան, ԱԿՏ, նախաձեռնություն">
     <meta name="author" content="Hakob Avagyan">
     <title>Կամավորական կենտրոն «ԱԿՏ»</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f5f7fa;
-            color: #2c3e50;
-            line-height: 1.7;
-        }
-
-
-        header {
-            background: linear-gradient(135deg, #1a5276, #2e86c1);
-            color: #fff;
-            padding: 0 0 0 0;
-        }
-
-        .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 40px;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .logo-area h1 {
-            font-size: 1.6rem;
-            letter-spacing: 1px;
-        }
-
-        .logo-area p {
-            font-size: 0.85rem;
-            opacity: 0.85;
-            margin-top: 2px;
-        }
-
-        nav {
-            background: rgba(0,0,0,0.2);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 32px;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 13px 18px;
-            color: #d6eaf8;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a:focus {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-        }
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-            max-height: 420px;
-        }
-
-        .hero picture,
-        .hero picture img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(26,82,118,0.45), rgba(26,82,118,0.75));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 24px;
-            color: #fff;
-        }
-
-        .hero-overlay h2 {
-            font-size: 2.2rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-            margin-bottom: 12px;
-        }
-
-        .hero-overlay p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 11px 28px;
-            background: #e74c3c;
-            color: #fff;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.2s;
-        }
-
-        .btn:hover { background: #c0392b; }
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        section {
-            margin-bottom: 56px;
-        }
-
-        section > h2 {
-            font-size: 1.55rem;
-            color: #1a5276;
-            border-left: 5px solid #2e86c1;
-            padding-left: 14px;
-            margin-bottom: 24px;
-        }
-
-    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<a href="#initiatives" class="skip-link">Անցնել բովանդակությանը</a>
+
 <header>
-    <div class="header-top">
+    <div class="header-container">
         <div class="logo-area">
             <h1>Կամավորական կենտրոն «ԱԿՏ»</h1>
             <p>Ակտիվ Կամավոր Տիրույթ · Հայաստան · 2015-ից</p>
         </div>
+        <nav aria-label="Կայքի գլխավոր նավիգացիա">
+            <ul>
+                <li><a href="programs.html">Ծրագրեր</a></li>
+                <li><a href="#about">Մեր մասին</a></li>
+                <li><a href="register.html">Միանալ</a></li>
+                <li><a href="#contact">Կապ</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav aria-label="Կայքի գլխավոր նավիգացիա">
-        <ul>
-            <li><a href="index.html">Գլխավոր</a></li>
-            <li><a href="programs.html">Ծրագրեր</a></li>
-            <li><a href="#directions">Ուղղություններ</a></li>
-            <li><a href="#initiatives">Նախաձեռնություններ</a></li>
-            <li><a href="#about">Մեր մասին</a></li>
-            <li><a href="#gallery">Պատկերասրահ</a></li>
-            <li><a href="register.html">Գրանցում</a></li>
-            <li><a href="#contact">Կոնտակտ</a></li>
-        </ul>
-    </nav>
 </header>
 
 <div class="hero">
     <picture>
-        <source
-            srcset="hero-mobile.jpg 600w, hero-mobile@2x.jpg 1200w"
-            sizes="(max-width: 600px) 100vw"
-            media="(max-width: 600px)"
-            type="image/jpeg">
-        <source
-            srcset="hero-tablet.jpg 1024w"
-            sizes="(max-width: 1024px) 100vw"
-            media="(max-width: 1024px)"
-            type="image/jpeg">
-        <img
-            src="hero.jpg"
-            srcset="hero.jpg 1200w, hero@2x.jpg 2400w"
-            sizes="100vw"
-            alt="ԱԿՏ կամավորները խմբային աշխատանքի ժամանակ՝ Երևանի Կենտրոնական այգում"
-            width="1200" height="420">
+        <source srcset="hero-mobile.jpg 600w" media="(max-width: 600px)" type="image/jpeg">
+        <source srcset="hero-tablet.jpg 1024w" media="(max-width: 1024px)" type="image/jpeg">
+        <img src="hero.jpg" alt="ԱԿՏ կամավորները խմբային աշխատանքի ժամանակ" width="1200" height="420">
     </picture>
     <div class="hero-overlay">
         <h2>Փոխե՛ք աշխարհը՝ մեկ քայլ առ մեկ</h2>
@@ -196,102 +45,118 @@
 
 <main>
 
-    <section id="directions">
-        <h2>Կամավորական գործունեության ուղղություններ</h2>
-        <div class="directions-grid">
-            <div class="direction-card">
-                <div class="icon">🌿</div>
-                <h3>Էկոլոգիա</h3>
-                <p>Բնապահպանական ծրագրեր, անտառաշինություն, կանաչ Երևան նախաձեռնություններ։</p>
-            </div>
-            <div class="direction-card">
-                <div class="icon">📚</div>
-                <h3>Կրթություն</h3>
-                <p>Դպրոցականների դաստիարակություն, դասընկերական կրթություն, STEM ծրագրեր։</p>
-            </div>
-            <div class="direction-card">
-                <div class="icon">🤝</div>
-                <h3>Սոցիալական</h3>
-                <p>Հոգատարություն ծերերի, հաշմանդամ անձանց և խոցելի խմբերի համար։</p>
-            </div>
-            <div class="direction-card">
-                <div class="icon">🏥</div>
-                <h3>Առողջություն</h3>
-                <p>Արյան դոնորություն, բժշկական ճամբարներ, հանրային առողջության իրազեկում։</p>
-            </div>
-            <div class="direction-card">
-                <div class="icon">🏛️</div>
-                <h3>Մշակույթ</h3>
-                <p>Ազգային ժառանգության պահպանում, մշակութային միջոցառումներ, թանգարաններ։</p>
-            </div>
-        </div>
-    </section>
-
     <section id="initiatives">
-        <h2>Ընթացիկ ծրագրեր եւ նախաձեռնություններ</h2>
+        <h2>Կամավորական ծրագրեր և նախաձեռնություններ</h2>
         <div class="articles-grid">
+
             <article class="program-card" id="card-featured">
+                <span class="badge-new">Նոր ծրագիր</span>
                 <figure>
-                    <img src="eco-program.jpg"
-                         alt="Կամավորներ ծառ են տնկում Երևանի հյուսիսային արվարձաններում"
-                         width="400" height="200">
-                    <figcaption>«Կանաչ Երևան» ծրագրի մասնակիցները — 2025 թ. հոկտեմբեր</figcaption>
+                    <img src="eco-program.jpg" alt="Կամավորներ ծառ են տնկում Երևանում" width="400" height="180">
                 </figure>
                 <div class="card-body">
                     <span class="tag">Էկոլոգիա</span>
                     <h3>Կանաչ Երևան 2025</h3>
-                    <div class="card-desc-overflow"><p>
-                        Ծրագիրն ուղղված է Երևանի կանաչ ծածկույթի ավելացմանը։
-                        <strong>500+</strong> ծառ կտնկվի Հրապարակի, Ավանի և Նոր Նորքի
-                        շրջաններում։ Կամավորները մասնակցում են տնկման, ոռոգման
-                        և <em>կանաչ գոտիների մաքրման</em> աշխատանքներին։
-                    </p></div>
-                    <div class="card-meta">
-                        📅 Հոկտեմբեր — Նոյեմբեր 2025 &nbsp;|&nbsp; 📍 Երևան
+                    <div class="card-desc-overflow" tabindex="0" role="region" aria-label="Նկարագրություն">
+                        <p>Ծրագիրն ուղղված է Երևանի կանաչ ծածկույթի ավելացմանը։ 500+ ծառ կտնկվի Հրապարակի և Ավանի շրջաններում։</p>
+                        <p>Աշխատանքները կազմակերպվում են շաբաթական երկու անգամ՝ չորեքշաբթի և շաբաթ օրերին։</p>
+                    </div>
+                    <div class="card-meta-row">
+                        <span>📍 Երևան, Հանրապետության հրապարակ</span>
+                        <span>⏱️ 3 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
                     </div>
                 </div>
             </article>
 
             <article class="program-card">
                 <figure>
-                    <img src="education-program.jpg"
-                         alt="ԱԿՏ կամավոր ուսուցիչ դասաժամ է անցկացնում գյուղական դպրոցում"
-                         width="400" height="200">
-                    <figcaption>«Կրթական կամուրջ» — կամավոր ուսուցիչ Սյունիքի մարզում</figcaption>
+                    <img src="education-program.jpg" alt="Կամավոր ուսուցիչ դասաժամ է անցկացնում" width="400" height="180">
                 </figure>
                 <div class="card-body">
                     <span class="tag">Կրթություն</span>
                     <h3>Կրթական կամուրջ</h3>
-                    <p>
-                        Կամավոր ուսուցիչներ մեկնում են Սյունիքի, Վայոց ձորի և
-                        Լոռու մարզի հեռավոր դպրոցներ՝ <em>մաթեմատիկա, ծրագրավորում
-                        և անգլերեն</em> դասավանդելու։ Ծրագիրն ընդգրկում է
-                        <strong>15 դպրոց</strong> ու <strong>600+</strong> աշակերտ։
-                    </p>
-                    <div class="card-meta">
-                        📅 Սեպտեմբեր — Դեկտեմբեր 2025 &nbsp;|&nbsp; 📍 Մարզեր
+                    <p>Կամավոր ուսուցիչներ մեկնում են մարզեր՝ <em>մաթեմատիկա, ծրագրավորում և անգլերեն</em> դասավանդելու։</p>
+                    <div class="card-meta-row">
+                        <span>📍 Սյունիքի մարզ, Գորիս</span>
+                        <span>⏱️ 5 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
                     </div>
                 </div>
             </article>
 
             <article class="program-card">
                 <figure>
-                    <img src="social-program.jpg"
-                         alt="ԱԿՏ կամավորը ուտելիք է բաժանում մեկուսացված տարեցներին"
-                         width="400" height="200">
-                    <figcaption>«Հոգատար ձեռք» — ծերերի կենտրոնի կամավոր այց</figcaption>
+                    <img src="social-program.jpg" alt="Կամավորը օգնում է տարեցներին" width="400" height="180">
                 </figure>
                 <div class="card-body">
                     <span class="tag">Սոցիալական</span>
                     <h3>Հոգատար ձեռք</h3>
-                    <p>
-                        Ամբողջ Հայաստանի <strong>ավագ քաղաքացիների կենտրոններ</strong>
-                        կամ առանձնահատուկ կարիք ունեցող ընտանիքների այց։
-                        Կամավորները շփվում, կարդում, օգնում ռoukine-ի
-                        հետ՝ <em>նվազեցնելու մեկուսացումն ու միայնությունը</em>։
-                    </p>
-                    <div class="card-meta">
-                        📅 Ամբողջ տարի &nbsp;|&nbsp; 📍 Ողջ ՀՀ
+                    <p>Աջակցություն և հոգատարություն <strong>ավագ քաղաքացիներին</strong> ու խոցելի խմբերին մենակությունը նվազեցնելու նպատակով։</p>
+                    <div class="card-meta-row">
+                        <span>📍 Երևան, Ավագների կենտրոն</span>
+                        <span>⏱️ 4 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="program-card">
+                <figure>
+                    <img src="health-program.jpg" alt="Արյան դոնորության ակցիա" width="400" height="180">
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Առողջություն</span>
+                    <h3>Արյան կաթիլ</h3>
+                    <p>Արյան դոնորության կամավորական արշավներ՝ հանրային առողջության իրազեկման և փրկարարական ծրագրերի շրջանակում։</p>
+                    <div class="card-meta-row">
+                        <span>📍 Ազգային արյան կենտրոն</span>
+                        <span>⏱️ 2 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="program-card">
+                <figure>
+                    <img src="culture-program.jpg" alt="Մշակութային ժառանգության պահպանում" width="400" height="180">
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Մշակույթ</span>
+                    <h3>Ազգային ժառանգություն</h3>
+                    <p>Պատմամշակութային հուշարձանների մաքրման և պահպանման աշխատանքներ, էքսկուրսիաների կազմակերպում։</p>
+                    <div class="card-meta-row">
+                        <span>📍 Կոտայքի մարզ, Գառնի</span>
+                        <span>⏱️ 6 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="program-card">
+                <figure>
+                    <img src="sport-program.jpg" alt="Մարզական միջոցառումների կազմակերպում" width="400" height="180">
+                </figure>
+                <div class="card-body">
+                    <span class="tag">Սպորտ</span>
+                    <h3>Առողջ ապրելակերպ</h3>
+                    <p>Մարզական բացօթյա խաղերի և համայնքային վազքարշավների կազմակերպում երիտասարդների համար։</p>
+                    <div class="card-meta-row">
+                        <span>📍 Երևան, Հաղթանակի զբոսայգի</span>
+                        <span>⏱️ 4 ժամ</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="register.html" class="btn-join">Միանալ</a>
                     </div>
                 </div>
             </article>
@@ -299,176 +164,81 @@
         </div>
     </section>
 
+    <section id="display-visibility">
+        <h2>Փորձարկում՝ display և visibility</h2>
+        <p class="section-lead">Երկու հատկությունն էլ թաքցնում են տարրը, բայց տարբեր կերպ։</p>
+
+        <p class="dv-title"><code>display: none</code></p>
+        <div class="dv-row">
+            <div class="dv-box">Տարր 1</div>
+            <div class="dv-box demo-hidden-display" id="dv-target-display">Տարր 2</div>
+            <div class="dv-box">Տարր 3</div>
+        </div>
+        <button type="button" class="btn-reset dv-toggle" data-target="dv-target-display" data-class="demo-hidden-display">Ցույց տալ «Տարր 2»-ը</button>
+
+        <p class="dv-title"><code>visibility: hidden</code></p>
+        <div class="dv-row">
+            <div class="dv-box">Տարր 1</div>
+            <div class="dv-box demo-hidden-visibility" id="dv-target-visibility">Տարր 2</div>
+            <div class="dv-box">Տարր 3</div>
+        </div>
+        <button type="button" class="btn-reset dv-toggle" data-target="dv-target-visibility" data-class="demo-hidden-visibility">Ցույց տալ «Տարր 2»-ը</button>
+    </section>
+
     <section id="about">
-        <h2>Ընդհանուր տեղեկություն կենտրոնի մասին</h2>
-        <div class="about-flex">
-            <div class="about-text">
-                <p>
-                    <abbr title="Ակտիվ Կամավոր Տիրույթ">ԱԿՏ</abbr> կամավորական կենտրոնը
-                    հիմնադրվել է <mark>2015 թ.</mark>-ին Երևանում՝ նպատակ ունենալով
-                    <strong>կամավոր ծառայությունը</strong> դարձնել հայ հասարակության
-                    ամենօրյա կյանքի մաս։
-                </p>
-                <p>
-                    Կենտրոնն աշխատում է <em>կրթության, բնապահպանության,
-                    սոցիալական ծառայության</em> և <em>մշակութային ժառանգության</em>
-                    ոլորտներում։ Ծրագրի <u>ամսական մասնակցության</u> շեմը՝
-                    <del>20 ժամ</del> <ins>15 ժամ</ins>
-                    <small>(փոփոխվել է 2025 թ. հունվարից)</small>։
-                </p>
-                <blockquote cite="https://www.un.org/en/volunteering">
-                    <p>«Կամավորությունը ոչ թե ժամանակի կորուստ է, այլ ներդրում ապագայի մեջ»</p>
-                    <cite>— ՄԱԿ-ի Կամավորների ծրագիր (UNV)</cite>
-                </blockquote>
-                <p>
-                    Հաջողությամբ ավարտած կամավորը ստանում է
-                    <sup>®</sup>պաշտոնական հավաստագիր,
-                    ճանաչված նաև CO<sub>2</sub> նվազեցման ծրագրերում։
-                    Գրանցման վճար՝ <del>5 000 դրամ</del> <ins>անվճար</ins>
-                    <small>(2024 թ.-ից)</small>։
-                </p>
-            </div>
-            <aside class="stats-box" aria-label="Կենտրոնի վիճակագրություն">
-                <h3>Մեր թվերը</h3>
-                <div class="stat-item">
-                    <span class="num">500+</span>
-                    <span class="label">Կամավոր</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">30+</span>
-                    <span class="label">Ծրագիր</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">10</span>
-                    <span class="label">Տարի</span>
-                </div>
-                <div class="stat-item">
-                    <span class="num">15</span>
-                    <span class="label">Մարզ</span>
-                </div>
-            </aside>
-        </div>
+        <h2>Մեր մասին</h2>
+        <p><abbr title="Ակտիվ Կամավոր Տիրույթ">ԱԿՏ</abbr> կամավորական կենտրոնը հիմնադրվել է <mark>2015 թ.</mark>-ին Երևանում։ Ծրագրի ամսական մասնակցության շեմը՝ <del>20 ժամ</del> <ins>15 ժամ</ins>։</p>
     </section>
 
-    <section id="gallery">
-        <h2>Պատկերասրահ</h2>
-        <div class="gallery-grid">
-
-            <figure>
-                <img src="gallery1.jpg"
-                     alt="Կամավորներ Երևանի Կենտրոնական պուրակում ջուր են ոռոգում նոր տնկված ծառերին"
-                     width="400" height="200"
-                     loading="lazy">
-                <figcaption>«Կանաչ Երևան» — ծառ տնկելու արշավ</figcaption>
-            </figure>
-
-            <figure>
-                <img src="gallery2.jpg"
-                     alt="ԱԿՏ կամավոր ուսուցիչ դասաժամ է անցկացնում Գորիսի թիվ 2 դպրոցում"
-                     width="400" height="200"
-                     loading="lazy">
-                <figcaption>«Կրթական կամուրջ» — ծրագիր Սյունիքի մարզում</figcaption>
-            </figure>
-
-            <figure>
-                <img src="gallery3.jpg"
-                     alt="Կամավորներ արյան դոնորություն են կատարում Ազգային արյան կենտրոնում"
-                     width="400" height="200"
-                     loading="lazy">
-                <figcaption>«Արյան կաթիլ» — արյան դոնորության ծրագիր</figcaption>
-            </figure>
-
-            <figure>
-                <img src="gallery4.jpg"
-                     alt="ԱԿՏ կամավորները հանդիպում են Երևանի Ազատության հրապարակում՝ ամփոփելու տարվա արդյունքները"
-                     width="400" height="200"
-                     loading="lazy">
-                <figcaption>ԱԿՏ — 2025 թ. տարեկան ամփոփ հավաք</figcaption>
-            </figure>
-
-        </div>
-    </section>
-
-    <!-- ===== ԿՈՆՏԱԿՏ ===== -->
     <section id="contact">
-        <h2>Կոնտակտ</h2>
+        <h2>Կապ մեզ հետ</h2>
         <address>
             <strong>Կամավորական կենտրոն «ԱԿՏ»</strong><br>
             Հայաստան, 0010 Երևան, Աբովյան փողոց 15, բն. 3<br>
             Հեռ.՝ <a href="tel:+37411123456">+374 11 12-34-56</a><br>
             Էլ. փոստ՝ <a href="mailto:info@akt-volunteer.am">info@akt-volunteer.am</a>
         </address>
-        <br>
-        <p>
-            Ծրագրերի ամբողջական ցուցակ՝
-            <a href="programs.html">Կամավորական ծրագրեր</a> էջում։
-        </p>
-        <p>
-            Արտաքին ռեսուրս՝
-            <a href="https://www.un.org/en/volunteering" target="_blank" rel="noopener">
-                ՄԱԿ-ի Կամավորների ծրագիր (UNV)
-            </a>
-        </p>
     </section>
 
 </main>
 
 <footer>
     <div class="footer-inner">
-
         <div class="footer-col">
             <h4>ԱԿՏ կենտրոն</h4>
-            <p>
-                Ակտիվ Կամավոր Տիրույթ՝ ձեր ծառայության հարթակը
-                Հայաստանում 2015 թ.-ից։<br>
-                Միացի՛ր, փոխի՛ր, ապրի՛ր։
-            </p>
+            <p>Ակտիվ Կամավոր Տիրույթ՝ ձեր ծառայության հարթակը Հայաստանում 2015 թ.-ից։</p>
         </div>
-
         <div class="footer-col">
             <h4>Հղումներ</h4>
             <ul>
-                <li><a href="index.html">Գլխավոր</a></li>
                 <li><a href="programs.html">Ծրագրեր</a></li>
-                <li><a href="#directions">Ուղղություններ</a></li>
-                <li><a href="#initiatives">Նախաձեռնություններ</a></li>
-                <li><a href="#gallery">Պատկերասրահ</a></li>
+                <li><a href="#about">Մեր մասին</a></li>
+                <li><a href="register.html">Միանալ</a></li>
+                <li><a href="#contact">Կապ</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>Կոնտակտ</h4>
             <address>
                 Երևան, Աբովյան 15/3<br>
-                <a href="tel:+37411123456">+374 11 12-34-56</a><br>
-                <a href="mailto:info@akt-volunteer.am">info@akt-volunteer.am</a>
+                <a href="tel:+37411123456">+374 11 12-34-56</a>
             </address>
         </div>
-
-        <div class="footer-col">
-            <h4>Ռեսուրսներ</h4>
-            <ul>
-                <li>
-                    <a href="https://www.un.org/en/volunteering"
-                       target="_blank" rel="noopener">
-                        ՄԱԿ-ի Կամավոր ծրագիր
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.icva.ngo"
-                       target="_blank" rel="noopener">
-                        ICVA Կամավոր Դաշինք
-                    </a>
-                </li>
-            </ul>
-        </div>
-
     </div>
     <div class="footer-bottom">
-        <small>© 2025 Կամավորական կենտրոն «ԱԿՏ»։ Բոլոր իրավունքները պաշտպանված են։
-        Կայքը մշակել է <strong>Hakob Avagyan</strong> — Լաբ. աշխ. 2, WEB ծրագիր։</small>
+        <small>© 2025 Կամավորական կենտրոն «ԱԿՏ»։ Բոլոր իրավունքները պաշտպանված են։ Մշակել է <strong>Hakob Avagyan</strong>։</small>
     </div>
 </footer>
+
+<script>
+    document.querySelectorAll(".dv-toggle").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            var target = document.getElementById(btn.dataset.target);
+            var hidden = target.classList.toggle(btn.dataset.class);
+            btn.textContent = hidden ? "Ցույց տալ «Տարր 2»-ը" : "Թաքցնել «Տարր 2»-ը";
+        });
+    });
+</script>
 
 </body>
 </html>
