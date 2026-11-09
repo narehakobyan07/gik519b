@@ -2,22 +2,17 @@
 <html lang="hy">
 
 <head>
-  <!-- Nshum enq ej-i lezun, kodavorumy ev ekranayin chapsery -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Արդի Գրադարան | Մուտք</title>
-
-  <!-- HTML ejy kapum enq arandzin CSS fayli het -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Stexcum enq navigaciayi panel, vori mijocov ogtaticy karox e ancnel kayqi ayl ejery -->
   <nav class="navbar">
-    <a href="index.html" class="logo"> 📖 VELL<span>.LIB</span></a>
+    <a href="index.html" class="logo">📖 VELL<span>.LIB</span></a>
 
-    <!-- Kayqi ejery kapox navigaciayi hghumner -->
     <ul class="nav-links">
       <li><a href="index.html">Գլխավոր</a></li>
       <li><a href="catalog.html">Կատալոգ</a></li>
@@ -26,50 +21,48 @@
       <li><a href="contact.html">Կապ</a></li>
     </ul>
 
-    <!-- Mutqi ej ancnelu hamar arandzin blok -->
     <div class="nav-actions">
       <a href="login.html" class="btn-outline">Մուտք</a>
     </div>
   </nav>
 
-  <!-- Ej-i himnakan masy, vori mej texadրված e mutqi forma -->
-  <main class="container">
+  <main class="container login-page">
 
-    <!-- Auth-container-y patasxanatu e mutqi bloky ejum kentronacnelu hamar -->
     <div class="auth-container">
+      <div class="glass-card login-card">
 
-      <!-- Glass-card-y ogtagorcum enq formai hamar arandzin dizaynayin konteyner -->
-      <div class="glass-card">
-        <h2 style="text-align: center; margin-bottom: 20px;">Մուտք Համակարգ</h2>
+        <h2 class="login-title">Մուտք Համակարգ</h2>
 
-        <!-- Forma, vori mijocov ogtaticy mutqagrum e hashvi tvyalnery -->
-        <form>
+        <form class="login-form">
 
-          <!-- Email hascei mutqagrman hamar sahmanvac dasht -->
           <div class="form-group">
-            <label>Էլ․ փոստ</label>
-            <input type="email" placeholder="Էլ․ փոստի հասցեն" required>
+            <label for="login-email">Էլ․ փոստ</label>
+            <input type="email" id="login-email" name="email" placeholder="Էլ․ փոստի հասցեն" autocomplete="email"
+              required>
           </div>
 
-          <!-- Gaghtnabar-i mutqagrman dasht, vori tvyalnery cuyc chen trvum sovorakan text-i tesqov -->
           <div class="form-group">
-            <label>Գաղտնաբառ</label>
-            <input type="password" placeholder="••••••••" required>
+            <label for="login-password">Գաղտնաբառ</label>
+            <input type="password" id="login-password" name="password" placeholder="••••••••"
+              autocomplete="current-password" required>
           </div>
 
-          <!-- Submit knopkan naxatesvac e mutqi form-y uxarkelu hamar -->
-          <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Մուտք Գործել</button>
+          <button type="submit" class="btn-primary login-button">
+            Մուտք Գործել
+          </button>
+
         </form>
 
-        <!-- Grancman ej ancnelu hghumy texadրված e mutqi formic nerqev -->
-        <p style="text-align: center; margin-top: 15px; color: var(--text-muted); font-size: 0.85rem;">
-          Չունե՞ք հաշիվ: <a href="#" style="color: var(--primary-accent);">Գրանցվել</a>
+        <p class="register-text">
+          Չունե՞ք հաշիվ:
+          <a href="#" class="register-link">Գրանցվել</a>
         </p>
+
       </div>
     </div>
+
   </main>
 
-  <!-- Footer-y kayqi nerqevum gtnvox hakirjayin masn e -->
   <footer>
     <p>&copy; 2026 Արդի Գրադարան. Բոլոր իրավունքները պաշտպանված են:</p>
   </footer>
