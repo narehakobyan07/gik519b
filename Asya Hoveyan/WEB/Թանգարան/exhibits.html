@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ցուցանմուշներ - Թանգարան</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Նավիգացիա -->
+    <header>
+        <div class="logo">Թանգարան</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="exhibits.html" class="active">Ցուցանմուշներ</a></li>
+                <li><a href="virtual.html">Վիրտուալ տուր</a></li>
+                <li><a href="tickets.html">Տոմսեր</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Ցուցանմուշների բովանդակություն -->
+    <main class="container page-content">
+        <h1 class="section-title">Մեր հիմնական ցուցանմուշները</h1>
+        <p>Ծանոթացեք մեր ամենահայտնի և արժեքավոր ցուցանմուշներին։</p>
+
+        <div class="grid">
+            <!-- Քարտ 1 (Ավելացված է badge և երկար տեքստ՝ scroll-ի համար) -->
+            <div class="card">
+                <div class="card-badge">Նոր</div>
+                <img src="image/hnaguyn2.jpg" alt="Հնագույն խեցեղեն">
+                <h3>Հնագույն խեցեղեն</h3>
+                <div class="card-description-scroll">
+                    <p>Մ.թ.ա. III հազարամյակին պատկանող եզակի զարդանախշերով կավե անոթներ, որոնք հայտնաբերվել են պեղումների ժամանակ և ներկայացնում են վաղ բրոնզեդարյան մշակույթը:</p>
+                </div>
+                <div class="card-meta">
+                    <span>Սրահ №1</span>
+                    <span>Մուտքը տոմսով</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn" style="padding: 8px 16px; font-size: 14px;">Մանրամասն</a>
+                </div>
+            </div>
+
+            <!-- Քարտ 2 -->
+            <div class="card">
+                <img src="image/zenqer.jpg" alt="Միջնադարյան զենքեր">
+                <h3>Միջնադարյան զենքեր</h3>
+                <p>Պաշտպանական սպառազինություն և սրեր հայոց թագավորների ժամանակաշրջանից։</p>
+                <div class="card-meta">
+                    <span>Սրահ №2</span>
+                    <span>Մուտքը տոմսով</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn" style="padding: 8px 16px; font-size: 14px;">Մանրամասն</a>
+                </div>
+            </div>
+
+            <!-- Քարտ 3 (Առնվազն 6 քարտ ունենալու պահանջի համար կարողես կրկնկել կամ ավելացնել ևս 3 հատ) -->
+            <div class="card">
+                <img src="image/zarder.jpg" alt="Արծաթյա զարդեր">
+                <h3>Արծաթյա զարդեր</h3>
+                <p>18-19-րդ դարերի ազգային ոճով պատրաստված զարդեր և կենցաղային իրեր։</p>
+                <div class="card-meta">
+                    <span>Սրահ №3</span>
+                    <span>Մուտքը տոմսով</span>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn" style="padding: 8px 16px; font-size: 14px;">Մանրամասն</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container">
+        <fieldset>
+            <legend>Այցելության մանրամասներ</legend>
+
+            <section id="visit-details">
+                <div style="margin-bottom: 15px;">
+                    <label for="visit-date">Այցելության ամսաթիվը:</label>
+                    <input type="date" id="visit-date" name="visit_date" required>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="visitors-count">Այցելուների քանակը:</label>
+                    <input type="number" id="visitors-count" name="visitors_count" min="1" max="10" value="1" required>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="exhibition">Ընտրել ցուցադրությունը:</label>
+                    <select id="exhibition" name="exhibition">
+                        <option value="ancient">Հնագույն խեցեղեն և զարդեր</option>
+                        <option value="medieval">Միջնադարյան զենքեր և սպառազինություն</option>
+                        <option value="silver">18-19-րդ դարերի արծաթյա իրեր</option>
+                    </select>
+                </div>
+            </section>
+        </fieldset>
+    </div>
+
+    <!-- Ստորագիր -->
+    <footer>
+        <p>&copy; 2026 Ազգային պատմության թանգարան։</p>
+    </footer>
+</body>
+
+</html>

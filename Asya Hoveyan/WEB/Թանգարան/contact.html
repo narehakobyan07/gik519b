@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Կապ - Թանգարան</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Նավիգացիա -->
+    <header>
+        <div class="logo">Թանգարան</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="exhibits.html">Ցուցանմուշներ</a></li>
+                <li><a href="virtual.html">Վիրտուալ տուր</a></li>
+                <li><a href="tickets.html">Տոմսեր</a></li>
+                <li><a href="contact.html" class="active">Կապ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Կապի բովանդակություն -->
+    <main class="container page-content">
+        <h1 class="section-title">Կապ մեզ հետ</h1>
+        <p>Ունե՞ք հարցեր կամ առաջարկներ։ Գրեք մեզ։</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 30px;">
+            <div>
+                <h3>Կոնտակտային տվյալներ</h3>
+                <p style="margin-top: 15px;"><strong>Հասցե:</strong> ք. Երևան, Հանրապետության հրապարակ</p>
+                <p style="margin-top: 10px;"><strong>Հեռախոս:</strong> +374 10 000000</p>
+                <p style="margin-top: 10px;"><strong>Էլ. փոստ:</strong> info@museum.am</p>
+                <p style="margin-top: 10px;"><strong>Աշխատանքային ժամեր:</strong> Երեքշաբթի - Կիրակի, 10:00 - 18:00</p>
+            </div>
+            <div>
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Ձեր անունը" required>
+                    <input type="tel" placeholder="Ձեր հեռախոսահամարը" required>
+                    <input type="email" placeholder="Ձեր էլ. փոստը" required>
+                    <textarea placeholder="Ձեր հաղորդագրությունը" rows="4" required></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Ուղարկել</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ստորագիր -->
+    <footer>
+        <p>&copy; 2026 Ազգային պատմության թանգարան։</p>
+    </footer>
+</body>
+</html>
