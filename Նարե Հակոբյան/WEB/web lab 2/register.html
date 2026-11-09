@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ամրագրում</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <a href="index.html">
+            <!-- Если логотип лежит в той же папке, что и index.html: -->
+            <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo">
+            
+            <!-- Если логотип лежит в папке images: -->
+            <!-- <img src="images/logo.png" alt="Լոգոտիպ" class="site-logo"> -->
+        </a>
+        <ul>
+            <li><a href="index.html">Գլխավոր</a></li>
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="service.html">Ծառայություններ</a></li>
+            <li><a href="contact.html">Կապ</a></li>
+            <!-- Ссылка на открытие входа через label -->
+            <li><label for="login-toggle" class="nav-login-btn">Մուտք</label></li>
+        </ul>
+    </nav>
+    
+</header>
+      <section id="membership" class="form-section">
+            <h2 class="section-title">Ակումբի Անդամակցության Ձև</h2>
+
+            <form action="#" method="post" class="membership-form">
+
+                <!-- Fieldset 1: Личные данные -->
+                <fieldset>
+                    <legend>Անձնական տվյալներ</legend>
+
+                    <!-- 1. Text (Имя) -->
+                    <div class="form-group">
+                        <label for="fullname">Անուն Ազգանուն *</label>
+                        <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="40"
+                            placeholder="Արմեն Գրիգորյան">
+                    </div>
+
+                    <!-- 2. Email -->
+                    <div class="form-group">
+                        <label for="email-member">Էլ. հասցե *</label>
+                        <input type="email" id="email-member" name="email" required placeholder="example@mail.am">
+                    </div>
+
+                    <!-- 3. Tel (Телефон с валидацией pattern) -->
+                    <div class="form-group">
+                        <label for="phone">Հեռախոսահամար *</label>
+                        <input type="tel" id="phone" name="phone" pattern="^\+374[0-9]{8}$" placeholder="+37499123456"
+                            required>
+                    </div>
+
+                    <!-- 4. Number (Возраст с min/max) -->
+                    <div class="form-group">
+                        <label for="age">Տարիք</label>
+                        <input type="number" id="age" name="age" min="14" max="90" placeholder="18">
+                    </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Детали абонемента -->
+                <fieldset>
+                    <legend>Ակումբի անդամակցության ձև</legend>
+
+                    <!-- 5. Select (Направление тренировки) -->
+                    <div class="form-group">
+                        <label for="direction">Մարզման ուղղություն *</label>
+                        <select id="direction" name="direction" required>
+                            <option value="">-- Ընտրեք ուղղությունը --</option>
+                            <option value="boxing">Բոքս</option>
+                            <option value="fitness">Ֆիթնես</option>
+                            <option value="yoga">Յոգա</option>
+                            <option value="crossfit">Կրոսֆիթ</option>
+                        </select>
+                    </div>
+
+                    <!-- 6. Date (Предпочитаемая дата начала) -->
+                    <div class="form-group">
+                        <label for="start-date">Նախընտրելի սկզբնաժամկետ (Օր)</label>
+                        <input type="date" id="start-date" name="start_date">
+                    </div>
+
+                    <!-- 7. Radiobuttons (Время тренировок) -->
+                    <div class="form-group">
+                        <label>Մարզման ժամ (Նախընտրելի)</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="training_time" value="morning" checked> Առավոտյան (08:00 -
+                                12:00)</label>
+                            <label><input type="radio" name="training_time" value="afternoon"> Կեսօրին (12:00 -
+                                17:00)</label>
+                            <label><input type="radio" name="training_time" value="evening"> Երեկոյան (17:00 -
+                                22:00)</label>
+                        </div>
+                    </div>
+
+                    <!-- 8. Checkbox (Согласие и доп. услуги) -->
+                    <div class="form-group">
+                        <label>Լրացուցիչ</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="services" value="locker"> Անհատական պահարան</label>
+                            <label><input type="checkbox" name="services" value="trainer"> Անձնական մարզիչ</label>
+                            <label><input type="checkbox" name="terms" required> Համաձայն եմ կանոններին *</label>
+                        </div>
+                    </div>
+
+                    <!-- 9. Textarea (Дополнительное сообщение) -->
+                    <div class="form-group">
+                        <label for="comments">Լրացուցիչ նշումներ</label>
+                        <textarea id="comments" name="comments" rows="4" maxlength="200"
+                            placeholder="Գրեք լրացուցիչ ցանկությունների մասին..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Кнопки формы -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-submit">Ուղարկել հայտը</button>
+                    <button type="reset" class="btn btn-reset">Մաքրել ձևը</button>
+                </div>
+
+            </form>
+        </section>
+</body>
+</html>
