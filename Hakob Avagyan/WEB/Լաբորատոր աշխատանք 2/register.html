@@ -3,594 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Կամավոր դառնալու գրանցման ձև — ԱԿՏ կամավորական կենտրոն">
-    <meta name="author" content="Hakob Avagyan">
     <title>Գրանցում — Կամավորական կենտրոն «ԱԿՏ»</title>
-    <style>
-    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="#reg-form" class="skip-link">Անցնել ձևին</a>
-
 <header>
-    <div class="header-top">
+    <div class="header-container">
         <div class="logo-area">
             <h1>Կամավորական կենտրոն «ԱԿՏ»</h1>
             <p>Ակտիվ Կամավոր Տիրույթ · Հայաստան · 2015-ից</p>
         </div>
+        <nav aria-label="Գլխավոր նավիգացիա">
+            <ul>
+                <li><a href="index.html">Գլխավոր</a></li>
+                <li><a href="programs.html">Ծրագրեր</a></li>
+                <li><a href="index.html#about">Մեր մասին</a></li>
+                <li><a href="register.html" aria-current="page">Միանալ</a></li>
+                <li><a href="index.html#contact">Կապ</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav aria-label="Կայքի գլխավոր նավիգացիա">
-        <ul>
-            <li><a href="index.html">Գլխավոր</a></li>
-            <li><a href="programs.html">Ծրագրեր</a></li>
-            <li><a href="index.html#directions">Ուղղություններ</a></li>
-            <li><a href="index.html#initiatives">Նախաձեռնություններ</a></li>
-            <li><a href="index.html#about">Մեր մասին</a></li>
-            <li><a href="index.html#gallery">Պատկերասրահ</a></li>
-            <li><a href="register.html" aria-current="page">Գրանցում</a></li>
-            <li><a href="index.html#contact">Կոնտակտ</a></li>
-        </ul>
-    </nav>
 </header>
 
-<div class="page-hero" role="banner">
+<div class="page-hero">
     <h2>Դարձի՛ր կամավոր</h2>
-    <p>Լրացրու ձևն ու միացի՛ր <strong>500+</strong> կամավորների, ովքեր ամեն օր փոխում են Հայաստանը։</p>
+    <p>Լրացրու ձևն ու միացի՛ր 500+ կամավորների</p>
 </div>
 
-<main id="main-content">
-
-    <p class="form-note"><span>*</span> Աստղանիշով դաշտերը պարտադիր են լրացման համար։</p>
-
-    <form class="reg-form"
-          id="reg-form"
-          method="post"
-          action="#"
-          novalidate
-          aria-label="Կամավոր դառնալու գրանցման ձև">
-
+<main>
+    <form class="reg-form" id="reg-form" method="post" action="#" novalidate>
         <fieldset>
             <legend>👤 Անձնական տվյալներ</legend>
-
             <div class="field-row">
-
-                <!-- Անուն -->
                 <div class="field">
-                    <label for="first-name">
-                        Անուն <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text"
-                           id="first-name"
-                           name="first_name"
-                           placeholder="Արամ"
-                           required
-                           minlength="2"
-                           maxlength="50"
-                           pattern="[Ա-Ֆա-ֆA-Za-z\s\-]{2,50}"
-                           autocomplete="given-name"
-                           aria-required="true"
-                           aria-describedby="first-name-err">
-                    <span class="error-msg" id="first-name-err" role="alert">
-                        Մուտքագրեք վավեր անուն (2–50 տառ)։
-                    </span>
+                    <label for="first-name">Անուն *</label>
+                    <input type="text" id="first-name" name="first_name" required minlength="2" maxlength="50">
+                    <span class="error-msg" id="first-name-err">Մուտքագրեք վավեր անուն։</span>
                 </div>
-
                 <div class="field">
-                    <label for="last-name">
-                        Ազգանուն <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text"
-                           id="last-name"
-                           name="last_name"
-                           placeholder="Պետրոսյան"
-                           required
-                           minlength="2"
-                           maxlength="60"
-                           pattern="[Ա-Ֆա-ֆA-Za-z\s\-]{2,60}"
-                           autocomplete="family-name"
-                           aria-required="true"
-                           aria-describedby="last-name-err">
-                    <span class="error-msg" id="last-name-err" role="alert">
-                        Մուտքագրեք վավեր ազգանուն (2–60 տառ)։
-                    </span>
+                    <label for="last-name">Ազգանուն *</label>
+                    <input type="text" id="last-name" name="last_name" required minlength="2" maxlength="60">
+                    <span class="error-msg" id="last-name-err">Մուտքագրեք վավեր ազգանուն։</span>
                 </div>
-
                 <div class="field">
-                    <label for="birthdate">
-                        Ծննդյան ամսաթիվ <span class="req" aria-hidden="true">*</span>
-                        <span class="hint">(16–65 տ.)</span>
-                    </label>
-                    <input type="date"
-                           id="birthdate"
-                           name="birthdate"
-                           required
-                           min="1960-01-01"
-                           max="2010-10-05"
-                           autocomplete="bday"
-                           aria-required="true"
-                           aria-describedby="birthdate-err">
-                    <span class="error-msg" id="birthdate-err" role="alert">
-                        Տարիքը պետք է լինի 16–65 տարի։
-                    </span>
+                    <label for="email">Էլ. փոստ *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                    <span class="error-msg" id="email-err">Մուտքագրեք վավեր էլ. փոստ։</span>
                 </div>
-
                 <div class="field">
-                    <label as="legend" id="gender-label">Սեռ</label>
-                    <div class="radio-group" role="radiogroup" aria-labelledby="gender-label">
-                        <label>
-                            <input type="radio" name="gender" value="male">
-                            <span>Արական</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" value="female">
-                            <span>Իգական</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" value="other">
-                            <span>Նախընտրեմ չնշել</span>
-                        </label>
-                    </div>
+                    <label for="cv-file">CV (PDF, max 3MB)</label>
+                    <input type="file" id="cv-file" name="cv_file" accept=".pdf,.doc,.docx">
+                    <span class="error-msg" id="cv-file-err"></span>
                 </div>
-
-                <div class="field">
-                    <label for="email">
-                        Էլ. փոստ <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <input type="email"
-                           id="email"
-                           name="email"
-                           placeholder="aram@example.am"
-                           required
-                           maxlength="100"
-                           autocomplete="email"
-                           aria-required="true"
-                           aria-describedby="email-err">
-                    <span class="error-msg" id="email-err" role="alert">
-                        Մուտքագրեք վավեր էլ. փոստ (example@domain.com)։
-                    </span>
-                </div>
-
-                <div class="field">
-                    <label for="phone">
-                        Հեռախոսի համար
-                        <span class="hint">(+374XXXXXXXX)</span>
-                    </label>
-                    <input type="tel"
-                           id="phone"
-                           name="phone"
-                           placeholder="+37491123456"
-                           pattern="\+374[0-9]{8}"
-                           maxlength="13"
-                           autocomplete="tel"
-                           aria-describedby="phone-err">
-                    <span class="error-msg" id="phone-err" role="alert">
-                        Ֆորմատ. +374XXXXXXXX (12 նիշ)։
-                    </span>
-                </div>
-
-                <div class="field">
-                    <label for="region">
-                        Մարզ / Քաղաք <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <select id="region"
-                            name="region"
-                            required
-                            aria-required="true"
-                            aria-describedby="region-err">
-                        <option value="" disabled selected>— Ընտրեք —</option>
-                        <optgroup label="Երևան">
-                            <option value="yerevan">Երևան</option>
-                        </optgroup>
-                        <optgroup label="Մարզեր">
-                            <option value="aragatsotn">Արագածոտն</option>
-                            <option value="ararat">Արարատ</option>
-                            <option value="armavir">Արմավիր</option>
-                            <option value="gegharkunik">Գեղարքունիք</option>
-                            <option value="lori">Լոռի</option>
-                            <option value="kotayk">Կոտայք</option>
-                            <option value="shirak">Շիրակ</option>
-                            <option value="syunik">Սյունիք</option>
-                            <option value="vayots-dzor">Վայոց ձոր</option>
-                            <option value="tavush">Տավուշ</option>
-                        </optgroup>
-                    </select>
-                    <span class="error-msg" id="region-err" role="alert">
-                        Ընտրեք մարզ կամ քաղաք։
-                    </span>
-                </div>
-
-                <div class="field">
-                    <label for="languages">Տիրապետում եք լեզուներին</label>
-                    <input type="text"
-                           id="languages"
-                           name="languages"
-                           placeholder="Հայերեն, Ռուսերեն, Անգլերեն"
-                           maxlength="120">
-                </div>
-
             </div>
         </fieldset>
 
         <fieldset>
-            <legend>🤝 Կամավոր դառնալու տվյալներ</legend>
-
-            <div class="field-row">
-
-                <div class="field full">
-                    <label id="direction-label">
-                        Ծրագրի ուղղություն <span class="req" aria-hidden="true">*</span>
-                        <span class="hint">(կարող եք ընտրել մի քանի)</span>
-                    </label>
-                    <div class="check-group"
-                         role="group"
-                         aria-labelledby="direction-label"
-                         aria-required="true"
-                         id="direction-group">
-                        <label>
-                            <input type="checkbox" name="direction" value="ecology">
-                            <span>🌿 Էկոլոգիա</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="direction" value="education">
-                            <span>📚 Կրթություն</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="direction" value="social">
-                            <span>🤝 Սոցիալական</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="direction" value="health">
-                            <span>🏥 Առողջություն</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="direction" value="culture">
-                            <span>🏛️ Մշակույթ</span>
-                        </label>
-                    </div>
-                    <span class="error-msg" id="direction-err" role="alert" style="display:none;">
-                        Ընտրեք առնվազն մեկ ուղղություն։
-                    </span>
-                </div>
-
-                <div class="field full">
-                    <label id="days-label">
-                        Հասանելի օրեր <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <div class="check-group"
-                         role="group"
-                         aria-labelledby="days-label"
-                         id="days-group">
-                        <label>
-                            <input type="checkbox" name="days" value="mon">
-                            <span>Երկ</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="tue">
-                            <span>Երք</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="wed">
-                            <span>Չոր</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="thu">
-                            <span>Հնգ</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="fri">
-                            <span>Ուրբ</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="sat">
-                            <span>Շաբ</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="days" value="sun">
-                            <span>Կիր</span>
-                        </label>
-                    </div>
-                    <span class="error-msg" id="days-err" role="alert" style="display:none;">
-                        Ընտրեք առնվազն մեկ հասանելի օր։
-                    </span>
-                </div>
-
-                <div class="field full">
-                    <label id="time-label">
-                        Ժամային հասանելիություն <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <div class="radio-group" role="radiogroup" aria-labelledby="time-label">
-                        <label>
-                            <input type="radio" name="time_slot" value="morning" required>
-                            <span>🌅 Առավոտ (9:00–12:00)</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="time_slot" value="afternoon">
-                            <span>☀️ Ցերեկ (12:00–17:00)</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="time_slot" value="evening">
-                            <span>🌆 Երեկո (17:00–21:00)</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="time_slot" value="flexible">
-                            <span>🔄 Ճկուն</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="field full">
-                    <label for="hours-range">
-                        Ամսական հասանելի ժամաքանակ
-                        <span class="hint">(ժ/ամիս)</span>
-                    </label>
-                    <div class="range-wrap">
-                        <input type="range"
-                               id="hours-range"
-                               name="monthly_hours"
-                               min="4"
-                               max="80"
-                               step="2"
-                               value="16"
-                               aria-valuemin="4"
-                               aria-valuemax="80"
-                               aria-valuenow="16"
-                               aria-describedby="hours-display"
-                               oninput="
-                                   document.getElementById('hours-display').textContent = this.value + ' ժ';
-                                   this.setAttribute('aria-valuenow', this.value);">
-                        <span class="range-val" id="hours-display" aria-live="polite">16 ժ</span>
-                    </div>
-                </div>
-
-                <div class="field full">
-                    <label id="exp-label">
-                        Նախկինում կամավոր եղե՞լ եք
-                    </label>
-                    <div class="radio-group" role="radiogroup" aria-labelledby="exp-label">
-                        <label>
-                            <input type="radio" name="experience" value="yes">
-                            <span>Այո</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="experience" value="no">
-                            <span>Ոչ</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label for="start-date">
-                        Ե՞րբ կարող եք սկսել
-                    </label>
-                    <input type="date"
-                           id="start-date"
-                           name="start_date"
-                           min="2025-10-06">
-                </div>
-
-                <div class="field">
-                    <label for="referral">Ինչպե՞ս լսեցիք մեր մասին</label>
-                    <select id="referral" name="referral">
-                        <option value="" disabled selected>— Ընտրեք —</option>
-                        <option value="friend">Ընկերոջ/ծանոթի միջոցով</option>
-                        <option value="social">Սոցիալական ցանց</option>
-                        <option value="website">Կայք կամ հոդված</option>
-                        <option value="university">Բուհ / դպրոց</option>
-                        <option value="event">Միջոցառում</option>
-                        <option value="other">Այլ</option>
-                    </select>
-                </div>
-
-                <div class="field full">
-                    <label for="motivation">
-                        Մասնակցության մոտիվացիա <span class="req" aria-hidden="true">*</span>
-                        <span class="hint">(min 40, max 800 տառ)</span>
-                    </label>
-                    <textarea id="motivation"
-                              name="motivation"
-                              placeholder="Ինչո՞ւ ցանկանում եք դառնալ կամավոր ԱԿՏ կենտրոնում. ի՞նչ եք ուզում ձեռք բերել, ի՞նչ փոխել..."
-                              required
-                              minlength="40"
-                              maxlength="800"
-                              aria-required="true"
-                              aria-describedby="motivation-err motivation-counter"></textarea>
-                    <span class="error-msg" id="motivation-err" role="alert">
-                        Նկարագրությունը պետք է լինի 40–800 տառ։
-                    </span>
-                    <span id="motivation-counter"
-                          aria-live="polite"
-                          style="font-size:0.78rem; color:#888; text-align:right; margin-top:3px;">
-                        0 / 800
-                    </span>
-                </div>
-
-                <div class="field">
-                    <label for="cv-file">
-                        CV կամ պորտֆոլիո
-                        <span class="hint">(PDF կամ Word, max 3 MB)</span>
-                    </label>
-                    <input type="file"
-                           id="cv-file"
-                           name="cv_file"
-                           accept=".pdf,.doc,.docx"
-                           aria-describedby="cv-file-err">
-                    <span class="error-msg" id="cv-file-err" role="alert"></span>
-                </div>
-
-                <div class="field">
-                    <label for="photo">
-                        Ձեր լուսանկարը
-                        <span class="hint">(JPG/PNG, max 2 MB)</span>
-                    </label>
-                    <input type="file"
-                           id="photo"
-                           name="photo"
-                           accept="image/jpeg,image/png,image/webp"
-                           aria-describedby="photo-err">
-                    <span class="error-msg" id="photo-err" role="alert"></span>
-                </div>
-
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>📋 Համաձայնություն</legend>
-
-            <div class="field-row">
-                <div class="field full">
-                    <label class="consent-label">
-                        <input type="checkbox"
-                               name="consent_data"
-                               id="consent-data"
-                               required
-                               aria-required="true"
-                               aria-describedby="consent-err">
-                        Համաձայն եմ, որ իմ անձնական տվյալները
-                        <strong>ԱԿՏ կամավորական կենտրոնը</strong> կմշակի
-                        բացառապես կամավորական ծրագրերի կազմակերպման նպատակով։
-                        <span class="req" aria-hidden="true">*</span>
-                    </label>
-                    <span class="error-msg" id="consent-err" role="alert">
-                        Կարգավիճակի հաստատումը պարտադիր է։
-                    </span>
-                </div>
-
-                <div class="field full">
-                    <label class="consent-label">
-                        <input type="checkbox"
-                               name="consent_rules"
-                               id="consent-rules"
-                               required
-                               aria-required="true">
-                        Ծանոթ եմ կամավորական կենտրոնի
-                        <a href="index.html#rules">կանոնակարգին</a>
-                        և ընդունում եմ դրա բոլոր պայմանները։
-                        <span class="req" aria-hidden="true">*</span>
-                    </label>
-                </div>
+            <legend>🤝 Կամավորության տվյալներ</legend>
+            <div class="field full">
+                <label for="motivation">Մոտիվացիա (min 40 տառ)</label>
+                <textarea id="motivation" name="motivation" required minlength="40" maxlength="800"></textarea>
+                <span id="motivation-counter">0 / 800</span>
             </div>
         </fieldset>
 
         <div class="form-actions">
-            <button type="submit" class="btn-submit">
-                ✅ Ուղարկել դիմումը
-            </button>
-            <button type="reset" class="btn-reset">
-                ↺ Մաքրել ձևը
-            </button>
+            <button type="submit" class="btn-submit">✅ Ուղարկել դիմումը</button>
+            <button type="reset" class="btn-reset">↺ Մաքրել ձևը</button>
         </div>
-
     </form>
 
-    <div id="success-banner" role="status" aria-live="polite">
-        🎉 Ձեր դիմումը հաջողությամբ ուղարկվեց։
-        Մոտ <strong>3 աշխատանքային օրվա</strong> ընթացքում
-        կստանաք հաստատման նամակ։ Շնորհակալ ենք!
+    <div id="success-banner">
+        🎉 Ձեր դիմումը հաջողությամբ ուղարկվեց։ Շնորհակալ ենք!
     </div>
-
 </main>
 
 <footer>
-    <p>
-        <small>© 2025 Կամավորական կենտրոն «ԱԿՏ»։ Բոլոր իրավունքները պաշտպանված են։
-        Կայքը մշակել է <strong>Hakob Avagyan</strong> — Լաբ. աշխ. 2, WEB ծրագիր։</small>
-    </p>
-    <p style="margin-top:6px;">
-        <a href="index.html">Գլխավոր</a> &nbsp;|&nbsp;
-        <a href="programs.html">Ծրագրեր</a> &nbsp;|&nbsp;
-        <a href="mailto:info@akt-volunteer.am">info@akt-volunteer.am</a>
-    </p>
+    <div class="footer-bottom">
+        <small>© 2025 Կամավորական կենտրոն «ԱԿՏ»</small>
+    </div>
 </footer>
 
 <script>
-(function () {
-    "use strict";
+    (function () {
+        "use strict";
 
-    const motivation = document.getElementById("motivation");
-    const counter    = document.getElementById("motivation-counter");
+        const motivation = document.getElementById("motivation");
+        const counter = document.getElementById("motivation-counter");
 
-    motivation.addEventListener("input", function () {
-        counter.textContent = this.value.length + " / 800";
-    });
-
-    function validateFileSize(input, maxMB, errId) {
-        input.addEventListener("change", function () {
-            const errEl = document.getElementById(errId);
-            if (this.files.length && this.files[0].size > maxMB * 1024 * 1024) {
-                errEl.textContent = "Ֆայլի չափը չի կարող գերազանցել " + maxMB + " MB։";
-                errEl.style.display = "block";
-                this.value = "";
-            } else {
-                errEl.textContent = "";
-                errEl.style.display = "none";
-            }
-        });
-    }
-
-    validateFileSize(document.getElementById("cv-file"),  3, "cv-file-err");
-    validateFileSize(document.getElementById("photo"),    2, "photo-err");
-
-    function atLeastOne(groupId, errId, name) {
-        const group  = document.getElementById(groupId);
-        const errEl  = document.getElementById(errId);
-        const boxes  = group.querySelectorAll("input[type='checkbox']");
-
-        function check() {
-            const checked = Array.from(boxes).some(cb => cb.checked);
-            if (!checked) {
-                errEl.style.display = "block";
-                group.setAttribute("aria-invalid", "true");
-            } else {
-                errEl.style.display = "none";
-                group.setAttribute("aria-invalid", "false");
-            }
-            return checked;
+        if (motivation && counter) {
+            motivation.addEventListener("input", function () {
+                counter.textContent = this.value.length + " / 800";
+            });
         }
 
-        boxes.forEach(cb => cb.addEventListener("change", check));
-        return check;
-    }
-
-    const validateDirections = atLeastOne("direction-group", "direction-err", "direction");
-    const validateDays       = atLeastOne("days-group",      "days-err",      "days");
-
-    const form    = document.getElementById("reg-form");
-    const banner  = document.getElementById("success-banner");
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const nativeOk = form.checkValidity();
-
-        const dirOk  = validateDirections();
-        const daysOk = validateDays();
-
-        if (!nativeOk || !dirOk || !daysOk) {
-            const firstInvalid = form.querySelector(":invalid") ||
-                                 document.getElementById(dirOk  ? "days-group" : "direction-group");
-            if (firstInvalid) firstInvalid.focus();
-
-            form.reportValidity();
-            return;
+        const cvFile = document.getElementById("cv-file");
+        if (cvFile) {
+            cvFile.addEventListener("change", function () {
+                const errEl = document.getElementById("cv-file-err");
+                if (this.files.length && this.files[0].size > 3 * 1024 * 1024) {
+                    errEl.textContent = "Ֆայլի չափը չի կարող գերազանցել 3 MB։";
+                    errEl.style.display = "block";
+                    this.value = "";
+                } else {
+                    errEl.textContent = "";
+                    errEl.style.display = "none";
+                }
+            });
         }
 
-        form.style.display = "none";
-        banner.style.display = "block";
-        banner.focus();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+        const form = document.getElementById("reg-form");
+        const banner = document.getElementById("success-banner");
 
-    form.addEventListener("reset", function () {
-        setTimeout(function () {
-            document.getElementById("direction-err").style.display = "none";
-            document.getElementById("days-err").style.display      = "none";
-            counter.textContent = "0 / 800";
-        }, 0);
-    });
-
-})();
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                form.style.display = "none";
+                banner.style.display = "block";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+    })();
 </script>
 
 </body>

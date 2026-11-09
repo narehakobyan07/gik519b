@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA STUDIO | Պրոֆեսիոնալ Լուսանկարչական Ստուդիա</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+Armenian:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                </svg>
+                LUMINA<span>STUDIO</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">Գլխավոր</a></li>
+                <li><a href="about.html" class="nav-link">Մեր մասին</a></li>
+                <li><a href="#services" class="nav-link">Ծառայություններ</a></li>
+                <li><a href="#portfolio" class="nav-link">Պորտֆոլիո</a></li>
+                <li><a href="#pricing" class="nav-link">Գնացուցակ</a></li>
+                <li><a href="#contact" class="nav-link">Կապ</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Մենյու">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-star"></i> Պրեմիում Լուսանկարչություն
+                </div>
+                <h1 class="hero-title">Պահպանեք Ձեր Լավագույն Պահերը</h1>
+                <p class="hero-subtitle">Մենք ստեղծում ենք բարձրորակ, գեղարվեստական և էմոցիոնալ լուսանկարներ, որոնք կպահպանեն Ձեր հիշողությունները հավերժ։</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fa-regular fa-calendar-check"></i> Ամրագրել Նկարահանում
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline">
+                        <i class="fa-regular fa-images"></i> Դիտել Աշխատանքները
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Ինչ ենք առաջարկում</span>
+                    <h2 class="section-title">Մեր Ծառայությունները</h2>
+                    <p class="section-desc">Ապահովում ենք ֆոտոնկարահանման ամբողջական ցիկլ՝ գաղափարից մինչև վերջնական մշակում։</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-user"></i></div>
+                        <h3>Դիմանկարային Նկարահանում</h3>
+                        <p>Անհատական, գեղարվեստական և բիզնես պորտրետներ՝ Ձեր լավագույն կողմերը ընդգծելու համար։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-shirt"></i></div>
+                        <h3>Fashion & Lookbook</h3>
+                        <p>Լուքբուքեր, կատալոգներ և իմիջային նկարահանումներ հագուստի բրենդերի և դիզայներների համար։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h3>Միջոցառումներ և Հարսանիքներ</h3>
+                        <p>Ձեր կյանքի կարևորագույն իրադարձությունների անմոռանալի և հուզիչ լուսաբանում։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h3>Ապրանքային / Կոմերցիոն</h3>
+                        <p>Բարձրորակ ֆոտոներ օնլայն խանութների, SMM առաջխաղացման և գովազդների համար։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                        <h3>Ստուդիայի Վարձակալություն</h3>
+                        <p>Լուսավոր և ընդարձակ տարածք՝ պրոֆեսիոնալ լույսերով այլ լուսանկարիչների համար։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Ռետուշ և Մշակում</h3>
+                        <p>Մասնագիտական գունային ուղղում, մաշկի ռետուշ և բարձրորակ հետմշակում։</p>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Ամրագրել</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section-padding" style="background-color: #0e0e12;">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Գալերեա</span>
+                    <h2 class="section-title">Մեր Աշխատանքները</h2>
+                    <p class="section-desc">Ուսումնասիրեք մեր վերջին ֆոտոշարքերն ու ստեղծագործական նախագծերը։</p>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Բոլորը</button>
+                    <button class="filter-btn" data-filter="portrait">Դիմանկար</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="events">Հարսանիք</button>
+                    <button class="filter-btn" data-filter="product">Ապրանքային</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Portrait Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Դիմանկար</span>
+                            <h3 class="portfolio-title">Էլեգանտ Դիմանկար</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="fashion" onclick="openLightbox('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80" alt="Fashion Shooting">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Աշնանային Հավաքածու</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="events" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Հարսանիք</span>
+                            <h3 class="portfolio-title">Ռոմանտիկ Պահեր</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="product" onclick="openLightbox('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Product Photography">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Ապրանքային</span>
+                            <h3 class="portfolio-title">Պրեմիում Ժամացույցներ</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Male Portrait">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Դիմանկար</span>
+                            <h3 class="portfolio-title">Բիզնես Պորտրետ</h3>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="fashion" onclick="openLightbox('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1000&q=80')">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80" alt="Editorial Fashion">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-cat">Fashion</span>
+                            <h3 class="portfolio-title">Editorial Look</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="pricing" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Մատչելի փաթեթներ</span>
+                    <h2 class="section-title">Գնացուցակ</h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="price-title">Ստանդարտ</h3>
+                        <div class="price-val">35,000 ֏</div>
+                        <ul class="price-features">
+                            <li><i class="fa-solid fa-check"></i> 1 ժամ նկարահանում</li>
+                            <li><i class="fa-solid fa-check"></i> 10 մշակված լուսանկար</li>
+                            <li><i class="fa-solid fa-check"></i> Բոլոր օրիգինալ կադրերը</li>
+                            <li><i class="fa-solid fa-check"></i> 1 Լուք / Զգեստ</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%;">Ընտրել</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="badge-popular">Ամենապահանջված</div>
+                        <h3 class="price-title">Պրեմիում</h3>
+                        <div class="price-val">65,000 ֏</div>
+                        <ul class="price-features">
+                            <li><i class="fa-solid fa-check"></i> 2 ժամ նկարահանում</li>
+                            <li><i class="fa-solid fa-check"></i> 25 մշակված լուսանկար</li>
+                            <li><i class="fa-solid fa-check"></i> Բոլոր օրիգինալ կադրերը</li>
+                            <li><i class="fa-solid fa-check"></i> Մինչև 3 Լուք / Զգեստ</li>
+                            <li><i class="fa-solid fa-check"></i> Դիմահարդարում ներառված է</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%;">Ընտրել</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3 class="price-title">Էքսկլյուզիվ</h3>
+                        <div class="price-val">120,000 ֏</div>
+                        <ul class="price-features">
+                            <li><i class="fa-solid fa-check"></i> Անսահմանափակ ժամանակ</li>
+                            <li><i class="fa-solid fa-check"></i> 50+ մշակված լուսանկար</li>
+                            <li><i class="fa-solid fa-check"></i> Դիմահարդարում & Վարսահարդարում</li>
+                            <li><i class="fa-solid fa-check"></i> Ֆոտոալբոմ (PhotoBook)</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%;">Ընտրել</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding" style="background-color: #0e0e12;">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div>
+                            <span class="section-subtitle">Ամրագրում</span>
+                            <h2 class="section-title">Կապվեք Մեզ Հետ</h2>
+                            <p style="color: var(--text-muted); margin-bottom: 2rem;">Ունե՞ք հարցեր կամ ցանկանում եք պատվիրել նկարահանում։ Լրացրեք ձևանմուշը կամ զանգահարեք մեզ։</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h4>Հասցե</h4>
+                                <p>ՀՀ, ք. Երևան, Սայաթ-Նովա պողոտա 15</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-details">
+                                <h4>Հեռախոս</h4>
+                                <a href="tel:+37499123456">+374 (99) 12-34-56</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h4>Էլ․ հասցե</h4>
+                                <a href="mailto:info@luminastudio.am">info@luminastudio.am</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="contact-details">
+                                <h4>Աշխատանքային ժամեր</h4>
+                                <p>Երկ - Կիր: 10:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <form onsubmit="handleBooking(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Անուն Ազգանուն *" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Հեռախոսահամար *" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <select class="form-control" required style="color: #a1a1aa;">
+                                        <option value="" disabled selected>Ընտրեք Ծառայությունը</option>
+                                        <option value="portrait">Դիմանկարային</option>
+                                        <option value="fashion">Fashion & Brand</option>
+                                        <option value="events">Միջոցառումներ</option>
+                                        <option value="product">Ապրանքային</option>
+                                        <option value="rental">Ստուդիայի վարձակալություն</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control" required style="color-scheme: dark;">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Հավելյալ նշումներ կամ գաղափարներ..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fa-regular fa-paper-plane"></i> Ուղարկել Հայտը
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox-modal" id="lightboxModal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImg" alt="Preview Image">
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i> Ձեր հայտը հաջողությամբ ուղարկվեց։ Մենք շուտով կկապվենք Ձեզ հետ։
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-desc">
+                    <a href="index.html" class="logo">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"/>
+                        </svg>
+                        LUMINA<span>STUDIO</span>
+                    </a>
+                    <p>Պրոֆեսիոնալ լուսանկարչական ստուդիա Երևանում։ Գեղարվեստական որակ և անհատական մոտեցում։</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Էջեր</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Գլխավոր</a></li>
+                        <li><a href="about.html">Մեր մասին</a></li>
+                        <li><a href="#services">Ծառայություններ</a></li>
+                        <li><a href="#portfolio">Պորտֆոլիո</a></li>
+                        <li><a href="#contact">Կապ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Ծառայություններ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Դիմանկար</a></li>
+                        <li><a href="#services">Fashion Ֆոտո</a></li>
+                        <li><a href="#services">Հարսանեկան</a></li>
+                        <li><a href="#services">Կոմերցիոն</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Կապ</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">ք․ Երևան, Սայաթ-Նովա 15</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.5rem;">+374 (99) 12-34-56</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">info@luminastudio.am</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUMINA STUDIO. Բոլոր իրավունքները պաշտպանված են։</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        function handleBooking(event) {
+            event.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            event.target.reset();
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>

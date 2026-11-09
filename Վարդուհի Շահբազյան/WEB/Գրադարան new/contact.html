@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Արդի Գրադարան | Կապ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Նավիգացիա -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">📖 VELL<span>.LIB</span></a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Գլխավոր</a></li>
+            <li><a href="catalog.html">Կատալոգ</a></li>
+            <li><a href="resources.html">Թվային Ռեսուրսներ</a></li>
+            <li><a href="about.html">Մեր մասին</a></li>
+            <li><a href="contact.html" class="active">Կապ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="login.html" class="btn-outline">Մուտք</a>
+        </div>
+    </nav>
+
+    <!-- Հիմնական բովանդակություն -->
+    <main class="container contact-page">
+
+        <div class="page-header">
+            <h1>Կապ Մեզ Հետ</h1>
+            <p>Ունե՞ք հարցեր կամ առաջարկներ: Գրեք մեզ:</p>
+        </div>
+
+        <!-- Կապի ձև -->
+        <div class="glass-card contact-card">
+
+            <form class="contact-form" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="fullname">Անուն Ազգանուն</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Ձեր անունը"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Էլ․ փոստ</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@mail.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Հաղորդագրություն</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Ձեր հաղորդագրությունը..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary contact-submit">
+                    Ուղարկել
+                </button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Արդի Գրադարան. Բոլոր իրավունքները պաշտպանված են:</p>
+    </footer>
+
+</body>
+</html>
