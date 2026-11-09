@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ազգային պատմության թանգարան - Գլխավոր</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Նավիգացիա -->
+    <header>
+        <div class="logo">Թանգարան</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Գլխավոր</a></li>
+                <li><a href="exhibits.html">Ցուցանմուշներ</a></li>
+                <li><a href="virtual.html">Վիրտուալ տուր</a></li>
+                <li><a href="tickets.html">Տոմսեր</a></li>
+                <li><a href="contact.html">Կապ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Գլխավոր բաններ -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Բացահայտեք անցյալի գանձերը</h1>
+                <p>Բարի գալուստ մեր թանգարանի պաշտոնական կայք: Սուզվեք պատմության, արվեստի և մշակույթի հարուստ աշխարհում:</p>
+                <a href="tickets.html" class="btn">Գնել տոմսեր</a>
+            </div>
+        </section>
+
+        <!-- Հակիրճ մաս -->
+        <section class="about-preview">
+            <div class="container">
+                <h2>Թանգարանի մասին</h2>
+                <p>Մեր թանգարանը հիմնադրվել է դարեր շարունակ կուտակված հոգևոր և նյութական արժեքները պահպանելու և սերունդներին փոխանցելու նպատակով։ Այստեղ դուք կարող եք գտնել հազարավոր եզակի նմուշներ։</p>
+                <a href="exhibits.html" class="btn-secondary">Տեսնել ցուցանմուշները</a>
+            </div>
+        </section>
+
+        <!-- Ամրագրման բաժին -->
+        <div class="container page-content" style="padding-top: 40px;">
+            <h1 class="section-title">Ամրագրել այցելությունը</h1>
+            <p>Լրացրեք ստորև նշված դաշտերը՝ թանգարան այցելությունը նախօրոք ամրագրելու համար։</p>
+
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Անձնական տվյալներ</legend>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label for="fullname">Ձեր անունը և ազգանունը:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Օր.՝ Աննա Հակոբյան" required>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="email">Էլեկտրոնային փոստ:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.am" required>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="phone">Հեռախոսահամար:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+374 XX XXXXXX" required>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Հաստատել ամրագրումը</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <!-- Ստորագիր -->
+    <footer>
+        <p>&copy; 2026 Ազգային պատմության թանգարան։ Բոլոր իրավունքները պաշտպանված են։</p>
+    </footer>
+</body>
+</html>
