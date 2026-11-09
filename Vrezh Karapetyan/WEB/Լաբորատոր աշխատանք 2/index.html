@@ -8,15 +8,14 @@
 </head>
 <body>
   <header class="site-header">
-    <h1> Երաժշտական դպրոց</h1>
+    <h1>Երաժշտական դպրոց</h1>
     <nav aria-label="Հիմնական մենյու">
-      <ul  class="nav-list">
-        <li><a href="index.html">Գլխավոր</a></li>
-        <li><a href="#sections">Բաժիններ</a></li>
-        <li><a href="#info">Տեղեկություն</a></li>
-        <li><a href="#gallery">Պատկերասրահ</a></li>
-        <li><a href="school.html">Դպրոցի մասին</a></li>
+      <ul class="nav-list">
+        <li><a href="#lessons">Դասեր</a></li>
+        <li><a href="#info">Գործիքներ</a></li>
         <li><a href="register.html">Գրանցում</a></li>
+        <li><a href="#contact">Կապ</a></li>
+        <li><a href="school.html">Դպրոցի մասին</a></li>
       </ul>
     </nav>
   </header>
@@ -26,7 +25,7 @@
       <picture>
         <source media="(min-width: 900px)" srcset="images/hero-large.jpg">
         <source media="(min-width: 500px)" srcset="images/hero-medium.jpg">
-        <img src="C:\Users\User\gik519b\Vrezh Karapetyan\WEB\Լաբորատոր աշխատանք 2\images\hero-small.jpeg"
+        <img src="images/hero-small.jpeg"
              srcset="images/hero-small.jpeg 480w, images/hero-medium.jpeg 800w, images/hero-large.jpeg 1400w"
              sizes="(min-width: 900px) 1200px, 100vw"
              alt="Երաժշտական դպրոցի դահլիճ՝ դաշնամուրով և աշակերտներով">
@@ -59,29 +58,64 @@
         </article>
       </div>
     </section>
-    <section class="cards" id="lessons">
-  <article class="card card--featured">
-    <span class="badge">Նոր դաս</span>
-    <h3>Դաշնամուր սկսնակների համար</h3>
-    <p>Հիմնական ձայնաշարեր, ձեռքերի դիրք և առաջին պարզ կատարումներ։</p>
-    <a href="contact.html" class="card-link">Գրանցվել</a>
-  </article>
 
-  <article class="card">
-    <h3>Կիթառ</h3>
-    <p>Ակորդներ, ռիթմ և հայկական ու համաշխարհային երգերի նվագակցություն։</p>
-    <a href="contact.html" class="card-link">Գրանցվել</a>
-  </article>
+    <section id="lessons">
+      <h2>Դասեր</h2>
+      <div class="cards">
 
-  <article class="card">
-    <h3>Վոկալ</h3>
-    <div class="long-text">
-      <p>Վոկալի դասընթացը ներառում է շնչառության մարզանք, ձայնի տեղադրում, դիկցիա, ինտոնացիա և բեմական վարքագիծ։ Աշակերտները աստիճանաբար անցնում են պարզ վարժանքներից դեպի ամբողջական երգերի կատարում։ Դասերը անցկացվում են անհատական և խմբային ձևաչափով։ Յուրաքանչյուր ամսվա վերջում կազմակերպվում է փոքր բաց համերգ, որտեղ սովորողները ներկայացնում են իրենց առաջընթացը ծնողների և ընկերների առջև։ Դասերի ընթացքում օգտագործվում են նաև ձայնագրություններ՝ սեփական կատարումը վերլսելու և վերլուծելու համար։</p>
-    </div>
-    <a href="contact.html" class="card-link">Գրանցվել</a>
-  </article>
-</section>
+        <article class="card card--featured">
+          <span class="badge">Նոր դաս</span>
+          <img src="images/piano.jpg" alt="Դաշնամուրի ստեղներ մոտ պլանով">
+          <h3>Դաշնամուր սկսնակների համար</h3>
+          <p>Հիմնական ձայնաշարեր, ձեռքերի դիրք և առաջին պարզ կատարումներ։</p>
+          <div class="meta"><span>Տևողություն՝ 60 րոպե</span><span>Արժեք՝ 18 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
 
+        <article class="card">
+          <img src="images/guitar.jpg" alt="Աշակերտը նվագում է ակուստիկ կիթառ">
+          <h3>Կիթառ</h3>
+          <p>Ակորդներ, ռիթմ և հայկական ու համաշխարհային երգերի նվագակցություն։</p>
+          <div class="meta"><span>Տևողություն՝ 45 րոպե</span><span>Արժեք՝ 16 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
+
+        <article class="card">
+          <img src="images/violin.jpg" alt="Ջութակ և աղեղ նոտաների վրա">
+          <h3>Ջութակ</h3>
+          <p>Ձայնի դրվածք, աղեղի տեխնիկա և անսամբլային նվագ։</p>
+          <div class="meta"><span>Տևողություն՝ 60 րոպե</span><span>Արժեք՝ 20 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
+
+        <article class="card">
+          <img src="images/concert.jpg" alt="Աշակերտների համերգը դպրոցի դահլիճում">
+          <h3>Վոկալ</h3>
+          <div class="long-text">
+            <p>Վոկալի դասընթացը ներառում է շնչառության մարզանք, ձայնի տեղադրում, դիկցիա, ինտոնացիա և բեմական վարքագիծ։ Աշակերտները աստիճանաբար անցնում են պարզ վարժանքներից դեպի ամբողջական երգերի կատարում։ Դասերը անցկացվում են անհատական և խմբային ձևաչափով։ Յուրաքանչյուր ամսվա վերջում կազմակերպվում է փոքր բաց համերգ, որտեղ սովորողները ներկայացնում են իրենց առաջընթացը ծնողների և ընկերների առջև։ Դասերի ընթացքում օգտագործվում են նաև ձայնագրություններ՝ սեփական կատարումը վերլսելու և վերլուծելու համար։</p>
+          </div>
+          <div class="meta"><span>Տևողություն՝ 50 րոպե</span><span>Արժեք՝ 15 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
+
+        <article class="card">
+          <img src="images/flute.jpg" alt="Ֆլեյտա նվագող աշակերտ">
+          <h3>Ֆլեյտա</h3>
+          <p>Շնչառության կառավարում, հնչյունի մաքրություն և առաջին ստեղծագործությունները։</p>
+          <div class="meta"><span>Տևողություն՝ 45 րոպե</span><span>Արժեք՝ 17 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
+
+        <article class="card">
+          <img src="images/drums.jpg" alt="Թմբուկների հավաքածու">
+          <h3>Թմբուկ</h3>
+          <p>Ռիթմի զգացողություն, հիմնական հարվածներ և խմբում նվագելու փորձ։</p>
+          <div class="meta"><span>Տևողություն՝ 45 րոպե</span><span>Արժեք՝ 16 000 ֏</span></div>
+          <div class="card-actions"><a href="register.html" class="card-link">Գրանցվել</a></div>
+        </article>
+
+      </div>
+    </section>
 
     <section id="info">
       <h2>Ընդհանուր տեղեկություն</h2>
@@ -133,8 +167,8 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2025  Երաժշտական դպրոց</p>
+  <footer class="site-footer" id="contact">
+    <p>&copy; 2025 Երաժշտական դպրոց</p>
     <address>
       Երևան, Մուզեյի փ. 9 ·
       <a href="tel:+37410123456">+374 10 123 456</a> ·
