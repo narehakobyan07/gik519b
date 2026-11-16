@@ -18,7 +18,6 @@
             <ul>
                 <li><a href="index.html">Գլխավոր</a></li>
                 <li><a href="programs.html">Ծրագրեր</a></li>
-                <li><a href="index.html#about">Մեր մասին</a></li>
                 <li><a href="register.html" aria-current="page">Միանալ</a></li>
                 <li><a href="index.html#contact">Կապ</a></li>
             </ul>
@@ -28,7 +27,7 @@
 
 <div class="page-hero">
     <h2>Դարձի՛ր կամավոր</h2>
-    <p>Լրացրու ձևն ու միացի՛ր 500+ կամավորների</p>
+    <p>Լրացրու ձևն ու միացի՛ր մեզ</p>
 </div>
 
 <main>
@@ -38,43 +37,20 @@
             <div class="field-row">
                 <div class="field">
                     <label for="first-name">Անուն *</label>
-                    <input type="text" id="first-name" name="first_name" required minlength="2" maxlength="50">
-                    <span class="error-msg" id="first-name-err">Մուտքագրեք վավեր անուն։</span>
-                </div>
-                <div class="field">
-                    <label for="last-name">Ազգանուն *</label>
-                    <input type="text" id="last-name" name="last_name" required minlength="2" maxlength="60">
-                    <span class="error-msg" id="last-name-err">Մուտքագրեք վավեր ազգանուն։</span>
+                    <input type="text" id="first-name" name="first_name" required minlength="2">
                 </div>
                 <div class="field">
                     <label for="email">Էլ. փոստ *</label>
-                    <input type="email" id="email" name="email" required autocomplete="email">
-                    <span class="error-msg" id="email-err">Մուտքագրեք վավեր էլ. փոստ։</span>
-                </div>
-                <div class="field">
-                    <label for="cv-file">CV (PDF, max 3MB)</label>
-                    <input type="file" id="cv-file" name="cv_file" accept=".pdf,.doc,.docx">
-                    <span class="error-msg" id="cv-file-err"></span>
+                    <input type="email" id="email" name="email" required>
                 </div>
             </div>
         </fieldset>
-
-        <fieldset>
-            <legend>🤝 Կամավորության տվյալներ</legend>
-            <div class="field full">
-                <label for="motivation">Մոտիվացիա (min 40 տառ)</label>
-                <textarea id="motivation" name="motivation" required minlength="40" maxlength="800"></textarea>
-                <span id="motivation-counter">0 / 800</span>
-            </div>
-        </fieldset>
-
         <div class="form-actions">
             <button type="submit" class="btn-submit">✅ Ուղարկել դիմումը</button>
-            <button type="reset" class="btn-reset">↺ Մաքրել ձևը</button>
+            <button type="reset" class="btn-reset">↺ Մաքրել</button>
         </div>
     </form>
-
-    <div id="success-banner">
+    <div id="success-banner" style="display:none; background: #27ae60; color: #fff; padding: 20px; border-radius: 8px; text-align: center;">
         🎉 Ձեր դիմումը հաջողությամբ ուղարկվեց։ Շնորհակալ ենք!
     </div>
 </main>
@@ -86,49 +62,15 @@
 </footer>
 
 <script>
-    (function () {
-        "use strict";
-
-        const motivation = document.getElementById("motivation");
-        const counter = document.getElementById("motivation-counter");
-
-        if (motivation && counter) {
-            motivation.addEventListener("input", function () {
-                counter.textContent = this.value.length + " / 800";
-            });
+    document.getElementById("reg-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (this.checkValidity()) {
+            this.style.display = "none";
+            document.getElementById("success-banner").style.display = "block";
+        } else {
+            this.reportValidity();
         }
-
-        const cvFile = document.getElementById("cv-file");
-        if (cvFile) {
-            cvFile.addEventListener("change", function () {
-                const errEl = document.getElementById("cv-file-err");
-                if (this.files.length && this.files[0].size > 3 * 1024 * 1024) {
-                    errEl.textContent = "Ֆայլի չափը չի կարող գերազանցել 3 MB։";
-                    errEl.style.display = "block";
-                    this.value = "";
-                } else {
-                    errEl.textContent = "";
-                    errEl.style.display = "none";
-                }
-            });
-        }
-
-        const form = document.getElementById("reg-form");
-        const banner = document.getElementById("success-banner");
-
-        if (form) {
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
-                if (!form.checkValidity()) {
-                    form.reportValidity();
-                    return;
-                }
-                form.style.display = "none";
-                banner.style.display = "block";
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        }
-    })();
+    });
 </script>
 
 </body>
