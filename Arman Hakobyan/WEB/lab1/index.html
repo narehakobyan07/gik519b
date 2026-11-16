@@ -3,68 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Կինոակումբ՝ ֆիլմերի ցուցադրություններ և գրանցում">
-    <title>Կինոակումբ – Գրանցում</title>
-    <!-- CSS ֆայլի միացում -->
+    <meta name="description" content="Կինոակումբ՝ ֆիլմերի ցուցադրություններ, ժամանակացույց և գրանցում">
+    <title>Կինոակումբ – Գլխավոր</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sticky navigation with Flexbox header -->
     <header id="top" class="site-header">
-        <h1>Կինոակումբ</h1>
-        <nav aria-label="Հիմնական նավիգացիա">
-            <a href="#movies">Ֆիլմեր</a>
-            <a href="#registration">Գրանցում</a>
-        </nav>
+        <div class="site-nav">
+            <div class="brand">🎬 Կինոակումբ</div>
+            <nav aria-label="Հիմնական նավիգացիա">
+                <ul class="nav-links">
+                    <li><a href="#movies">Ֆիլմեր</a></li>
+                    <li><a href="#schedule">Ցուցադրումներ</a></li>
+                    <li><a href="#registration">Ամրագրում</a></li>
+                    <li><a href="about.html">Մեր մասին</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <hr>
-    
+
     <main>
-        <!-- Ֆիլմերի բաժին -->
-        <section id="movies">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Բարի գալուստ Կինոակումբ</h1>
+            <p>Վայելեք լավագույն ֆիլմերը բարձրորակ ձայնով և պատկերով</p>
+        </section>
+
+        <!-- Ֆիլմերի բաժին (Grid layout with 6 cards) -->
+        <section id="movies" class="section-container">
             <h2>Այս ամսվա ցուցադրությունները</h2>
-            <div class="movie-list">
-                <article class="movie-card">
+            <div class="cards">
+                <!-- Card 1 -->
+                <article class="card">
+                    <span class="badge">Պրեմիերա</span>
+                    <img src="images/movie1.jpg" alt="Տիեզերական Օդիսեյ">
                     <h3>Տիեզերական Օդիսեյ</h3>
-                    <p>Գիտաֆանտաստիկա, 1968</p>
+                    <p class="card-description">Գիտաֆանտաստիկ ֆիլմ տիեզերական ճանապարհորդության և արհեստական բանականության մասին:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Sci-Fi</span>
+                        <span><strong>Տևողություն:</strong> 149 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
-                <article class="movie-card">
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="images/movie2.jpg" alt="Կնքահայրը">
                     <h3>Կնքահայրը</h3>
-                    <p>Դրամա, 1972</p>
+                    <p class="card-description">Լեգենդար դրամա Կորլեոնե ընտանիքի պատմության, ազդեցության և ներքին պայքարի մասին:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Դրամա</span>
+                        <span><strong>Տևողություն:</strong> 175 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
-                <article class="movie-card">
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <img src="images/movie3.jpg" alt="Մատրիցա">
                     <h3>Մատրիցա</h3>
-                    <p>Մարտաֆիլմ, 1999</p>
+                    <p class="card-description">Պայքար իրական աշխարհի և վիրտուալ ռեալության միջև: Կուլտային մարտաֆիլմ:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Մարտաֆիլմ</span>
+                        <span><strong>Տևողություն:</strong> 136 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
-                <article class="movie-card">
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <img src="images/movie4.jpg" alt="Ինտերստելար">
                     <h3>Ինտերստելար</h3>
-                    <p>Գիտաֆանտաստիկա, 2014</p>
+                    <p class="card-description">Մարդկության փրկության առաքելություն տիեզերքի խորքերում: Սեր և ֆիզիկա:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Sci-Fi</span>
+                        <span><strong>Տևողություն:</strong> 169 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
-                <article class="movie-card">
+
+                <!-- Card 5 -->
+                <article class="card">
+                    <img src="images/movie5.jpg" alt="Փախուստ Շոուշենկից">
                     <h3>Փախուստ Շոուշենկից</h3>
-                    <p>Դրամա, 1994</p>
+                    <p class="card-description font-long">Հույսի, բարեկամության և ազատության հասնելու անոտնահարելի կամքի մասին հուզիչ պատմություն: Ֆիլմը պատմում է բանկիր Էնդի Դյուֆրեյնի մասին, ով անարդարացիորեն դատապարտվում է ցմահ ազատազրկման:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Դրամա</span>
+                        <span><strong>Տևողություն:</strong> 142 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
-                <article class="movie-card">
+
+                <!-- Card 6 -->
+                <article class="card">
+                    <img src="images/movie6.jpg" alt="Քրեական ընթերցվածք">
                     <h3>Քրեական ընթերցվածք</h3>
-                    <p>Քրեական, 1994</p>
+                    <p class="card-description">Քվենտին Տարանտինոյի գլուխգործոցը՝ ոչ գծային սյուժեով և անմոռանալի կերպարներով:</p>
+                    <div class="card-meta">
+                        <span><strong>Ժանր:</strong> Քրեական</span>
+                        <span><strong>Տևողություն:</strong> 154 րոպե</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="#registration" class="btn">Մանրամասն</a>
+                    </div>
                 </article>
             </div>
         </section>
-        
-        <hr>
-        
-        <!-- Գրանցման ձևի բաժին -->
-        <section id="registration">
+
+        <!-- Ցուցադրությունների աղյուսակ և ցուցակ -->
+        <section id="schedule" class="section-container bg-decorative">
+            <h2>Ցուցադրումների Ժամանակացույց</h2>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Ֆիլմ</th>
+                        <th>Օր</th>
+                        <th>Ժամ</th>
+                        <th>Սրահ</th>
+                        <th>Գին</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Տիեզերական Օդիսեյ</td>
+                        <td>Ուրբաթ</td>
+                        <td>18:00</td>
+                        <td>Սրահ 1</td>
+                        <td>2500 Դրամ</td>
+                    </tr>
+                    <tr>
+                        <td>Կնքահայրը</td>
+                        <td>Շաբաթ</td>
+                        <td>19:30</td>
+                        <td>Սրահ 2</td>
+                        <td>3000 Դրամ</td>
+                    </tr>
+                    <tr>
+                        <td>Մատրիցա</td>
+                        <td>Կիրակի</td>
+                        <td>17:00</td>
+                        <td>Սրահ 1</td>
+                        <td>2000 Դրամ</td>
+                    </tr>
+                    <tr>
+                        <td>Ինտերստելար</td>
+                        <td>Կիրակի</td>
+                        <td>20:00</td>
+                        <td>VIP Սրահ</td>
+                        <td>3500 Դրամ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Կինոակումբի Կանոնները</h3>
+            <ul class="styled-list">
+                <li>Խնդրում ենք սեանսից 15 րոպե առաջ ներկայանալ:</li>
+                <li>Դահլիճում հեռախոսները փոխանցել անձայն ռեժիմի:</li>
+                <li>Արգելվում է ֆիլմի նկարահանումը դահլիճից:</li>
+            </ul>
+        </section>
+
+        <!-- Գրանցման / Ամրագրման ձևի բաժին -->
+        <section id="registration" class="section-container">
             <h2>Ֆիլմի դիտման գրանցման ձև</h2>
             
             <form action="#" method="POST" id="registration-form">
-                <!-- Առաջին Fieldset: Անձնական տվյալներ -->
                 <fieldset>
                     <legend>Անձնական տվյալներ</legend>
                     
                     <label for="fullname">Անուն Ազգանուն:</label>
                     <input type="text" id="fullname" name="fullname" 
                            required minlength="3" maxlength="50" 
-                           pattern="[Ա-Ֆա-ֆ\s]+" 
                            placeholder="Օրինակ՝ Անի Հակոբյան">
                     
                     <label for="email">Էլ. փոստ:</label>
@@ -77,11 +198,9 @@
                            placeholder="09XXXXXXXX">
                 </fieldset>
                 
-                <!-- Երկրորդ Fieldset: Ֆիլմի դիտման գրանցում -->
                 <fieldset>
-                    <legend>Ֆիլմի դիտման գրանցման ձև</legend>
+                    <legend>Ֆիլմի դիտման ամրագրում</legend>
                     
-                    <!-- Սպեցիֆիկության ցուցադրման համար ավելացված class -->
                     <label for="movie-select" class="special-label">Ընտրեք ֆիլմը:</label>
                     <select id="movie-select" name="movie" required>
                         <option value="">-- Ընտրեք ֆիլմ --</option>
@@ -127,16 +246,15 @@
                 </fieldset>
                 
                 <div class="form-buttons">
-                    <button type="submit">Գրանցվել</button>
-                    <button type="reset">Մաքրել</button>
+                    <button type="submit" class="btn btn-submit">Գրանցվել</button>
+                    <button type="reset" class="btn btn-reset">Մաքրել</button>
                 </div>
             </form>
         </section>
     </main>
-    
-    <hr>
-    <footer>
-        <p>&copy; 2026 Կինոակումբ</p>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Կինոակումբ | Տարբերակ 18</p>
         <a href="#top">Վերադառնալ վերև</a>
     </footer>
 </body>
