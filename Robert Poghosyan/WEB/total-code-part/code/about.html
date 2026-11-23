@@ -6,24 +6,35 @@
   <meta name="description" content="Հայաստան Տուր զբոսաշրջային գործակալության մասին տեղեկություններ և HTML, XML, XHTML ուղեցույց">
   <title>Հայաստան Տուր — Մեր մասին</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
 </head>
 
 <body>
 
 <header id="about-top" class="site-header" data-page="about">
   <h1>Մեր մասին</h1>
-
-  <nav aria-label="Հիմնական նավիգացիա">
-    <a href="index.html">Գլխավոր</a>
-    <a href="about.html">Մեր մասին</a>
-    <a href="index.html#routes">Երթուղիներ</a>
-    <a href="index.html#booking">Ամրագրում</a>
-    <a href="index.html#contacts">Կապ</a>
-  </nav>
-
+  <p>Ծանոթացեք մեր գործակալությանը</p>
 </header>
 
-<hr>
+<nav class="site-nav" aria-label="Հիմնական նավիգացիա">
+  <a class="site-name" href="index.html">Հայաստան Տուր</a>
+
+  <input type="checkbox" class="menu-toggle" id="menu-toggle"
+         aria-label="Բացել կամ փակել նավիգացիան">
+  <label for="menu-toggle" class="menu-button" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="nav-links">
+    <a href="index.html">Գլխավոր</a>
+    <a href="about.html">Մեր մասին</a>
+    <a href="index.html#routes">Ուղղություններ</a>
+    <a href="index.html#booking">Ամրագրում</a>
+    <a href="index.html#contacts">Կապ</a>
+  </div>
+</nav>
 
 <main>
 
@@ -36,40 +47,34 @@
     </p>
 
     <p>
-      Մենք առաջարկում ենք պատմամշակութային, բնապահպանական և
-      ճանաչողական ճանապարհորդություններ։
+      Մենք առաջարկում ենք պատմամշակութային, բնապահպանական
+      և ճանաչողական ճանապարհորդություններ։
     </p>
 
     <h3>Մեր առաքելությունը</h3>
-
     <p>
       Մեր նպատակն է ճանապարհորդներին հնարավորություն տալ
       բացահայտելու Հայաստանի պատմությունը, մշակույթը և բնությունը։
     </p>
 
     <h4>Մեր ծառայությունները</h4>
-
     <p>
       Կազմակերպում ենք ուղևորություններ, ուղեկցորդի ծառայություններ
       և տուրերի նախնական ամրագրում։
     </p>
 
     <h5>Հաճախորդների համար</h5>
-
     <p>
       Յուրաքանչյուր ճանապարհորդ կարող է ընտրել իրեն համապատասխան
       երթուղին և ժամանակացույցը։
     </p>
 
     <h6>Կարևոր նշում</h6>
-
     <p>
-      Ճանապարհորդությունից առաջ անհրաժեշտ է ստուգել տուրի վերջնական
-      ժամը, արժեքը և հասանելի տեղերը։
+      Ճանապարհորդությունից առաջ անհրաժեշտ է ստուգել տուրի
+      վերջնական ժամը, արժեքը և հասանելի տեղերը։
     </p>
   </section>
-
-  <hr>
 
   <section id="guide">
     <h2>Օգտագործման ուղեցույց</h2>
@@ -84,7 +89,8 @@
     </p>
 
     <blockquote cite="https://www.w3.org/">
-      Վեբ ստանդարտները օգնում են ստեղծել կառուցվածքային և հասանելի վեբ էջեր։
+      Վեբ ստանդարտները օգնում են ստեղծել կառուցվածքային և
+      հասանելի վեբ էջեր։
     </blockquote>
 
     <p>
@@ -93,16 +99,14 @@
     </p>
 
     <p>
-      Տեղեկատվական աղբյուր՝ <cite>World Wide Web Consortium (W3C)</cite>։
+      Տեղեկատվական աղբյուր՝
+      <cite>World Wide Web Consortium (W3C)</cite>։
     </p>
 
     <h3>HTML կոդի օրինակ</h3>
 
-    <pre>
-      <code>&lt;p&gt;Բարի գալուստ Հայաստան Տուր։&lt;/p&gt;
-        &lt;a href="about.html"&gt;Մեր մասին&lt;/a&gt;
-      </code>
-    </pre>
+    <pre><code>&lt;p&gt;Բարի գալուստ Հայաստան Տուր։&lt;/p&gt;
+&lt;a href="about.html"&gt;Մեր մասին&lt;/a&gt;</code></pre>
 
     <p>
       Ֆայլը պահպանելու համար կարելի է օգտագործել
@@ -120,14 +124,12 @@
     </p>
   </section>
 
-  <hr>
-
   <section id="html-xml-xhtml">
     <h2>HTML, XML և XHTML</h2>
 
     <p>
-      <strong>HTML</strong>-ը վեբ էջերի կառուցվածքը ստեղծելու համար
-      օգտագործվող նշագրման լեզու է։
+      <strong>HTML</strong>-ը վեբ էջերի կառուցվածքը ստեղծելու
+      համար օգտագործվող նշագրման լեզու է։
     </p>
 
     <p>
@@ -136,8 +138,8 @@
     </p>
 
     <p>
-      <strong>XHTML</strong>-ը HTML-ի ձև է, որը հետևում է XML-ի
-      ավելի խիստ շարահյուսական կանոններին։
+      <strong>XHTML</strong>-ը HTML-ի ձև է, որը հետևում է
+      XML-ի ավելի խիստ շարահյուսական կանոններին։
     </p>
 
     <p>
@@ -151,12 +153,11 @@
     </p>
 
     <p>
-      XHTML-ում տարրերը պետք է ճիշտ փակվեն, ատրիբուտները պետք է
-      ճիշտ ձևակերպվեն, իսկ XML-ի շարահյուսական կանոնները պետք է պահպանվեն։
+      XHTML-ում տարրերը պետք է ճիշտ փակվեն, ատրիբուտները
+      պետք է ճիշտ ձևակերպվեն, իսկ XML-ի շարահյուսական կանոնները
+      պետք է պահպանվեն։
     </p>
   </section>
-
-  <hr>
 
   <section id="services">
     <h2>Մեր ծառայությունները</h2>
@@ -178,15 +179,14 @@
     </ol>
   </section>
 
-  <hr>
-
   <section id="contact-about">
     <h2>Կապ</h2>
 
     <address>
       Հայաստան, Երևան<br>
       Հեռախոս՝ <a href="tel:+37499123456">+374 99 123456</a><br>
-      Էլ․ փոստ՝ <a href="mailto:info@armeniatour.example">info@armeniatour.example</a>
+      Էլ․ փոստ՝
+      <a href="mailto:info@armeniatour.example">info@armeniatour.example</a>
     </address>
   </section>
 

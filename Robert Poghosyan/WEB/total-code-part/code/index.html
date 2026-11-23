@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="hy">
 <head>
     <meta charset="UTF-8">
@@ -7,24 +6,35 @@
     <meta name="description" content="Հայաստան Տուր զբոսաշրջային գործակալություն՝ Հայաստանի տեսարժան վայրեր, երթուղիներ և տուրիստական ծառայություններ">
     <title>Հայաստան Տուր — Գլխավոր էջ</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
 </head>
 
 <body>
 
 <header id="top" class="site-header" data-page="home">
     <h1>Հայաստան Տուր</h1>
-
-    <nav aria-label="Հիմնական նավիգացիա">
-        <a href="index.html">Գլխավոր</a>
-        <a href="about.html">Մեր մասին</a>
-        <a href="#routes">Երթուղիներ</a>
-        <a href="#booking">Ամրագրում</a>
-        <a href="#contacts">Կապ</a>
-    </nav>
-
+    <p>Բացահայտի՛ր Հայաստանի գեղեցկությունը մեզ հետ</p>
 </header>
 
-<hr>
+<nav class="site-nav" aria-label="Հիմնական նավիգացիա">
+    <a class="site-name" href="index.html">Հայաստան Տուր</a>
+
+    <input type="checkbox" class="menu-toggle" id="menu-toggle"
+           aria-label="Բացել կամ փակել նավիգացիան">
+    <label for="menu-toggle" class="menu-button" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <div class="nav-links">
+        <a href="index.html">Գլխավոր</a>
+        <a href="about.html">Մեր մասին</a>
+        <a href="#routes">Ուղղություններ</a>
+        <a href="#booking">Ամրագրում</a>
+        <a href="#contacts">Կապ</a>
+    </div>
+</nav>
 
 <main>
 
@@ -44,15 +54,12 @@
 
         <article id="garni-route" data-route="garni-geghard">
             <h3>Գառնի և Գեղարդ</h3>
-
             <p>
                 Գառնիի հեթանոսական տաճարը և Գեղարդի վանական համալիրը
                 Հայաստանի ամենահայտնի պատմական տեսարժան վայրերից են։
             </p>
-
             <a href="https://en.wikipedia.org/wiki/Temple_of_Garni"
-               target="_blank"
-               rel="noopener noreferrer">
+               target="_blank" rel="noopener noreferrer">
                 Կարդալ Գառնիի մասին
             </a>
         </article>
@@ -65,8 +72,6 @@
             </p>
         </aside>
     </section>
-
-    <hr>
 
     <section id="formatting">
         <h2>Ճանապարհորդական տեղեկություններ</h2>
@@ -104,11 +109,11 @@
 
         <p>
             <small>Գները կարող են փոփոխվել՝ կախված ընտրված ծրագրից։</small>
-            <span data-info="important">Ամրագրումից առաջ խնդրում ենք ճշտել վերջնական արժեքը։</span>
+            <span data-info="important">
+                Ամրագրումից առաջ խնդրում ենք ճշտել վերջնական արժեքը։
+            </span>
         </p>
     </section>
-
-    <hr>
 
     <section id="routes">
         <h2>Զբոսաշրջային երթուղիներ</h2>
@@ -118,8 +123,99 @@
             մեկօրյա և բազմօրյա ճանապարհորդություններ։
         </p>
 
-        <h3>Հանրաճանաչ ուղղություններ</h3>
+        <div class="tour-cards">
 
+            <article class="tour-card">
+                <span class="tour-badge">Հատուկ առաջարկ</span>
+                <img src="../images/garni.png" alt="Գառնիի հեթանոսական տաճար">
+                <h3>Գառնի և Գեղարդ</h3>
+                <p class="tour-description">
+                    Բացահայտեք Գառնիի հեթանոսական տաճարը և Գեղարդի վանական
+                    համալիրը։ Այս ճանապարհորդությունը համատեղում է Հայաստանի
+                    պատմությունը, մշակույթը և բնության գեղեցկությունը։
+                    Ուղևորության ընթացքում կարող եք տեսնել հնագույն
+                    ճարտարապետություն և ծանոթանալ հայկական ավանդույթներին։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">25,000 դրամ</span>
+                    <span class="tour-duration">1 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+            <article class="tour-card">
+                <img src="../images/garni.png" alt="Սևանա լիճ">
+                <h3>Սևան</h3>
+                <p class="tour-description">
+                    Հանգստացեք Սևանա լճի ափին, այցելեք Սևանավանք և
+                    բացահայտեք Հայաստանի բնության գեղեցկությունը։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">20,000 դրամ</span>
+                    <span class="tour-duration">1 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+            <article class="tour-card">
+                <img src="../images/tatev.png" alt="Տաթևի վանական համալիր">
+                <h3>Տաթև</h3>
+                <p class="tour-description">
+                    Այցելեք Տաթևի վանք, օգտվեք աշխարհի երկար ճոպանուղիներից
+                    մեկից և բացահայտեք Սյունիքի պատմամշակութային ժառանգությունը։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">45,000 դրամ</span>
+                    <span class="tour-duration">2 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+            <article class="tour-card">
+                <img src="../images/garni.png" alt="Դիլիջանի բնություն">
+                <h3>Դիլիջան</h3>
+                <p class="tour-description">
+                    Բացահայտեք Դիլիջանի անտառները, հին քաղաքային փողոցները
+                    և Հաղարծինի վանական համալիրը։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">22,000 դրամ</span>
+                    <span class="tour-duration">1 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+            <article class="tour-card">
+                <img src="../images/tatev.png" alt="Խոր Վիրապի վանք">
+                <h3>Խոր Վիրապ</h3>
+                <p class="tour-description">
+                    Այցելեք Խոր Վիրապի վանքը և վայելեք Արարատ լեռան
+                    գեղեցիկ տեսարանը։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">18,000 դրամ</span>
+                    <span class="tour-duration">1 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+            <article class="tour-card">
+                <img src="../images/garni.png" alt="Ամբերդ ամրոց">
+                <h3>Ամբերդ</h3>
+                <p class="tour-description">
+                    Ճանաչեք միջնադարյան Ամբերդ ամրոցը և Հայաստանի
+                    պատմական ճարտարապետական ժառանգությունը։
+                </p>
+                <div class="tour-meta">
+                    <span class="tour-price">30,000 դրամ</span>
+                    <span class="tour-duration">2 օր</span>
+                </div>
+                <a class="tour-link" href="#booking">Ամրագրել</a>
+            </article>
+
+        </div>
+
+        <h3>Հանրաճանաչ ուղղություններ</h3>
         <ul>
             <li>Գառնի և Գեղարդ</li>
             <li>Սևան</li>
@@ -134,7 +230,6 @@
         </ul>
 
         <h3>Ամրագրման քայլերը</h3>
-
         <ol>
             <li>Ընտրել երթուղին</li>
             <li>Ընտրել ճանապարհորդության օրը</li>
@@ -143,27 +238,46 @@
         </ol>
 
         <h3>Հիմնական հասկացություններ</h3>
-
         <dl>
             <dt>Երթուղի</dt>
             <dd>Ճանապարհորդության ընթացքում այցելվող վայրերի հաջորդականություն։</dd>
-
             <dt>Ուղեկցորդ</dt>
             <dd>Մասնագետ, որը ուղեկցում և տեղեկություններ է տրամադրում զբոսաշրջիկներին։</dd>
-
             <dt>Ամրագրում</dt>
             <dd>Տուրիստական ծառայության նախնական պատվիրում։</dd>
         </dl>
     </section>
 
-    <hr>
+    <section id="css-lab-experiments">
+        <h2>CSS տեսանելիության և ցուցադրման փորձարկումներ</h2>
+
+        <p>
+            Ստորև ներկայացված են երեք փորձնական տարրերը։
+            Փորձարկման ընթացքում կարելի է ժամանակավորապես կիրառել
+            <code>display: none</code> և <code>visibility: hidden</code>։
+        </p>
+
+        <div class="visibility-demo">1․ Սովորական տեսանելի տարր</div>
+        <div class="visibility-demo hidden-display-demo">
+            2․ display: none փորձնական տարր
+        </div>
+        <div class="visibility-demo hidden-visibility-demo">
+            3․ visibility: hidden փորձնական տարր
+        </div>
+
+        <p>Հղումների ցուցադրում՝</p>
+        <div class="display-examples">
+            <a class="display-inline" href="#routes">inline</a>
+            <a class="display-inline-block" href="#routes">inline-block</a>
+            <a class="display-block" href="#routes">block</a>
+        </div>
+    </section>
 
     <section id="route-table">
         <h2>Տուրերի ժամանակացույց և արժեքներ</h2>
 
         <table>
             <caption>Հայաստան Տուր — հիմնական երթուղիներ</caption>
-
             <thead>
             <tr>
                 <th scope="col">Երթուղի</th>
@@ -173,7 +287,6 @@
                 <th scope="col">Տեսակ</th>
             </tr>
             </thead>
-
             <tbody>
             <tr>
                 <td rowspan="2">Գառնի — Գեղարդ</td>
@@ -182,14 +295,12 @@
                 <td>25,000 դրամ</td>
                 <td>Պատմամշակութային</td>
             </tr>
-
             <tr>
                 <td>1 օր</td>
                 <td>10:00</td>
                 <td>28,000 դրամ</td>
                 <td>Պատմամշակութային</td>
             </tr>
-
             <tr>
                 <td>Սևան</td>
                 <td rowspan="2">1 օր</td>
@@ -197,14 +308,12 @@
                 <td>20,000 դրամ</td>
                 <td>Բնության</td>
             </tr>
-
             <tr>
                 <td>Դիլիջան</td>
                 <td>09:00</td>
                 <td>22,000 դրամ</td>
                 <td>Բնության</td>
             </tr>
-
             <tr>
                 <td>Տաթև</td>
                 <td>2 օր</td>
@@ -213,7 +322,6 @@
                 <td>Մշակութային</td>
             </tr>
             </tbody>
-
             <tfoot>
             <tr>
                 <td colspan="4">Տեղերը սահմանափակ են, նախապես ամրագրումը ցանկալի է</td>
@@ -223,12 +331,9 @@
         </table>
     </section>
 
-    <hr>
-
     <section id="gallery">
         <h2>Հայաստանի տեսարժան վայրերը</h2>
-
-        <p>Ծանոթացեք Հայաստանի հայտնի զբոսաշրջային վայրերից երկուսին։</p>
+        <p>Ծանոթացեք Հայաստանի հայտնի զբոսաշրջային վայրերին։</p>
 
         <a href="about.html">
             <img src="../images/garni.png"
@@ -237,19 +342,15 @@
         </a>
 
         <figure>
-            <img src="../images/tatev.png"
-                 alt="Տաթևի վանական համալիր">
+            <img src="../images/tatev.png" alt="Տաթևի վանական համալիր">
             <figcaption>Տաթևի վանական համալիր</figcaption>
         </figure>
     </section>
-
-    <hr>
 
     <section id="media">
         <h2>Մեդիա</h2>
 
         <h3>Աուդիո</h3>
-
         <audio controls>
             <source src="../music/tour-introducation.mp3" type="audio/mpeg">
             Ձեր դիտարկիչը չի աջակցում աուդիո տարրին։
@@ -262,21 +363,16 @@
         </p>
 
         <h3>Տեսանյութ</h3>
-
-        <video controls width="640">
+        <video controls>
             <source src="../video/armenia-tour.mp4" type="video/mp4">
-
             <track src="../video/subtitles.vtt"
                    kind="subtitles"
                    srclang="hy"
                    label="Հայերեն"
                    default>
-
             Ձեր դիտարկիչը չի աջակցում տեսանյութի տարրին։
         </video>
     </section>
-
-    <hr>
 
     <section id="quotes">
         <h2>Օգտակար տեղեկություններ</h2>
@@ -301,47 +397,29 @@
             <q>Ճանապարհորդությունը սկսվում է առաջին քայլից</q>։
         </p>
 
-        <p>
-            Տեղեկատվության աղբյուր՝ <cite>Հայաստան Տուր տեղեկատվական նյութեր</cite>։
-        </p>
+        <p>Տեղեկատվության աղբյուր՝ <cite>Հայաստան Տուր տեղեկատվական նյութեր</cite>։</p>
 
         <pre><code>&lt;p&gt;Բարի գալուստ Հայաստան։&lt;/p&gt;</code></pre>
 
-        <p>
-            Պահպանելու համար սեղմեք
-            <kbd>Ctrl</kbd> + <kbd>S</kbd>։
-        </p>
-
-        <p>
-            Համակարգի օրինակային պատասխանը՝
-            <samp>Tour successfully booked.</samp>
-        </p>
-
+        <p>Պահպանելու համար սեղմեք <kbd>Ctrl</kbd> + <kbd>S</kbd>։</p>
+        <p>Համակարգի օրինակային պատասխանը՝ <samp>Tour successfully booked.</samp></p>
         <p>
             Եթե <var>n</var>-ը զբոսաշրջիկների քանակն է,
-            ապա ընդհանուր արժեքը կարող է հաշվարկվել ըստ
-            մեկ անձի արժեքի և <var>n</var>-ի։
+            ապա ընդհանուր արժեքը կախված է <var>n</var>-ից։
         </p>
     </section>
 
-    <hr>
-
     <section id="schedule">
         <h2>Տուրերի ժամերը</h2>
-
         <p>
             Գառնիի շրջագայությունը սկսվում է
             <time datetime="09:00">09:00</time>-ին։
         </p>
-
         <p>
             Սևանի երթուղին սկսվում է
             <time datetime="08:30">08:30</time>-ին։
         </p>
     </section>
-
-    <hr>
-
 
     <section id="booking">
         <h2>Ուղևորության ամրագրման հարցում</h2>
@@ -352,170 +430,97 @@
         </p>
 
         <form action="#" method="post">
-
             <fieldset>
                 <legend>Անձնական տվյալներ</legend>
 
                 <p>
-                    <label for="first-name">Անուն</label><br>
-                    <input
-                            type="text"
-                            id="first-name"
-                            name="firstName"
-                            placeholder="Մուտքագրեք ձեր անունը"
-                            minlength="2"
-                            maxlength="30"
-                            required
-                    >
+                    <label for="first-name">Անուն</label>
+                    <input type="text" id="first-name" name="firstName"
+                           placeholder="Մուտքագրեք ձեր անունը"
+                           minlength="2" maxlength="30" required>
                 </p>
 
                 <p>
-                    <label for="last-name">Ազգանուն</label><br>
-                    <input
-                            type="text"
-                            id="last-name"
-                            name="lastName"
-                            placeholder="Մուտքագրեք ձեր ազգանունը"
-                            minlength="2"
-                            maxlength="40"
-                            required
-                    >
+                    <label for="last-name">Ազգանուն</label>
+                    <input type="text" id="last-name" name="lastName"
+                           placeholder="Մուտքագրեք ձեր ազգանունը"
+                           minlength="2" maxlength="40" required>
                 </p>
 
                 <p>
-                    <label for="email">Էլեկտրոնային հասցե</label><br>
-                    <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="example@email.com"
-                            maxlength="100"
-                            required
-                    >
+                    <label for="email">Էլեկտրոնային հասցե</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@email.com"
+                           maxlength="100" required>
                 </p>
 
                 <p>
-                    <label for="phone">Հեռախոսահամար</label><br>
-                    <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="+37499123456"
-                            pattern="\+374[0-9]{8}"
-                            title="Մուտքագրեք հեռախոսահամարը +374XXXXXXXX ձևաչափով"
-                            required
-                    >
+                    <label for="phone">Հեռախոսահամար</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="+37499123456"
+                           pattern="\+374[0-9]{8}"
+                           title="Մուտքագրեք հեռախոսահամարը +374XXXXXXXX ձևաչափով"
+                           required>
                 </p>
-
             </fieldset>
 
-            <br>
-
             <fieldset>
-                <legend>Ուղևորության ամրագրման հարցում</legend>
+                <legend>Ուղևորության տվյալներ</legend>
 
                 <p>
-                    <label for="route">Ընտրեք երթուղին</label><br>
+                    <label for="route">Ընտրեք երթուղին</label>
                     <select id="route" name="route" required>
                         <option value="">Ընտրեք երթուղին</option>
                         <option value="garni-geghard">Գառնի և Գեղարդ</option>
                         <option value="sevan">Սևան</option>
                         <option value="dilijan">Դիլիջան</option>
                         <option value="tatev">Տաթև</option>
+                        <option value="khor-virap">Խոր Վիրապ</option>
+                        <option value="amberd">Ամբերդ</option>
                     </select>
                 </p>
 
                 <p>
-                    <label for="passengers">Ուղևորների քանակ</label><br>
-                    <input
-                            type="number"
-                            id="passengers"
-                            name="passengers"
-                            min="1"
-                            max="20"
-                            required
-                    >
+                    <label for="passengers">Ուղևորների քանակ</label>
+                    <input type="number" id="passengers" name="passengers"
+                           min="1" max="20" required>
                 </p>
 
                 <p>
-                    <label for="start-date">Մեկնարկի ամսաթիվ</label><br>
-                    <input
-                            type="date"
-                            id="start-date"
-                            name="startDate"
-                            required
-                    >
+                    <label for="start-date">Մեկնարկի ամսաթիվ</label>
+                    <input type="date" id="start-date" name="startDate" required>
                 </p>
 
-                <p>
-                    Ուղևորության տեսակը
-                </p>
-
-                <input
-                        type="radio"
-                        id="one-day"
-                        name="tripType"
-                        value="one-day"
-                        required
-                >
+                <p>Ուղևորության տեսակը</p>
+                <input type="radio" id="one-day" name="tripType"
+                       value="one-day" required>
                 <label for="one-day">Մեկօրյա</label>
 
-                <br>
-
-                <input
-                        type="radio"
-                        id="multi-day"
-                        name="tripType"
-                        value="multi-day"
-                >
+                <input type="radio" id="multi-day" name="tripType"
+                       value="multi-day">
                 <label for="multi-day">Բազմօրյա</label>
 
-                <p>
-                    Լրացուցիչ ծառայություններ
-                </p>
-
-                <input
-                        type="checkbox"
-                        id="guide"
-                        name="additionalService"
-                        value="guide"
-                >
+                <p>Լրացուցիչ ծառայություններ</p>
+                <input type="checkbox" id="guide" name="additionalService"
+                       value="guide">
                 <label for="guide">Ցանկանում եմ ուղեկցորդ</label>
 
-                <br>
-
-                <input
-                        type="checkbox"
-                        id="transport"
-                        name="additionalService"
-                        value="transport"
-                >
-                <label for="transport">Ցանկանում եմ լրացուցիչ տրանսպորտային ծառայություն</label>
+                <input type="checkbox" id="transport" name="additionalService"
+                       value="transport">
+                <label for="transport">Լրացուցիչ տրանսպորտային ծառայություն</label>
 
                 <p>
-                    <label for="message">Լրացուցիչ հաղորդագրություն կամ մեկնաբանություն</label><br>
-                    <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            cols="50"
-                            minlength="10"
-                            maxlength="500"
-                            placeholder="Գրեք ձեր ցանկությունները կամ հարցերը..."
-                    ></textarea>
+                    <label for="message">Լրացուցիչ հաղորդագրություն կամ մեկնաբանություն</label>
+                    <textarea id="message" name="message"
+                              rows="6" minlength="10" maxlength="500"
+                              placeholder="Գրեք ձեր ցանկությունները կամ հարցերը..."></textarea>
                 </p>
-
             </fieldset>
-
-            <br>
 
             <button type="submit">Ուղարկել ամրագրման հարցումը</button>
             <button type="reset">Մաքրել ձևը</button>
-
         </form>
     </section>
-
-    <hr>
 
     <section id="contacts">
         <h2>Կապ մեզ հետ</h2>
@@ -523,16 +528,24 @@
         <address>
             Հայաստան, Երևան<br>
             Հեռախոս՝ <a href="tel:+37499123456">+374 99 123456</a><br>
-            Էլ․ փոստ՝ <a href="mailto:info@armeniatour.example">info@armeniatour.example</a><br>
+            Էլ․ փոստ՝
+            <a href="mailto:info@armeniatour.example">info@armeniatour.example</a><br>
             Հասցե՝ Հանրապետության հրապարակ
         </address>
 
         <p>
             <a href="https://maps.google.com/"
-               target="_blank"
-               rel="noopener noreferrer">
+               target="_blank" rel="noopener noreferrer">
                 Գտնել մեզ քարտեզի վրա
             </a>
+        </p>
+    </section>
+
+    <section id="js-results">
+        <h2>JavaScript — տուրերի տևողության հաշվարկ</h2>
+        <p>
+            Այս բաժնի հաշվարկները կատարվում են JavaScript-ի միջոցով։
+            Արդյունքները տեսնելու համար բացեք դիտարկիչի Console բաժինը։
         </p>
     </section>
 
